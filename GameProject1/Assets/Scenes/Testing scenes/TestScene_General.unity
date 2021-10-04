@@ -165,6 +165,9 @@ GameObject:
   m_Component:
   - component: {fileID: 130409506}
   - component: {fileID: 130409505}
+  - component: {fileID: 130409509}
+  - component: {fileID: 130409508}
+  - component: {fileID: 130409507}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -237,6 +240,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130409507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130409504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349000010114e1c40b429ffe37f03ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 2
+  fireRate: 10
+  crosshairs: {fileID: 0}
+  player: {fileID: 130409504}
+  bulletPrefab: {fileID: 2727611965551835193, guid: b7963e4bc402f5f4680526b3b1fce194, type: 3}
+  bulletStart: {fileID: 0}
+--- !u!114 &130409508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130409504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731333e452fd6d242b8734160d5f098f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5
+--- !u!114 &130409509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130409504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc12a481ba39b8747b853fc35311b46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  playerBody: {fileID: 0}
 --- !u!1 &512287394
 GameObject:
   m_ObjectHideFlags: 0
