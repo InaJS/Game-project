@@ -1,8 +1,5 @@
 #if UNITY_EDITOR_WIN
-#endif
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Memo : MonoBehaviour
@@ -11,3 +8,4 @@ public class Memo : MonoBehaviour
     [SerializeField] private bool _lock;
 }
 
+#endif

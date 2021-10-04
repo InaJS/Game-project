@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _memo: "The game object of interest is the DanceTimer - within \nit there's a component
-    with the same name.\n\n\nasdasdasd"
+    with the same name."
   _lock: 1
 --- !u!1 &1342323232
 GameObject:
