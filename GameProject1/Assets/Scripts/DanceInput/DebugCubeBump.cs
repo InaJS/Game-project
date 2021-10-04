@@ -5,16 +5,29 @@ using UnityEngine;
 
 public class DebugCubeBump : MonoBehaviour
 {
-    private Transform _startingPosition;
+    private Vector3 _startingPosition;
+    private bool _dancing = true;
 
     private void Awake()
     {
-        _startingPosition = this.transform;
+        _startingPosition = this.transform.position;
     }
 
-
-    public void CubeBumpMethod()
+    public void SuccesfulDance()
     {
-        this.transform.position = _startingPosition.position + Vector3.up*0.1f;
+        _dancing = true;
+    }
+
+    public void TripOver()
+    {
+        _dancing = false;
+    }
+
+    private void Update()
+    {
+        if (_dancing)
+        {
+            transform.position = _startingPosition + Vector3.right * Mathf.Sin(Time.time);
+        }
     }
 }
