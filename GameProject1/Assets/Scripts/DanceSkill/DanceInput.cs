@@ -16,6 +16,7 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private UnityEvent onNoInput;
     
     private PlayerMovement playerMovement;
+    private HitboxGenerator hitboxGenerator;
     private float timerInternal;
     private float blockedTime;
     private bool dancedOnTime;

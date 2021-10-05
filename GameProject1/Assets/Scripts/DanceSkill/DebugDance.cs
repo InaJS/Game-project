@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-public class DebugCubeBump : MonoBehaviour
+public class DebugDance : MonoBehaviour
 {
+    public string keyName;
+    public UnityEvent callback;
     private Vector3 startingPosition;
     private bool dancing = true;
 
@@ -25,6 +28,11 @@ public class DebugCubeBump : MonoBehaviour
         if (dancing)
         {
             transform.position = startingPosition + Vector3.right * Mathf.Sin(Time.time);
+        }
+
+        if (Input.GetKeyDown(keyName))
+        {
+            callback.Invoke();
         }
     }
 }
