@@ -15,18 +15,11 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private UnityEvent onWrongInput;
     [SerializeField] private UnityEvent onNoInput;
     
-    private PlayerMovement playerMovement;
-    private HitboxGenerator hitboxGenerator;
     private float timerInternal;
     private float blockedTime;
     private bool dancedOnTime;
     private bool dancedOutOfTime;
-
-    private void Awake()
-    {
-        playerMovement = GetComponent<PlayerMovement>();
-    }
-
+    
     void Update()
     {
         // 1. raise both timers and update the debug.text
