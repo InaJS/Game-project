@@ -1,10 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using ExtensionMethods;
-using MiscUtil.Collections;
 using UnityEngine;
-
 
 [RequireComponent(typeof(PolygonCollider2D),typeof(PlayerMovement))]
 public class HitboxGenerator : MonoBehaviour

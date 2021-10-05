@@ -23,7 +23,7 @@ public class PushableObject : MonoBehaviour
         while (duration > 0)
         {
             transform.position += dir * force * Time.deltaTime;
-            yield return new WaitForFixedUpdate();
+            yield return null;
             duration -= Time.deltaTime;
         }
 
