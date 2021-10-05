@@ -230,51 +230,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2016128713196145715, guid: 47fd73e8c131b234f8deecd0f538644f, type: 3}
   m_PrefabInstance: {fileID: 2016128712495925758}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1067583865
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1067583867}
-  - component: {fileID: 1067583866}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1067583866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067583865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c3adb41a83fbd459f6f15800ddbd17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyList:
-  - {fileID: 2875840601992728630, guid: 5126183b586f5a84298894727a0a20d2, type: 3}
---- !u!4 &1067583867
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067583865}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.08, y: -2.42, z: -6.5480323}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831054282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2016128712145805876, guid: 47fd73e8c131b234f8deecd0f538644f, type: 3}
@@ -292,6 +247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2016128713196145711, guid: 47fd73e8c131b234f8deecd0f538644f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2016128713196145712, guid: 47fd73e8c131b234f8deecd0f538644f, type: 3}
       propertyPath: m_RootOrder
       value: 1
