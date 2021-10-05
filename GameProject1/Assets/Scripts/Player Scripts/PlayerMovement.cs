@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour {
     [SerializeField]private float moveSpeed;
     
@@ -10,8 +11,10 @@ public class PlayerMovement : MonoBehaviour {
     private float vertical;
     
     public Rigidbody2D playerBody;
-    
-    
+    public Vector2 PlayerInput
+    {
+        get => new Vector2(horizontal, vertical);
+    }
     
     void Start() {
         playerBody = GetComponent <Rigidbody2D>();

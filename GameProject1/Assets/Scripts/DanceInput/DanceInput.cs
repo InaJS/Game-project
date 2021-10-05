@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class DanceTimer : MonoBehaviour
+[RequireComponent(typeof(PlayerMovement))]
+public class DanceInput : MonoBehaviour
 {
     [SerializeField] private string _danceButtonName;
     [Range(0.5f, 2.0f)] [SerializeField] private float _timeBetweenBeats;
@@ -12,10 +14,17 @@ public class DanceTimer : MonoBehaviour
     [SerializeField] private UnityEvent _onCorrectInput;
     [SerializeField] private UnityEvent _onWrongInput;
     [SerializeField] private UnityEvent _onNoInput;
+    
+    private PlayerMovement _playerMovement;
     private float _timerInternal;
     private float _blockedTime;
     private bool _dancedOnTime;
     private bool _dancedOutOfTime;
+
+    private void Awake()
+    {
+        _playerMovement = GetComponent<PlayerMovement>();
+    }
 
     void Update()
     {
