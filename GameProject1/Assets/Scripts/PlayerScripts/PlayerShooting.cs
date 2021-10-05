@@ -24,9 +24,9 @@ public class PlayerShooting : MonoBehaviour {
 
         Vector3 difference = target - player.transform.position;
         float roationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        //player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, roationZ);
+        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, roationZ);
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButton(0)) {
             if (shootCooldown < 0) {
                 float distance = difference.magnitude;
                 Vector2 direction = difference / distance;
