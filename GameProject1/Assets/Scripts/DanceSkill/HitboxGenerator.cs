@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ExtensionMethods;
 using MiscUtil.Collections;
 using UnityEngine;
 
@@ -40,7 +41,8 @@ public class HitboxGenerator : MonoBehaviour
 
     public void TriggerHitboxOnPlayerDirection()
     {
-        TriggerHitbox(playerMovement.PlayerInput);
+        Vector3 direction = playerMovement.PlayerInput.GetDirections4();
+        TriggerHitbox(direction);
     }
 
     public void TriggerHitbox(Vector3 dir)
