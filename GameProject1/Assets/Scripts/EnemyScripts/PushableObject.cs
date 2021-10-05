@@ -7,13 +7,14 @@ using UnityEngine;
 public class PushableObject : MonoBehaviour
 {
     [SerializeField] private float bouncyness;
+    [SerializeField] private FloatValue pushBuff;
     [SerializeField] private float stunTime;
     private bool isBeingPushed;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         Vector3 pushDirection = this.transform.position - other.transform.position;
-        TryPush(pushDirection,bouncyness,stunTime);
+        TryPush(pushDirection,bouncyness + pushBuff.value,stunTime);
     }
 
     public void TryPush(Vector3 dir, float force, float duration)

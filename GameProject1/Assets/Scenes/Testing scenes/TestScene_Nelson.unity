@@ -236,8 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bouncyness: 1
-  stunTime: 0.1
+  bouncyness: 1.5
+  pushBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
+  stunTime: 0.2
 --- !u!50 &257422063
 Rigidbody2D:
   serializedVersion: 4
