@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using ExtensionMethods;
 using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D),typeof(PlayerMovement))]
+[RequireComponent(typeof(PolygonCollider2D))]
 public class HitboxGenerator : MonoBehaviour
 {
     [Range(0.05f, 0.5f)] [SerializeField] private float duration;
@@ -28,7 +28,7 @@ public class HitboxGenerator : MonoBehaviour
     private void Awake()
     {
         polyCollider = GetComponent<PolygonCollider2D>();
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponentInParent<PlayerMovement>();
     }
 
     public void TriggerDebugHitbox()
@@ -105,16 +105,16 @@ public class HitboxGenerator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (!enableGizmo)
+        {
+            return;
+        }
+        
         GenerateGizmoFan(debugDir);
     }
 
     private void GenerateGizmoFan(Vector3 direction)
     {
-        if (!enableGizmo)
-        {
-            return;
-        }
-
         Gizmos.color = Color.red;
         direction.Normalize();
 
