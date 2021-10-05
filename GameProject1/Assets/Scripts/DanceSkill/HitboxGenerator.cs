@@ -42,6 +42,7 @@ public class HitboxGenerator : MonoBehaviour
     public void TriggerHitboxOnPlayerDirection()
     {
         Vector3 direction = playerMovement.PlayerInput.GetDirections4();
+        debugDir = direction;
         TriggerHitbox(direction);
     }
 
