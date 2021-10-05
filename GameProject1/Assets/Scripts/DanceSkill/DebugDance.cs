@@ -15,20 +15,22 @@ public class DebugDance : MonoBehaviour
 
     public void SuccesfulDance()
     {
+        Debug.Log("Danced");
         dancing = true;
     }
 
     public void TripOver()
     {
+        Debug.Log("Tripped");
         dancing = false;
     }
 
     private void Update()
     {
-        if (dancing)
-        {
-            transform.position = startingPosition + Vector3.right * Mathf.Sin(Time.time);
-        }
+        // if (dancing)
+        // {
+        //     transform.position = startingPosition + Vector3.right * Mathf.Sin(Time.time);
+        // }
 
         if (Input.GetKeyDown(keyName))
         {

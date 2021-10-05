@@ -58,6 +58,10 @@ public class HitboxGenerator : MonoBehaviour
 
     private void GenerateColliderPointsToDirection(Vector3 hitboxDir)
     {
+        // Victor (a classmate) gave me a good idea for the particle effect -
+        // I could probably generate a mesh with the same points as the collider
+        // and fill it up with some form of shader code
+        
         hitboxDir.Normalize();
         List<Vector2> points = new List<Vector2>();
 
