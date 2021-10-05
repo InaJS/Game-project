@@ -11,8 +11,8 @@ public class MemoEditorWindow : Editor
     private void OnEnable()
     {
         so = serializedObject;
-        propMemo = so.FindProperty("_memo");
-        propLock = so.FindProperty("_lock");
+        propMemo = so.FindProperty("memo");
+        propLock = so.FindProperty("lock");
     }
     
     public override void OnInspectorGUI()

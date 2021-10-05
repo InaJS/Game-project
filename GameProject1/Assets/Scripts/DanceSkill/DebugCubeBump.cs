@@ -2,29 +2,29 @@ using UnityEngine;
 
 public class DebugCubeBump : MonoBehaviour
 {
-    private Vector3 _startingPosition;
-    private bool _dancing = true;
+    private Vector3 startingPosition;
+    private bool dancing = true;
 
     private void Awake()
     {
-        _startingPosition = this.transform.position;
+        startingPosition = this.transform.position;
     }
 
     public void SuccesfulDance()
     {
-        _dancing = true;
+        dancing = true;
     }
 
     public void TripOver()
     {
-        _dancing = false;
+        dancing = false;
     }
 
     private void Update()
     {
-        if (_dancing)
+        if (dancing)
         {
-            transform.position = _startingPosition + Vector3.right * Mathf.Sin(Time.time);
+            transform.position = startingPosition + Vector3.right * Mathf.Sin(Time.time);
         }
     }
 }

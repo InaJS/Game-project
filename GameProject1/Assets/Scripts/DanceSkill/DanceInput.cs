@@ -6,74 +6,74 @@ using UnityEngine.UI;
 [RequireComponent(typeof(PlayerMovement))]
 public class DanceInput : MonoBehaviour
 {
-    [SerializeField] private string _danceButtonName;
-    [Range(0.5f, 2.0f)] [SerializeField] private float _timeBetweenBeats;
-    [Range(0.05f, 0.2f)] [SerializeField] private float _inputErrorMargin;
-    [Range(0.1f, 1.0f)] [SerializeField] private float _disableTime;
-    [SerializeField] private Text _debugTimerText;
-    [SerializeField] private UnityEvent _onCorrectInput;
-    [SerializeField] private UnityEvent _onWrongInput;
-    [SerializeField] private UnityEvent _onNoInput;
+    [SerializeField] private string danceButtonName;
+    [Range(0.5f, 2.0f)] [SerializeField] private float timeBetweenBeats;
+    [Range(0.05f, 0.2f)] [SerializeField] private float inputErrorMargin;
+    [Range(0.1f, 1.0f)] [SerializeField] private float disableTime;
+    [SerializeField] private Text debugTimerText;
+    [SerializeField] private UnityEvent onCorrectInput;
+    [SerializeField] private UnityEvent onWrongInput;
+    [SerializeField] private UnityEvent onNoInput;
     
-    private PlayerMovement _playerMovement;
-    private float _timerInternal;
-    private float _blockedTime;
-    private bool _dancedOnTime;
-    private bool _dancedOutOfTime;
+    private PlayerMovement playerMovement;
+    private float timerInternal;
+    private float blockedTime;
+    private bool dancedOnTime;
+    private bool dancedOutOfTime;
 
     private void Awake()
     {
-        _playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     void Update()
     {
         // 1. raise both timers and update the debug.text
         
-        _timerInternal += Time.deltaTime;
-        _debugTimerText.text = _timerInternal.ToString();
+        timerInternal += Time.deltaTime;
+        debugTimerText.text = timerInternal.ToString();
 
-        if (_blockedTime > 0)
+        if (blockedTime > 0)
         {
-            _blockedTime -= Time.deltaTime;
+            blockedTime -= Time.deltaTime;
             return;
         }
 
         // 2. then try to reset the timer if it's over the tempo
         
-        bool passedInputWindow = _timerInternal > _timeBetweenBeats;
+        bool passedInputWindow = timerInternal > timeBetweenBeats;
 
         if (passedInputWindow)
         {
-            if (!_dancedOnTime && !_dancedOutOfTime) // if you didnt dance this beat, you dont get a debuff
+            if (!dancedOnTime && !dancedOutOfTime) // if you didnt dance this beat, you dont get a debuff
             {
-                _onNoInput.Invoke();
+                onNoInput.Invoke();
             }
             
-            _timerInternal = 0;
+            timerInternal = 0;
             
-            _dancedOnTime = false;
-            _dancedOutOfTime = false;
+            dancedOnTime = false;
+            dancedOutOfTime = false;
             return;
         }
         
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = _timerInternal >= _timeBetweenBeats - _inputErrorMargin &&
-                                 _timerInternal <= _timeBetweenBeats;
+        bool withinInputWindow = timerInternal >= timeBetweenBeats - inputErrorMargin &&
+                                 timerInternal <= timeBetweenBeats;
 
-        if (Input.GetButtonDown(_danceButtonName))
+        if (Input.GetButtonDown(danceButtonName))
         {
             if (withinInputWindow)
             {
-                _onCorrectInput.Invoke();
-                _dancedOnTime = true;
+                onCorrectInput.Invoke();
+                dancedOnTime = true;
             }
             else
             {
-                _onWrongInput.Invoke();
-                _blockedTime = _disableTime; // blocks the input for N seconds
-                _dancedOutOfTime = true;
+                onWrongInput.Invoke();
+                blockedTime = disableTime; // blocks the input for N seconds
+                dancedOutOfTime = true;
             }
         }
     }

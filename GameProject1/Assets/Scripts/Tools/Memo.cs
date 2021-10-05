@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Memo : MonoBehaviour
 {
-    [SerializeField] [TextArea] private string _memo;
-    [SerializeField] private bool _lock;
+    [SerializeField] [TextArea] private string memo;
+    [SerializeField] private bool @lock;
 }
 
 #endif
