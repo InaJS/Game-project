@@ -5,8 +5,16 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class PushableObject : MonoBehaviour
 {
+    private bool isBeingPushed;
+    
     public void TryPush(Vector3 dir, float force, float duration)
     {
+        if (isBeingPushed)
+        {
+            return;
+        }
+        
+        isBeingPushed = true;
         StartCoroutine(Push(dir.normalized, force, duration));
     }
 
@@ -15,8 +23,10 @@ public class PushableObject : MonoBehaviour
         while (duration > 0)
         {
             transform.position += dir * force * Time.deltaTime;
-            yield return new WaitForSeconds(Time.deltaTime);
+            yield return new WaitForFixedUpdate();
             duration -= Time.deltaTime;
         }
+
+        isBeingPushed = false;
     }
 }
