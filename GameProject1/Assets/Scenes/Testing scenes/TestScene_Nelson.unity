@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 931492877}
   - component: {fileID: 931492876}
   - component: {fileID: 931492878}
+  - component: {fileID: 931492879}
+  - component: {fileID: 931492880}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -200,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931492875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.86000013, y: -0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -218,6 +220,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63aac73e67f9b364aaea7afcd475a35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyName: space
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 931492879}
+        m_TargetAssemblyTypeName: HitboxGenerator, Assembly-CSharp
+        m_MethodName: TriggerDebugHitbox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &931492879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931492875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbe514e831590c46a3be73581453f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.089
+  enableGizmo: 1
+  forwardPointCount: 4
+  forwardAngleSpread: 103
+  forwardRadius: 5.64
+  backPointCount: 2
+  backAngleSpread: 18
+  backRadius: 2.31
+  baseDir: {x: 10.58, y: 5.42, z: 0}
+--- !u!60 &931492880
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931492875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.1953716, y: -0.71863925}
+      - {x: -2.1953716, y: -0.71863925}
+      - {x: -2.108227, y: -0.94418126}
+      - {x: -1.997984, y: -1.1593786}
+      - {x: -1.8658508, y: -1.3618737}
+      - {x: 5.1372914, y: -2.3276236}
+      - {x: 5.6383743, y: 0.13538542}
+      - {x: 5.019656, y: 2.5715065}
+      - {x: 3.4040167, y: 4.4969172}
+      - {x: 1.1123276, y: 5.5292244}
 --- !u!1 &1203468435
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,9 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0adc1604341eab46872c3ad1d65304e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _memo: "The game object of interest is the DanceTimer - within \nit there's a component
-    with the same name."
-  _lock: 1
+  memo: 
+  lock: 0
 --- !u!1 &1342323232
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +527,7 @@ GameObject:
   - component: {fileID: 1657555300}
   - component: {fileID: 1657555301}
   - component: {fileID: 1657555302}
+  - component: {fileID: 1657555303}
   m_Layer: 0
   m_Name: DanceTimer
   m_TagString: Untagged
@@ -487,56 +561,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f1c98066c347540a77438deb011fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _danceButtonName: Fire2
-  _timeBetweenBeats: 1
-  _inputErrorMargin: 0.2
-  _disableTime: 0.6
-  _debugTimerText: {fileID: 1342323234}
-  _onCorrectInput:
+  danceButtonName: Fire2
+  timeBetweenBeats: 1
+  inputErrorMargin: 0.1
+  disableTime: 0.4
+  debugTimerText: {fileID: 1342323234}
+  onCorrectInput:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 931492878}
-        m_TargetAssemblyTypeName: DebugCubeBump, Assembly-CSharp
-        m_MethodName: SuccesfulDance
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onWrongInput:
+      m_Calls: []
+  onWrongInput:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 931492878}
-        m_TargetAssemblyTypeName: DebugCubeBump, Assembly-CSharp
-        m_MethodName: TripOver
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onNoInput:
+      m_Calls: []
+  onNoInput:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 931492878}
-        m_TargetAssemblyTypeName: DebugCubeBump, Assembly-CSharp
-        m_MethodName: TripOver
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1657555302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +588,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  playerBody: {fileID: 0}
+  playerBody: {fileID: 1657555303}
+--- !u!50 &1657555303
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657555299}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1842795589
 GameObject:
   m_ObjectHideFlags: 0
