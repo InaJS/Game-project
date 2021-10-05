@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ExtensionMethods;
 using MiscUtil.Collections;
 using UnityEngine;
 
@@ -40,7 +41,9 @@ public class HitboxGenerator : MonoBehaviour
 
     public void TriggerHitboxOnPlayerDirection()
     {
-        TriggerHitbox(playerMovement.PlayerInput);
+        Vector3 direction = playerMovement.PlayerInput.GetDirections4();
+        debugDir = direction;
+        TriggerHitbox(direction);
     }
 
     public void TriggerHitbox(Vector3 dir)
@@ -58,6 +61,10 @@ public class HitboxGenerator : MonoBehaviour
 
     private void GenerateColliderPointsToDirection(Vector3 hitboxDir)
     {
+        // Victor (a classmate) gave me a good idea for the particle effect -
+        // I could probably generate a mesh with the same points as the collider
+        // and fill it up with some form of shader code
+        
         hitboxDir.Normalize();
         List<Vector2> points = new List<Vector2>();
 
