@@ -56,8 +56,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaAmplitude: 1
+    - _AlphaFrequency: 5.3
     - _BlueAmplitude: 1
-    - _BlueFrequency: 1
+    - _BlueFrequency: 0.6
     - _BrightnessAmplitude: 1
     - _BrightnessFrequency: 1
     - _BumpScale: 1
@@ -67,14 +69,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GreenAmplitude: 1
-    - _GreenFrequency: 1
+    - _GreenAmplitude: 0.8
+    - _GreenFrequency: 0.88
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RedAmplitude: 1
-    - _RedFrequency: 1
+    - _RedAmplitude: 0.9
+    - _RedFrequency: 1.8
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

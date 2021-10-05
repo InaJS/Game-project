@@ -64,17 +64,20 @@ Shader "Unlit/ColorWave"
                 return o;
             }
 
+            float sin01(float value)
+            {
+                return 0.5f * sin(value) + 0.5f;
+            }
+
             fixed4 frag(v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                col.r = _RedAmplitude * sin(_Time.y * _RedFrequency);
-                col.g = _GreenAmplitude * sin(_Time.y * _GreenFrequency);
-                col.b = _BlueAmplitude * sin(_Time.y * _BlueFrequency);
-
-                col.rgb = col.rgb * _BrightnessAmplitude * sin(_Time.y * _BrightnessFrequency);
-
-                col.a = _AlphaAmplitude * sin(_Time.y * _AlphaFrequency);
+                col.r = _RedAmplitude * sin01(_Time.y * _RedFrequency);
+                col.g = _GreenAmplitude * sin01(_Time.y * _GreenFrequency);
+                col.b = _BlueAmplitude * sin01(_Time.y * _BlueFrequency);
+                
+                col.a *= _AlphaAmplitude * sin01(_Time.y * _AlphaFrequency);
 
                 return col;
             }
