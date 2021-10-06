@@ -18,7 +18,7 @@ Shader "Unlit/ColorWave"
     {
         Tags
         {
-            "RenderType"="Opaque"
+            "RenderType"="Opaque" "Queue" = "Transparent"
         }
         
         Blend SrcAlpha OneMinusSrcAlpha
@@ -76,6 +76,8 @@ Shader "Unlit/ColorWave"
                 col.r = _RedAmplitude * sin01(_Time.y * _RedFrequency);
                 col.g = _GreenAmplitude * sin01(_Time.y * _GreenFrequency);
                 col.b = _BlueAmplitude * sin01(_Time.y * _BlueFrequency);
+
+                col.rgb *= _BrightnessAmplitude * sin01(_Time.y * _BrightnessFrequency);
                 
                 col.a *= _AlphaAmplitude * sin01(_Time.y * _AlphaFrequency);
 
