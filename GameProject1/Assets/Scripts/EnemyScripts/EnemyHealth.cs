@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bolt;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
@@ -13,6 +14,11 @@ public class EnemyHealth : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        enemyHealth--;
+        if (collision.gameObject.CompareTag("Player")) {
+            //StartCoroutine(EnemyOnCollision.attack);
+        }
+        if (collision.gameObject.CompareTag("Projectile")) {
+            enemyHealth--;   
+        }
     }
 }
