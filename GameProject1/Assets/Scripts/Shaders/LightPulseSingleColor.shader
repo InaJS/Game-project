@@ -1,18 +1,13 @@
-Shader "Unlit/ColorWave"
+Shader "Unlit/LightPulseSingleColor"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _BrightnessAmplitude ("White amplitude", float) = 1
-        _BrightnessFrequency ("White frequency", float) = 1
-        _RedAmplitude ("Red amplitude", float) = 1
-        _RedFrequency ("Red frequency", float) = 1
-        _GreenAmplitude ("Green amplitude", float) = 1
-        _GreenFrequency ("Green frequency", float) = 1
-        _BlueAmplitude ("Blue amplitude", float) = 1
-        _BlueFrequency ("Blue frequency", float) = 1
-        _AlphaAmplitude ("Alpha amplitude", float) = 1
-        _AlphaFrequency ("Alpha frequency", float) = 1
+        _Colour ("Colour", Color) = (1,1,1,1)
+        _BrightnessAmplitude ("Brightness Amplitude", float) = 1.0
+        _BrightnessFrequency ("Brightness Frequency", float) = 1.0
+        _AlphaAmplitude ("Alpha Amplitude", float) = 1.0
+        _AlphaFrequency ("Alpha Frequency", float) = 1.0
     }
     SubShader
     {
@@ -20,7 +15,6 @@ Shader "Unlit/ColorWave"
         {
             "RenderType"="Opaque" "Queue" = "Transparent"
         }
-        
         Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
@@ -45,16 +39,12 @@ Shader "Unlit/ColorWave"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float4 _Colour;
             float _BrightnessAmplitude;
             float _BrightnessFrequency;
-            float _RedAmplitude;
-            float _RedFrequency;
-            float _BlueAmplitude;
-            float _BlueFrequency;
-            float _GreenAmplitude;
-            float _GreenFrequency;
+
             float _AlphaAmplitude;
-            float _AlphaFrequency;            
+            float _AlphaFrequency;
 
             v2f vert(appdata v)
             {
@@ -73,10 +63,8 @@ Shader "Unlit/ColorWave"
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                col.r = _RedAmplitude * sin01(_Time.y * _RedFrequency);
-                col.g = _GreenAmplitude * sin01(_Time.y * _GreenFrequency);
-                col.b = _BlueAmplitude * sin01(_Time.y * _BlueFrequency);
-                
+                col.rgb = _Colour.rgb * _BrightnessAmplitude * sin01(_Time.y * _BrightnessFrequency);
+
                 col.a *= _AlphaAmplitude * sin01(_Time.y * _AlphaFrequency);
 
                 return col;
