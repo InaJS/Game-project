@@ -1,7 +1,124 @@
 fileFormatVersion: 2
 guid: b3e92af466c769949b5f047b7f759ef5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2774015500210645578
+    second: jock_sprite_sheet_0
+  - first:
+      213: -2684581615270074477
+    second: jock_sprite_sheet_1
+  - first:
+      213: -491783555685906184
+    second: jock_sprite_sheet_2
+  - first:
+      213: -4623599265323447730
+    second: jock_sprite_sheet_3
+  - first:
+      213: 2028376541873337831
+    second: jock_sprite_sheet_4
+  - first:
+      213: 6954941809491683213
+    second: jock_sprite_sheet_5
+  - first:
+      213: -4449815295077224741
+    second: jock_sprite_sheet_6
+  - first:
+      213: 8498358234558510672
+    second: jock_sprite_sheet_7
+  - first:
+      213: 9029016556014482919
+    second: jock_sprite_sheet_8
+  - first:
+      213: -1541861722995432835
+    second: jock_sprite_sheet_9
+  - first:
+      213: 578683504648863457
+    second: jock_sprite_sheet_10
+  - first:
+      213: -64654310714700980
+    second: jock_sprite_sheet_11
+  - first:
+      213: -4317402707172971865
+    second: jock_sprite_sheet_12
+  - first:
+      213: 2595084523594863696
+    second: jock_sprite_sheet_13
+  - first:
+      213: 3660665003999712273
+    second: jock_sprite_sheet_14
+  - first:
+      213: 5518151218697487567
+    second: jock_sprite_sheet_15
+  - first:
+      213: 2842350425151204483
+    second: jock_sprite_sheet_16
+  - first:
+      213: -1778438378674533022
+    second: jock_sprite_sheet_17
+  - first:
+      213: -3422920732324275639
+    second: jock_sprite_sheet_18
+  - first:
+      213: -1982410843392153561
+    second: jock_sprite_sheet_19
+  - first:
+      213: 3123167208979160719
+    second: jock_sprite_sheet_20
+  - first:
+      213: -854775534250934882
+    second: jock_sprite_sheet_21
+  - first:
+      213: 4487272131452027111
+    second: jock_sprite_sheet_22
+  - first:
+      213: 4937803581538768144
+    second: jock_sprite_sheet_23
+  - first:
+      213: -7968997057159177909
+    second: jock_sprite_sheet_24
+  - first:
+      213: -6207085798953585564
+    second: jock_sprite_sheet_25
+  - first:
+      213: -7138699785563369717
+    second: jock_sprite_sheet_26
+  - first:
+      213: -5691180616612088590
+    second: jock_sprite_sheet_27
+  - first:
+      213: -8411218746227366297
+    second: jock_sprite_sheet_28
+  - first:
+      213: 6537629980205033662
+    second: jock_sprite_sheet_29
+  - first:
+      213: -953731375672710576
+    second: jock_sprite_sheet_30
+  - first:
+      213: 6895513615839618776
+    second: jock_sprite_sheet_31
+  - first:
+      213: 2314407318040178243
+    second: jock_sprite_sheet_32
+  - first:
+      213: -7744889688624807768
+    second: jock_sprite_sheet_33
+  - first:
+      213: 5367687193164120626
+    second: jock_sprite_sheet_34
+  - first:
+      213: -8530639180897806362
+    second: jock_sprite_sheet_35
+  - first:
+      213: -5086233796672670219
+    second: jock_sprite_sheet_36
+  - first:
+      213: 636863067388551625
+    second: jock_sprite_sheet_37
+  - first:
+      213: -5197488118192627228
+    second: jock_sprite_sheet_38
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +158,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +192,651 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: jock_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1982
+        width: 273
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4aab7b66684f7620800000000000000
+      internalID: 2774015500210645578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1983
+        width: 267
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39768439e337ebad0800000000000000
+      internalID: -2684581615270074477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1976
+        width: 271
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f886f03675dc29f0800000000000000
+      internalID: -491783555685906184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1974
+        width: 271
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a83ae07fca5dfb0800000000000000
+      internalID: -4623599265323447730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 1972
+        width: 273
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e57811d7bd362c10800000000000000
+      internalID: 2028376541873337831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 1972
+        width: 275
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87a3441abae48060800000000000000
+      internalID: 6954941809491683213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1588
+        width: 287
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde62d4b0941f32c0800000000000000
+      internalID: -4449815295077224741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1587
+        width: 277
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05630e0c9cb30f570800000000000000
+      internalID: 8498358234558510672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1590
+        width: 268
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e53d5c48b28d4d70800000000000000
+      internalID: 9029016556014482919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1590
+        width: 286
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72e51c9ee43a9ae0800000000000000
+      internalID: -1541861722995432835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1585
+        width: 277
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee39fbd495e70800800000000000000
+      internalID: 578683504648863457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1201
+        width: 276
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b07a83f3d4a1ff0800000000000000
+      internalID: -64654310714700980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1197
+        width: 288
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa25a6cc118514c0800000000000000
+      internalID: -4317402707172971865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1196
+        width: 274
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0545cf6ff97930420800000000000000
+      internalID: 2595084523594863696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 1196
+        width: 277
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1145b151d6b4dc230800000000000000
+      internalID: 3660665003999712273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1195
+        width: 288
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc44a570c49649c40800000000000000
+      internalID: 5518151218697487567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 802
+        width: 428
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c615af6ae027720800000000000000
+      internalID: 2842350425151204483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 803
+        width: 233
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26dce2897b7b157e0800000000000000
+      internalID: -1778438378674533022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 797
+        width: 233
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94add77bab75f70d0800000000000000
+      internalID: -3422920732324275639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 798
+        width: 428
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7286ab857df0d74e0800000000000000
+      internalID: -1982410843392153561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 403
+        width: 259
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed9518708b75b20800000000000000
+      internalID: 3123167208979160719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 402
+        width: 253
+        height: 382
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d374e2e2a3324f0800000000000000
+      internalID: -854775534250934882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 400
+        width: 253
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e045bd9a3ef54e30800000000000000
+      internalID: 4487272131452027111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 405
+        width: 274
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0151540223a968440800000000000000
+      internalID: 4937803581538768144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 12
+        width: 252
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49d4e7e56f686190800000000000000
+      internalID: -7968997057159177909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 10
+        width: 259
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464fff63a500cd9a0800000000000000
+      internalID: -6207085798953585564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 9
+        width: 251
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f86531e5e3eec90800000000000000
+      internalID: -7138699785563369717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 7
+        width: 254
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f47f32e16dd401b0800000000000000
+      internalID: -5691180616612088590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 10
+        width: 254
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766e2076d19554b80800000000000000
+      internalID: -8411218746227366297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jock_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 27
+        width: 380
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8a01344d35aba50800000000000000
+      internalID: 6537629980205033662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
