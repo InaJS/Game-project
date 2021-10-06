@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using ExtensionMethods;
@@ -30,7 +31,7 @@ public class HitboxGenerator : MonoBehaviour
         polyCollider = GetComponent<PolygonCollider2D>();
         playerMovement = GetComponentInParent<PlayerMovement>();
     }
-
+    
     public void TriggerDebugHitbox()
     {
         TriggerHitbox(debugDir);

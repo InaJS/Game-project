@@ -27,10 +27,10 @@ public class DebugDance : MonoBehaviour
 
     private void Update()
     {
-        // if (dancing)
-        // {
-        //     transform.position = startingPosition + Vector3.right * Mathf.Sin(Time.time);
-        // }
+        if (dancing)
+        {
+            transform.position = startingPosition + Vector3.right * Mathf.Sin(Time.time);
+        }
 
         if (Input.GetKeyDown(keyName))
         {
