@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 1d26a9516becda64fa43b114faf892e3
+guid: faf55aeb0ca39cb449bfaffe3fe318a7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - myAnim: {fileID: -6544962876417356698, guid: 5126183b586f5a84298894727a0a20d2, type: 3}
-  - target: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
