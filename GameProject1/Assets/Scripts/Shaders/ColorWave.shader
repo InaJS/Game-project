@@ -18,7 +18,7 @@ Shader "Unlit/ColorWave"
     {
         Tags
         {
-            "RenderType"="Opaque"
+            "RenderType"="Opaque" "Queue" = "Transparent"
         }
         
         Blend SrcAlpha OneMinusSrcAlpha
