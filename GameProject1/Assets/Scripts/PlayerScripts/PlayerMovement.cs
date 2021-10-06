@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour {
     
     private float horizontal;
     private float vertical;
+    public Animator animator;
+
     
     public Rigidbody2D playerBody;
     public Vector2 PlayerInput
@@ -21,6 +23,11 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void Update() {
+
+    //The animations for movement in different directions uses the first two directly underneath.
+    animator.SetFloat("XSpeed", horizontal);
+    animator.SetFloat("YSpeed", vertical);
+
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
     }

@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  animator: {fileID: 124721683}
   playerBody: {fileID: 124721687}
 --- !u!50 &124721687
 Rigidbody2D:
