@@ -59,9 +59,9 @@ Material:
     - _AlphaAmplitude: 1
     - _AlphaFrequency: 3
     - _BlueAmplitude: 0.7
-    - _BlueFrequency: 1.9
-    - _BrightnessAmplitude: 1
-    - _BrightnessFrequency: 0.1
+    - _BlueFrequency: 5
+    - _BrightnessAmplitude: 0.9
+    - _BrightnessFrequency: 3
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -69,14 +69,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GreenAmplitude: 1
-    - _GreenFrequency: 2.5
+    - _GreenAmplitude: 0.6
+    - _GreenFrequency: 0.1
     - _Metallic: 0
+    - _MinAlpha: 0.1
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RedAmplitude: 0.9
-    - _RedFrequency: 6
+    - _RedAmplitude: 0.4
+    - _RedFrequency: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

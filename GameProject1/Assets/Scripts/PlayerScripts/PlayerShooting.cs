@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using PlayerScripts;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float fireRate = 10f;
-    [SerializeField] private GameObject crosshairs;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletStart;
+    private Crosshair crosshairs;
 
     private float shootCooldown;
     private Vector3 target;
 
     void Start()
     {
+        crosshairs = Crosshair.Instance;
+        
         shootCooldown = 1.0f / fireRate;
         Cursor.visible = false;
     }

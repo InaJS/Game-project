@@ -4,16 +4,20 @@ Shader "Unlit/ColorWave"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _TimeOffset ("Time Offset", float) = 1
-        _BrightnessAmplitude ("White amplitude", float) = 1
-        _BrightnessFrequency ("White frequency", float) = 1
+        
         _RedAmplitude ("Red amplitude", float) = 1
         _RedFrequency ("Red frequency", float) = 1
         _GreenAmplitude ("Green amplitude", float) = 1
         _GreenFrequency ("Green frequency", float) = 1
         _BlueAmplitude ("Blue amplitude", float) = 1
         _BlueFrequency ("Blue frequency", float) = 1
+        
+        _BrightnessAmplitude ("White amplitude", float) = 1
+        _BrightnessFrequency ("White frequency", float) = 1
+        
         _AlphaAmplitude ("Alpha amplitude", float) = 1
         _AlphaFrequency ("Alpha frequency", float) = 1
+        _MinAlpha ("Minimum Alpha", float) = 0.1
     }
     SubShader
     {
@@ -57,6 +61,7 @@ Shader "Unlit/ColorWave"
             float _GreenFrequency;
             float _AlphaAmplitude;
             float _AlphaFrequency;            
+            float _MinAlpha;            
 
             v2f vert(appdata v)
             {
@@ -82,7 +87,7 @@ Shader "Unlit/ColorWave"
 
                 col.rgb *= _BrightnessAmplitude * sin01(_TimeOffset + _Time.y * _BrightnessFrequency);
                 
-                col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * _AlphaFrequency);
+                col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * _AlphaFrequency) + _MinAlpha;
 
                 return col;
             }
