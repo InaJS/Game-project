@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/LevelArena.unity
     guid: 52cee37185431f9499fd6ce4164bd917
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/LoseScreen.unity
+    guid: 91c6bb51b1e213e499adf62dd4279dbc
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/WinScreen.unity
+    guid: 99ea1ff9bd90e2945a92aff889de6b52
   m_configObjects: {}
