@@ -1,0 +1,1200 @@
+fileFormatVersion: 2
+guid: 8fab50657a0faee47b3b685cc9c105c1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3410249581392400752
+    second: Bunny Girl1 Sprite Sheet 1_0
+  - first:
+      213: -7506298691780708692
+    second: Bunny Girl1 Sprite Sheet 1_1
+  - first:
+      213: -8935884370228524697
+    second: Bunny Girl1 Sprite Sheet 1_2
+  - first:
+      213: 4232834464750631364
+    second: Bunny Girl1 Sprite Sheet 1_3
+  - first:
+      213: 2231502832408040
+    second: Bunny Girl1 Sprite Sheet 1_4
+  - first:
+      213: -4532377751147604897
+    second: Bunny Girl1 Sprite Sheet 1_5
+  - first:
+      213: -8803207712777625668
+    second: Bunny Girl1 Sprite Sheet 1_6
+  - first:
+      213: 4917346199629721709
+    second: Bunny Girl1 Sprite Sheet 1_7
+  - first:
+      213: -7100262372788306093
+    second: Bunny Girl1 Sprite Sheet 1_8
+  - first:
+      213: -2003014746021596620
+    second: Bunny Girl1 Sprite Sheet 1_9
+  - first:
+      213: -4917112977823251994
+    second: Bunny Girl1 Sprite Sheet 1_10
+  - first:
+      213: -2495477503081320935
+    second: Bunny Girl1 Sprite Sheet 1_11
+  - first:
+      213: 1005816474245757312
+    second: Bunny Girl1 Sprite Sheet 1_12
+  - first:
+      213: -6240482180609927751
+    second: Bunny Girl1 Sprite Sheet 1_13
+  - first:
+      213: -4631898127753415124
+    second: Bunny Girl1 Sprite Sheet 1_14
+  - first:
+      213: 6866775487962454279
+    second: Bunny Girl1 Sprite Sheet 1_15
+  - first:
+      213: 2086826619801187345
+    second: Bunny Girl1 Sprite Sheet 1_16
+  - first:
+      213: 8572466034510171285
+    second: Bunny Girl1 Sprite Sheet 1_17
+  - first:
+      213: 1434541702046727844
+    second: Bunny Girl1 Sprite Sheet 1_18
+  - first:
+      213: -6373197064332188165
+    second: Bunny Girl1 Sprite Sheet 1_19
+  - first:
+      213: 2202827171495999072
+    second: Bunny Girl1 Sprite Sheet 1_20
+  - first:
+      213: 6686648252151854722
+    second: Bunny Girl1 Sprite Sheet 1_21
+  - first:
+      213: -886784018860720152
+    second: Bunny Girl1 Sprite Sheet 1_22
+  - first:
+      213: 4509938216252615255
+    second: Bunny Girl1 Sprite Sheet 1_23
+  - first:
+      213: 2859467115027263545
+    second: Bunny Girl1 Sprite Sheet 1_24
+  - first:
+      213: 3436758580285224842
+    second: Bunny Girl1 Sprite Sheet 1_25
+  - first:
+      213: 5942453480897202250
+    second: Bunny Girl1 Sprite Sheet 1_26
+  - first:
+      213: -7574395088116815154
+    second: Bunny Girl1 Sprite Sheet 1_27
+  - first:
+      213: 8674658216618009655
+    second: Bunny Girl1 Sprite Sheet 1_28
+  - first:
+      213: -6180140095679072902
+    second: Bunny Girl1 Sprite Sheet 1_29
+  - first:
+      213: 8571374892741232932
+    second: Bunny Girl1 Sprite Sheet 1_30
+  - first:
+      213: 5936987173400129165
+    second: Bunny Girl1 Sprite Sheet 1_31
+  - first:
+      213: -6358156633569361225
+    second: Bunny Girl1 Sprite Sheet 1_32
+  - first:
+      213: 8342294414257065543
+    second: Bunny Girl1 Sprite Sheet 1_33
+  - first:
+      213: -7677326474885484113
+    second: Bunny Girl1 Sprite Sheet 1_34
+  - first:
+      213: 8553147602650931269
+    second: Bunny Girl1 Sprite Sheet 1_35
+  - first:
+      213: -8678473660643821794
+    second: Bunny Girl1 Sprite Sheet 1_36
+  - first:
+      213: 3607671666874694255
+    second: Bunny Girl1 Sprite Sheet 1_37
+  - first:
+      213: 6503292222411288501
+    second: Bunny Girl1 Sprite Sheet 1_38
+  - first:
+      213: -51133566505329894
+    second: Bunny Girl1 Sprite Sheet 1_39
+  - first:
+      213: 7930701506113433798
+    second: Bunny Girl1 Sprite Sheet 1_41
+  - first:
+      213: -2333710445789214429
+    second: Bunny Girl1 Sprite Sheet 1_46
+  - first:
+      213: 7602069311434477945
+    second: Bunny Girl1 Sprite Sheet 1_47
+  - first:
+      213: 5505965863695558873
+    second: Bunny Girl1 Sprite Sheet 1_50
+  - first:
+      213: 2178884027913744903
+    second: Bunny Girl1 Sprite Sheet 1_51
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 2901
+        width: 226
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e6ea1f21c5ca0d0800000000000000
+      internalID: -3410249581392400752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2901
+        width: 225
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca67e622c1544d790800000000000000
+      internalID: -7506298691780708692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 2901
+        width: 226
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7694096728c5df380800000000000000
+      internalID: -8935884370228524697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 2901
+        width: 225
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9fd78e48c0eba30800000000000000
+      internalID: 4232834464750631364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 2901
+        width: 226
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e514ad3a8de70000800000000000000
+      internalID: 2231502832408040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 2901
+        width: 225
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5496fae272c911c0800000000000000
+      internalID: -4532377751147604897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 2422
+        width: 214
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf19e30a39b4d580800000000000000
+      internalID: -8803207712777625668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2422
+        width: 238
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60fb8ab05ced3440800000000000000
+      internalID: 4917346199629721709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 2422
+        width: 208
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f71e1adfcc67d90800000000000000
+      internalID: -7100262372788306093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 2422
+        width: 214
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432738f63bcd334e0800000000000000
+      internalID: -2003014746021596620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 2032
+        y: 2422
+        width: 238
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1c1647cc7e2cbb0800000000000000
+      internalID: -4917112977823251994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 2422
+        width: 202
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91eebdbbe684e5dd0800000000000000
+      internalID: -2495477503081320935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1948
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08977a811c065fd00800000000000000
+      internalID: 1005816474245757312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1948
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5179d258a5569a0800000000000000
+      internalID: -6240482180609927751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 1948
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26f573913138bfb0800000000000000
+      internalID: -4631898127753415124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1948
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7099c50bcefab4f50800000000000000
+      internalID: 6866775487962454279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 1948
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114341511c5e5fc10800000000000000
+      internalID: 2086826619801187345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1948
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c8414807487f670800000000000000
+      internalID: 8572466034510171285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1468
+        width: 154
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aebaf5d31488e310800000000000000
+      internalID: 1434541702046727844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1468
+        width: 255
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5eae0690bdd87a0800000000000000
+      internalID: -6373197064332188165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 1468
+        width: 197
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066f89234a3029e10800000000000000
+      internalID: 2202827171495999072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1468
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2867f7f682fbbcc50800000000000000
+      internalID: 6686648252151854722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1468
+        width: 256
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef305b12a281b3f0800000000000000
+      internalID: -886784018860720152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1468
+        width: 195
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a22bab9e4869e30800000000000000
+      internalID: 4509938216252615255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 988
+        width: 154
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9307c16e03edea720800000000000000
+      internalID: 2859467115027263545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_25
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 988
+        width: 256
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a873da458b1d1bf20800000000000000
+      internalID: 3436758580285224842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_26
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 988
+        width: 195
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a484927d4f5d77250800000000000000
+      internalID: 5942453480897202250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_27
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 988
+        width: 172
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca65585cc752e690800000000000000
+      internalID: -7574395088116815154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 988
+        width: 255
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734a07d00b3926870800000000000000
+      internalID: 8674658216618009655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 988
+        width: 197
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7576e6a35bbb3aa0800000000000000
+      internalID: -6180140095679072902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_30
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 501
+        width: 226
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4290b864d04a3f670800000000000000
+      internalID: 8571374892741232932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_31
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 501
+        width: 231
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ea092f06a646250800000000000000
+      internalID: 5936987173400129165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_32
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 501
+        width: 208
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b20ecd8a3a43c7a0800000000000000
+      internalID: -6358156633569361225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_33
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 501
+        width: 225
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e84850298c5c370800000000000000
+      internalID: 8342294414257065543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_34
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 501
+        width: 233
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1bfbf4f38a47590800000000000000
+      internalID: -7677326474885484113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_35
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 501
+        width: 202
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5402e779d62e2b670800000000000000
+      internalID: 8553147602650931269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_36
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 22
+        width: 183
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17bdb8af2edf8780800000000000000
+      internalID: -8678473660643821794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_37
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 22
+        width: 183
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6abe4a4446011230800000000000000
+      internalID: 3607671666874694255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_38
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 22
+        width: 183
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfa26302d5504a50800000000000000
+      internalID: 6503292222411288501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_39
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 22
+        width: 183
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bd95cca465a4ff0800000000000000
+      internalID: -51133566505329894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_41
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 63
+        width: 381
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0fb8b40038f0e60800000000000000
+      internalID: 7930701506113433798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_46
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 298
+        width: 89
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3298d1ec6befc9fd0800000000000000
+      internalID: -2333710445789214429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_47
+      rect:
+        serializedVersion: 2
+        x: 2692
+        y: 298
+        width: 89
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97153f1e2c9ff7960800000000000000
+      internalID: 7602069311434477945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_50
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 117
+        width: 28
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8200bf7ce196c40800000000000000
+      internalID: 5505965863695558873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunny Girl1 Sprite Sheet 1_51
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 117
+        width: 28
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702329aaa73fc3e10800000000000000
+      internalID: 2178884027913744903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
