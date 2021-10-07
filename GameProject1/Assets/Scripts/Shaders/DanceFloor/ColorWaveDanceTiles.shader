@@ -110,6 +110,8 @@ Shader "Unlit/ColorWaveDanceTiles"
                 // col.a *= _AlphaAmplitude * fracWave(_TimeOffset + _Time.y, 1/_AlphaFrequency,_AlphaDuration) + _MinAlpha;
                 col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI  * _AlphaFrequency) + _MinAlpha;
 
+                // https://www.desmos.com/calculator/n1stbulhpe
+                
                 return col;
             }
             ENDCG
