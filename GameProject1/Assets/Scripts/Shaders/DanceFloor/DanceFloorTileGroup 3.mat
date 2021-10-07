@@ -56,11 +56,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AlphaAmplitude: 1
+    - _AlphaAmplitude: 2
     - _AlphaFrequency: 3
     - _BlueAmplitude: 0.7
     - _BlueFrequency: 5
-    - _BrightnessAmplitude: 0.9
+    - _BrightnessAmplitude: 2
     - _BrightnessFrequency: 3
     - _BumpScale: 1
     - _Cutoff: 0.5

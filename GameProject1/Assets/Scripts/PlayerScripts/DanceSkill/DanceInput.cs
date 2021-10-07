@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class DanceInput : MonoBehaviour
 {
     [SerializeField] private string danceButtonName;
-    [Range(0.5f, 2.0f)] [SerializeField] private float timeBetweenBeats;
-    [Range(0.05f, 0.2f)] [SerializeField] private float inputErrorMargin;
-    [Range(0.1f, 1.0f)] [SerializeField] private float disableTime;
+    [SerializeField] private FloatValue timeBetweenBeats;
+    [SerializeField] private FloatValue inputErrorMargin;
+    [SerializeField] private FloatValue disableTime;
     [SerializeField] private Text debugTimerText;
     [SerializeField] private UnityEvent onCorrectInput;
     [SerializeField] private UnityEvent onWrongInput;
@@ -35,7 +35,7 @@ public class DanceInput : MonoBehaviour
 
         // 2. then try to reset the timer if it's over the tempo
         
-        bool passedInputWindow = timerInternal > timeBetweenBeats;
+        bool passedInputWindow = timerInternal > timeBetweenBeats.value;
 
         if (passedInputWindow)
         {
@@ -53,8 +53,8 @@ public class DanceInput : MonoBehaviour
         
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = timerInternal >= timeBetweenBeats - inputErrorMargin &&
-                                 timerInternal <= timeBetweenBeats;
+        bool withinInputWindow = timerInternal >= timeBetweenBeats.value - inputErrorMargin.value &&
+                                 timerInternal <= timeBetweenBeats.value;
 
         if (Input.GetButtonDown(danceButtonName))
         {
@@ -66,7 +66,7 @@ public class DanceInput : MonoBehaviour
             else
             {
                 onWrongInput.Invoke();
-                blockedTime = disableTime; // blocks the input for N seconds
+                blockedTime = disableTime.value; // blocks the input for N seconds
                 dancedOutOfTime = true;
             }
         }
