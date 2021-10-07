@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList:
   - {fileID: 2875840601992728630, guid: 5126183b586f5a84298894727a0a20d2, type: 3}
+  - {fileID: 3702350968236354255, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
   enableGizmo: 1
   cubeHeight: 3.66
   cubeWidth: 17.9

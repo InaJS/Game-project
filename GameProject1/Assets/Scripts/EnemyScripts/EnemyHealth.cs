@@ -8,17 +8,16 @@ public class EnemyHealth : MonoBehaviour {
     [SerializeField] private int enemyHealth = 5;
 
     void Update() {
-        if (enemyHealth <= 0) {
-            Destroy(gameObject);
-        }
+        // I removed the death check from here,
+        // because we only need to check for death when the enemy takes damage ;)
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
-            //StartCoroutine(EnemyOnCollision.attack);
-        }
         if (collision.gameObject.CompareTag("Projectile")) {
-            enemyHealth--;   
+            enemyHealth--;
+            if (enemyHealth <= 0) {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2875840601992728628}
   - component: {fileID: 2875840601992728629}
   - component: {fileID: 2875840601992728630}
+  - component: {fileID: 2206763723662411157}
+  - component: {fileID: -5698239151902676787}
   m_Layer: 0
   m_Name: Jock
   m_TagString: Enemy
@@ -94,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26a9516becda64fa43b114faf892e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1.5
   minDistance: 0.5
   myAnim: {fileID: 3878928991649079374}
   target: {fileID: 2016128713196145712, guid: 47fd73e8c131b234f8deecd0f538644f, type: 3}
@@ -111,6 +113,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageDelay: 1
+--- !u!114 &2206763723662411157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875840601992728627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d6624edae05a6408e5ccf839b6178f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 5
+--- !u!114 &-5698239151902676787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875840601992728627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncyness: 5
+  pushBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
+  stunTime: 0.3
 --- !u!1 &3940413167080568620
 GameObject:
   m_ObjectHideFlags: 0

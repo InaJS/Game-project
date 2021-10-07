@@ -16,23 +16,23 @@ public class EnemyOnCollision : MonoBehaviour {
     private void Awake() {
         playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
         
-        // This bit of code was weird, I believe you didnt know "find of type" existed?
-        // I changed it mostly because the readability was bad, but also because "find of type" is probably faster 
+        // I believe you werent familiar with "find of type"?
+        // I changed this mostly because the readability was bad, but also because "find of type" is probably faster 
         // old code for reference
         // playerHealth = GameObject.Find("Player").GetComponent <PlayerHealth>();
     }
     
-    private IEnumerator attackTimer() {
-        while (true) {
-            if (playerHealth.GetHealth() <= 0) {
-                break;
-            }
-
-            Debug.Log("Player has been hit!");
-            playerHealth.DamagePlayer(1);
-            yield return new WaitForSeconds(time);
-        }
-    }
+    // private IEnumerator attackTimer() {
+    //     while (true) {
+    //         if (playerHealth.GetHealth() <= 0) {
+    //             break;
+    //         }
+    //
+    //         Debug.Log("Player has been hit!");
+    //         playerHealth.DamagePlayer(1);
+    //         yield return new WaitForSeconds(time);
+    //     }
+    // }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Projectile")) {
@@ -42,13 +42,13 @@ public class EnemyOnCollision : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player")) {
                 Debug.Log("Player has been hit!");
                 collision.gameObject.GetComponent <PlayerHealth>().DamagePlayer(damageAmount);
-                attack = StartCoroutine(attackTimer());
+                // attack = StartCoroutine(attackTimer());
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player")) {
-            StopCoroutine(attack);
-        }
-    }
+    // private void OnTriggerExit2D(Collider2D other) {
+    //     if (other.gameObject.CompareTag("Player")) {
+    //         StopCoroutine(attack);
+    //     }
+    // }
 }
