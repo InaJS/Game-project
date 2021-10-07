@@ -7,11 +7,11 @@ using UnityEngine;
 public class EnemyOnCollision : MonoBehaviour {
     [Tooltip("How often the player will take damage")]
     [SerializeField] private float damageDelay = 1f;
+    [SerializeField] private float damageAmount;
 
     private Coroutine attack;
     private float time = 1f;
     private PlayerHealth playerHealth;
-    private float damageAmount;
 
     private void Awake() {
         playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
@@ -41,7 +41,7 @@ public class EnemyOnCollision : MonoBehaviour {
         
         if (collision.gameObject.CompareTag("Player")) {
                 Debug.Log("Player has been hit!");
-                collision.gameObject.GetComponent <PlayerHealth>().DamagePlayer(damageAmount);
+                collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damageAmount);
                 // attack = StartCoroutine(attackTimer());
         }
     }
