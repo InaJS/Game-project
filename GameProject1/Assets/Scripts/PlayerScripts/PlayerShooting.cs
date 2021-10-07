@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour {
+public class PlayerShooting : MonoBehaviour 
+{
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float fireRate = 10f;
     [SerializeField] private GameObject crosshairs;
-    [SerializeField] private GameObject player;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletStart;
 
@@ -22,7 +22,7 @@ public class PlayerShooting : MonoBehaviour {
         target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, transform.position.z));
         crosshairs.transform.position = new Vector2(target.x, target.y);
 
-        Vector3 difference = target - player.transform.position;
+        Vector3 difference = target - this.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
         if (Input.GetMouseButton(0)) {
