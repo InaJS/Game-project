@@ -2457,6 +2457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7441108525622716312, guid: 342c50ffae976b944822128ff04a4671, type: 3}
+      propertyPath: debugTimerText
+      value: 
+      objectReference: {fileID: 1857332218}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342c50ffae976b944822128ff04a4671, type: 3}
 --- !u!1 &786774156
@@ -4230,37 +4234,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1303803447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4679205255910048264, guid: 342c50ffae976b944822128ff04a4671, type: 3}
-  m_PrefabInstance: {fileID: 780621561}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1303803448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303803447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f1c98066c347540a77438deb011fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  danceButtonName: Fire2
-  timeBetweenBeats: {fileID: 11400000, guid: 0c2b0f653dcf43e479663d737ae8decd, type: 2}
-  inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
-  disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
-  debugTimerText: {fileID: 1857332218}
-  onCorrectInput:
-    m_PersistentCalls:
-      m_Calls: []
-  onWrongInput:
-    m_PersistentCalls:
-      m_Calls: []
-  onNoInput:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1350659039
 GameObject:
   m_ObjectHideFlags: 0
@@ -7817,6 +7790,10 @@ PrefabInstance:
     - target: {fileID: 1080362520449931559, guid: 7efb5c4945a42424f914ed7ce30d3add, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701330233523875362, guid: 7efb5c4945a42424f914ed7ce30d3add, type: 3}
+      propertyPath: timeOffset
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1701330233523875362, guid: 7efb5c4945a42424f914ed7ce30d3add, type: 3}
       propertyPath: tileLights.Array.data[0].renderers.Array.data[0]

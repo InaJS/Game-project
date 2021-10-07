@@ -1,22 +1,25 @@
-Shader "Unlit/ColorWave"
+Shader "Unlit/ColorWaveDanceTiles"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         _TimeOffset ("Time Offset", float) = 1
-        
+
         _RedAmplitude ("Red amplitude", float) = 1
         _RedFrequency ("Red frequency", float) = 1
         _GreenAmplitude ("Green amplitude", float) = 1
         _GreenFrequency ("Green frequency", float) = 1
         _BlueAmplitude ("Blue amplitude", float) = 1
         _BlueFrequency ("Blue frequency", float) = 1
-        
+
         _BrightnessAmplitude ("White amplitude", float) = 1
         _BrightnessFrequency ("White frequency", float) = 1
-        
+        _BrightnessDuration ("White duration", float) = 1
+        _MinBrightness ("Minimum White", float) = 0.1
+
         _AlphaAmplitude ("Alpha amplitude", float) = 1
         _AlphaFrequency ("Alpha frequency", float) = 1
+        _AlphaDuration ("Alpha duration", float) = 1
         _MinAlpha ("Minimum Alpha", float) = 0.1
     }
     SubShader
@@ -25,7 +28,7 @@ Shader "Unlit/ColorWave"
         {
             "RenderType"="Opaque" "Queue" = "Transparent"
         }
-        
+
         Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
@@ -51,17 +54,23 @@ Shader "Unlit/ColorWave"
             sampler2D _MainTex;
             float4 _MainTex_ST;
             float _TimeOffset;
-            float _BrightnessAmplitude;
-            float _BrightnessFrequency;
+
             float _RedAmplitude;
             float _RedFrequency;
             float _BlueAmplitude;
             float _BlueFrequency;
             float _GreenAmplitude;
             float _GreenFrequency;
+
+            float _BrightnessAmplitude;
+            float _BrightnessFrequency;
+            float _BrightnessDuration;
+            float _MinBrightness;
+
             float _AlphaAmplitude;
-            float _AlphaFrequency;            
-            float _MinAlpha;            
+            float _AlphaFrequency;
+            float _AlphaDuration;
+            float _MinAlpha;
 
             v2f vert(appdata v)
             {
@@ -69,6 +78,16 @@ Shader "Unlit/ColorWave"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 return o;
+            }
+
+            float fracWave(float value, float timeBetweenPeaks, float timeBiggerThanZero)
+            {
+                float w = timeBiggerThanZero;
+
+                float alpha = - timeBetweenPeaks / w + 1 + w;
+
+                float result = frac(alpha - w + (value / w));
+                return saturate(result);
             }
 
             float sin01(float value)
@@ -81,13 +100,15 @@ Shader "Unlit/ColorWave"
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // The idea is to use a BW mask and recolor it within the shader using simple waves
 
-                col.r *= _RedAmplitude * sin01(_TimeOffset +_Time.y * _RedFrequency);
-                col.g *= _GreenAmplitude * sin01(_TimeOffset + _Time.y * _GreenFrequency);
-                col.b *= _BlueAmplitude * sin01(_TimeOffset + _Time.y * _BlueFrequency);
+                col.r *= _RedAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI *_RedFrequency);
+                col.g *= _GreenAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _GreenFrequency);
+                col.b *= _BlueAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _BlueFrequency);
 
-                col.rgb *= _BrightnessAmplitude * sin01(_TimeOffset + _Time.y * _BrightnessFrequency);
-                
-                col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * _AlphaFrequency) + _MinAlpha;
+                // col.rgb *= _BrightnessAmplitude * fracWave(_TimeOffset + _Time.y, 1/_BrightnessFrequency,_BrightnessDuration);
+                col.rgb *= _BrightnessAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _BrightnessFrequency) + _MinBrightness;
+
+                // col.a *= _AlphaAmplitude * fracWave(_TimeOffset + _Time.y, 1/_AlphaFrequency,_AlphaDuration) + _MinAlpha;
+                col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI  * _AlphaFrequency) + _MinAlpha;
 
                 return col;
             }
