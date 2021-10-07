@@ -22,7 +22,14 @@ public class EnemySpawner : MonoBehaviour {
     void Spawn() {
         spawnPosition.x = Random.Range(transform.position.x - cubeWidth / 2 , transform.position.x + cubeWidth / 2);
         spawnPosition.y = Random.Range(transform.position.y - cubeHeight /2 , transform.position.y + cubeHeight / 2);
-        Instantiate(enemyList[Random.Range(0, enemyList.Count)], spawnPosition, Quaternion.identity);
+
+        Instantiate(enemyList[Random.Range(0, enemyList.Count)], this.transform.position + spawnPosition, Quaternion.identity);
+        
+        // This was mostly correct, but the instantiate method takes in world space coordinates,
+        // so you have to add a transform.position vector as well,
+        // that way the enemies spawn inside the gizmo you're drawing :p
+        // old code for reference:
+        // Instantiate(enemyList[Random.Range(0, enemyList.Count)], spawnPosition, Quaternion.identity);
     }
 
     private void OnValidate() {

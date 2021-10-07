@@ -25,7 +25,8 @@ public class GoTowardsPlayer : MonoBehaviour
 
         float stepDistance = Time.deltaTime * moveSpeed;
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, stepDistance);
-        myAnim.SetFloat("moveX", (target.position - transform.position).normalized.x);
-        myAnim.SetFloat("moveY", (target.position - transform.position).normalized.y);
+        
+        myAnim.SetFloat("XSpeed", (target.position - transform.position).normalized.x);
+        myAnim.SetFloat("YSpeed", (target.position - transform.position).normalized.y);
     }
 }

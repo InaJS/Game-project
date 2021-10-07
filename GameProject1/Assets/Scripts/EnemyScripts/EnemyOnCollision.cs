@@ -14,7 +14,12 @@ public class EnemyOnCollision : MonoBehaviour {
     private float damageAmount;
 
     private void Awake() {
-        playerHealth = GameObject.Find("Player").GetComponent <PlayerHealth>();
+        playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
+        
+        // This bit of code was weird, I believe you didnt know "find of type" existed?
+        // I changed it mostly because the readability was bad, but also because "find of type" is probably faster 
+        // old code for reference
+        // playerHealth = GameObject.Find("Player").GetComponent <PlayerHealth>();
     }
     
     private IEnumerator attackTimer() {
@@ -44,7 +49,6 @@ public class EnemyOnCollision : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
             StopCoroutine(attack);
-
         }
     }
 }
