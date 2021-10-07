@@ -4788,7 +4788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1531713110}
   m_Layer: 0
-  m_Name: Scene
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4961,7 +4961,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1371687459573514468, guid: 4577f554dffa6eb4f933ec2982157a69, type: 3}
       propertyPath: m_Name
-      value: Walls (1)
+      value: Walls
       objectReference: {fileID: 0}
     - target: {fileID: 1371687459573514471, guid: 4577f554dffa6eb4f933ec2982157a69, type: 3}
       propertyPath: m_RootOrder
