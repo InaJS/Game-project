@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //To load a new scene, UnityEngine.SceneManagement needs to be in use.
-public class Menu : MonoBehaviour
+public class MenuScript : MonoBehaviour
 {
 
     [SerializeField] GameObject pauseMenu;
