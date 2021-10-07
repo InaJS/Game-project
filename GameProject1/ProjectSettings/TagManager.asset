@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Projectile
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -40,15 +41,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Walls
+    uniqueID: 973625721
+    locked: 0
   - name: Background
     uniqueID: 334088969
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Lower Midground
+    uniqueID: 1981238287
+    locked: 0
+  - name: Midground
+    uniqueID: 2434440409
+    locked: 0
   - name: Player
     uniqueID: 2825576745
     locked: 0
   - name: Foreground
     uniqueID: 3118630283
+    locked: 0
+  - name: Top layer
+    uniqueID: 2625026139
     locked: 0
