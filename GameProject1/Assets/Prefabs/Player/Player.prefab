@@ -72,7 +72,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -184,9 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc12a481ba39b8747b853fc35311b46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 13
   animator: {fileID: 1049181603793923462}
-  playerBody: {fileID: 4679205255910048269}
 --- !u!61 &2368507965179732025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,7 +361,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1469390551
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1681785768708636481, guid: eb3be6280b249b34c9117c53376b0a46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

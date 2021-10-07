@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 namespace Tools
 {
-    public class FadeBehavior : MonoBehaviour
+    public class FadeImageBehavior : MonoBehaviour
     {
         [SerializeField] private Image fadeImage;
         [SerializeField] private float fadeTime = 1.0f;
+        [SerializeField] private Color startColor;
         [SerializeField] private Color targetColour = Color.white;
-        private Color startColor;
+        [SerializeField] private bool disableOnFinish = true;
 
         public void RequestFade()
         {
@@ -20,7 +21,9 @@ namespace Tools
         private IEnumerator FadeAnimation()
         {
             float elapsedTime = 0.0f;
-            startColor = fadeImage.color;
+            fadeImage.color = startColor;
+            
+            fadeImage.gameObject.SetActive(true);
 
             while (elapsedTime < fadeTime)
             {
@@ -29,6 +32,8 @@ namespace Tools
                 Color newColor = Color.Lerp(startColor, targetColour, Mathf.Clamp01(elapsedTime / fadeTime));
                 fadeImage.color = newColor;
             }
+            
+            fadeImage.gameObject.SetActive(disableOnFinish);
         }
     }
 }

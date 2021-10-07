@@ -8,6 +8,7 @@ namespace PlayerScripts
     public class Crosshair : MonoBehaviour
     {
         private SpriteRenderer renderer; 
+        private Animator animator; 
         private static Crosshair instance;
         public static Crosshair Instance
         {
@@ -22,10 +23,21 @@ namespace PlayerScripts
                 return instance;
             }
         }
+
+        public void ResetFireTrigger()
+        {
+            animator.ResetTrigger("Fire");
+        }
         
-        protected virtual void Awake()
+        public void SetFireAnimationTrigger()
+        {
+            animator.SetTrigger("Fire");
+        }
+        
+        private void Awake()
         {
             renderer = this.GetComponent<SpriteRenderer>();
+            animator = this.GetComponent<Animator>();
             if(instance != null) Destroy(this);
             DontDestroyOnLoad(this);
         }
