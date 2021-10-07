@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour {
     [SerializeField] private bool enableGizmo;
     [Range(0f, 25f)] [SerializeField] private float cubeHeight = 5f;
     [Range(0f, 25f)] [SerializeField] private float cubeWidth = 5f;
-    private float spawnTime = 3f;
+    [SerializeField] private float spawnTime = 3f;
     private Vector3 spawnPosition;
     private Vector3 sizeOfCube;
 

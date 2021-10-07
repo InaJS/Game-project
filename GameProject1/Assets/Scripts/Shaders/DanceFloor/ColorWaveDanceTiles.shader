@@ -74,6 +74,7 @@ Shader "Unlit/ColorWave"
             fixed4 frag(v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
+                // The idea is to use a BW mask and recolor it within the shader using simple waves
 
                 col.r *= _RedAmplitude * sin01(_TimeOffset +_Time.y * _RedFrequency);
                 col.g *= _GreenAmplitude * sin01(_TimeOffset + _Time.y * _GreenFrequency);

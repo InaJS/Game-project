@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080362520449931556}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -49,9 +49,9 @@ MonoBehaviour:
   tilesHolder: {fileID: 0}
   tileScale: 0.7
   horizontalCount: 8
-  horizontalSpacing: 3
+  horizontalSpacing: 3.3
   vertitalCount: 7
-  vertitalSpacing: 3
+  vertitalSpacing: 3.1
 --- !u!114 &1701330233523875362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,9 +64,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b71ccba2ab9474f82af1cb28a5d557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  organizer: {fileID: 1080362520449931558}
+  tileLights:
+  - renderers:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    lightGroupMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
+  - renderers:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    lightGroupMaterial: {fileID: 2100000, guid: ae6e82460409aab45bfae6baea3d23c3, type: 2}
+  - renderers:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    lightGroupMaterial: {fileID: 2100000, guid: 656bcd547c9b45d4497d96b0ea11e1d7, type: 2}
+  - renderers:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    lightGroupMaterial: {fileID: 2100000, guid: 0db43fea1a22c7143a52a0e6db0fbcba, type: 2}
+  timeOffset: 0.4
+  useRandomFill: 0
   lightGroupCount: 4
-  tileLights: []
 --- !u!114 &1080362520449931561
 MonoBehaviour:
   m_ObjectHideFlags: 0
