@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c883e4bd69e784f8b77ad9946fc0fc, type: 3}
   m_Name: ToGameOver
   m_EditorClassIdentifier: 
-  sceneName: LoseScreen
+  sceneName: 3_LoseScreen

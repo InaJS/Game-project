@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c883e4bd69e784f8b77ad9946fc0fc, type: 3}
-  m_Name: ToDanceFloor
+  m_Name: ToLevelArena
   m_EditorClassIdentifier: 
-  sceneName: LevelArena
+  sceneName: 2_LevelArena

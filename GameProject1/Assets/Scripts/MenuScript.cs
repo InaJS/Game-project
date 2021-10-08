@@ -13,13 +13,13 @@ public class MenuScript : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("LevelArena");
+        SceneManager.LoadScene("2_LevelArena");
 
     }
 
     public void Disclaimer()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("1_StartMenu");
     }
     
     //Quit the Application.
