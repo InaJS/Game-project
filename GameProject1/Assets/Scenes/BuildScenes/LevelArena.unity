@@ -10923,6 +10923,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: enableGizmo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: enemyWaveList.Array.size
       value: 1
       objectReference: {fileID: 0}
