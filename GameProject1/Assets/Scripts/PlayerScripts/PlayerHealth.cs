@@ -54,9 +54,9 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
+            
             int damage = (int) enemy.GetDamage();
-            this.DamagePlayer(damage);
-            // attack = StartCoroutine(attackTimer());
+            DamagePlayer(damage);
         }
     }
 }
