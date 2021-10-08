@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("XSpeed", horizontal);
         animator.SetFloat("YSpeed", vertical);
         //Do not touch!!
+        
+        
     }
 
     private void FixedUpdate()

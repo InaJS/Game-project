@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2875840601992728628}
   - component: {fileID: 2875840601992728629}
   - component: {fileID: 2875840601992728630}
-  - component: {fileID: 2206763723662411157}
   - component: {fileID: -5698239151902676787}
   m_Layer: 0
   m_Name: Jock
@@ -114,18 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageDelay: 1
   damageAmount: 1
---- !u!114 &2206763723662411157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2875840601992728627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d6624edae05a6408e5ccf839b6178f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   enemyHealth: 5
 --- !u!114 &-5698239151902676787
 MonoBehaviour:

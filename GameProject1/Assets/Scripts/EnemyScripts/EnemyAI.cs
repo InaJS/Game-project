@@ -4,22 +4,37 @@ using System.Collections.Generic;
 using Bolt;
 using UnityEngine;
 
-public class EnemyOnCollision : MonoBehaviour {
+public class EnemyAI : MonoBehaviour {
     [Tooltip("How often the player will take damage")]
     [SerializeField] private float damageDelay = 1f;
     [SerializeField] private float damageAmount;
+    [SerializeField] private int enemyHealth = 5;
 
     private Coroutine attack;
     private float time = 1f;
-    private PlayerHealth playerHealth;
+    private PlayerHealth player;
+
 
     private void Awake() {
-        playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
-        
-        // I believe you werent familiar with "find of type"?
-        // I changed this mostly because the readability was bad, but also because "find of type" is probably faster 
+        // I changed the check for damage to be a responsibility of the player scripts
         // old code for reference
         // playerHealth = GameObject.Find("Player").GetComponent <PlayerHealth>();
+    }
+
+    public float GetDamage()
+    {
+        return damageAmount;
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision) {
+        // I moved some of the stuff from the enemy health script into this one, because there were some
+        // repeated trigger-enter checks
+        if (collision.gameObject.CompareTag("Projectile")) {
+            enemyHealth--;
+            if (enemyHealth <= 0) {
+                Destroy(gameObject);
+            }
+        }
     }
     
     // private IEnumerator attackTimer() {
@@ -34,17 +49,6 @@ public class EnemyOnCollision : MonoBehaviour {
     //     }
     // }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Projectile")) {
-                // Debug.Log("Enemy has been Hit!");
-        }
-        
-        if (collision.gameObject.CompareTag("Player")) {
-                // Debug.Log("Player has been hit!");
-                collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damageAmount);
-                // attack = StartCoroutine(attackTimer());
-        }
-    }
 
     // private void OnTriggerExit2D(Collider2D other) {
     //     if (other.gameObject.CompareTag("Player")) {

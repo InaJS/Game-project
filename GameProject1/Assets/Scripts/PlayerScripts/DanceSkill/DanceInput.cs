@@ -53,8 +53,7 @@ public class DanceInput : MonoBehaviour
         
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = timerInternal >= currentSongBpm.value - inputErrorMargin.value &&
-                                 timerInternal <= currentSongBpm.value;
+        bool withinInputWindow = (timerInternal >= currentSongBpm.value - inputErrorMargin.value && timerInternal <= currentSongBpm.value) || timerInternal < inputErrorMargin.value;
 
         if (Input.GetButtonDown(danceButtonName))
         {

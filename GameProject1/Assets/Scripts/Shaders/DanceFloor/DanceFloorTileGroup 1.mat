@@ -69,13 +69,14 @@ Material:
     - _DelayBetweenFlashes: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlashDuration: 0.2
+    - _FlashDuration: 0.15
     - _FlashStrength: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GreenAmplitude: 1
     - _GreenFrequency: 0.7
+    - _LoadingTimeOffset: 0.15
     - _Metallic: 0
     - _MinAlpha: 0.4
     - _MinAlphaValue: 0.8

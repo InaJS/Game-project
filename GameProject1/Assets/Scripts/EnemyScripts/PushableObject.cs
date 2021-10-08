@@ -13,7 +13,7 @@ public class PushableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(this.gameObject.tag) || other.CompareTag("Untagged"))
+        if (!other.CompareTag("Dance"))
         {
            return; 
         }

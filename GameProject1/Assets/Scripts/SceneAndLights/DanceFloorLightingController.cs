@@ -94,13 +94,15 @@ public class DanceFloorLightingController : MonoBehaviour
 
     private void SetDanceFloorColor(Color color)
     {
-        for (int i = 0; i < tileLights.Count; i++)
-        {
-            foreach (SpriteRenderer spriteRenderer in tileLights[i].renderers)
-            {
-                spriteRenderer.sharedMaterial.SetColor("_Color", color);
-            }
-        }
+        singleGroupMaterial.SetColor("_Color", color);
+        
+        // for (int i = 0; i < tileLights.Count; i++)
+        // {
+        //     foreach (SpriteRenderer spriteRenderer in tileLights[i].renderers)
+        //     {
+        //         spriteRenderer.sharedMaterial.SetColor("_Color", color);
+        //     }
+        // }
     }
 
     // private void OnValidate() TODO

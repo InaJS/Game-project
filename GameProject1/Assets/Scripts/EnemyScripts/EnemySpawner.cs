@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour {
-    [SerializeField] private List <EnemyOnCollision> enemyList = new List <EnemyOnCollision>();
+    [SerializeField] private List <EnemyAI> enemyList = new List <EnemyAI>();
     [SerializeField] private bool enableGizmo;
     [Range(0f, 25f)] [SerializeField] private float cubeHeight = 5f;
     [Range(0f, 25f)] [SerializeField] private float cubeWidth = 5f;
