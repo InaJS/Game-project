@@ -86,8 +86,8 @@ Shader "Unlit/ColorWaveDanceTiles"
 
                 float alpha = - timeBetweenPeaks / w + 1 + w;
 
-                float result = frac(alpha - w + (value / w));
-                return saturate(result);
+                float result = frac(saturate(alpha - w + (value / w)));
+                return result;
             }
 
             float sin01(float value)
@@ -104,11 +104,11 @@ Shader "Unlit/ColorWaveDanceTiles"
                 col.g *= _GreenAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _GreenFrequency);
                 col.b *= _BlueAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _BlueFrequency);
 
-                // col.rgb *= _BrightnessAmplitude * fracWave(_TimeOffset + _Time.y, 1/_BrightnessFrequency,_BrightnessDuration);
-                col.rgb *= _BrightnessAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _BrightnessFrequency) + _MinBrightness;
+                col.rgb *= _BrightnessAmplitude * fracWave(_TimeOffset + _Time.y, 1/_BrightnessFrequency,_BrightnessDuration);
+                // col.rgb *= _BrightnessAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI * _BrightnessFrequency) + _MinBrightness;
 
-                // col.a *= _AlphaAmplitude * fracWave(_TimeOffset + _Time.y, 1/_AlphaFrequency,_AlphaDuration) + _MinAlpha;
-                col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI  * _AlphaFrequency) + _MinAlpha;
+                col.a *= _AlphaAmplitude * fracWave(_TimeOffset + _Time.y, 1/_AlphaFrequency,_AlphaDuration) + _MinAlpha;
+                // col.a *= _AlphaAmplitude * sin01(_TimeOffset + _Time.y * UNITY_TWO_PI  * _AlphaFrequency) + _MinAlpha;
 
                 // https://www.desmos.com/calculator/n1stbulhpe
                 
