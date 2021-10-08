@@ -29,7 +29,7 @@ public class EnemyFire : MonoBehaviour
 
             GameObject ShootEffect = Instantiate(ShootEffectPrefab, EnemyFirePoint.position, EnemyFirePoint.rotation);
             Destroy(ShootEffect, 1f);
-            FindObjectOfType<AudioManager>().Play("EnemyShot1");
+            // FindObjectOfType<AudioManager>().Play("EnemyShot1");
         }
         else
         {
