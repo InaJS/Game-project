@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3948adfbc312d6f4e92e2d566de3f59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: 2_LevelArena
   blackScreen: {fileID: 3315606066892808163}
   fadeTime: 1
 --- !u!222 &3315606066892808160

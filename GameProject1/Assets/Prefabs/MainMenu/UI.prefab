@@ -1043,10 +1043,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionFade
       objectReference: {fileID: 0}
-    - target: {fileID: 3315606066892808161, guid: 9b41676bf34d7a042ba7fa8c81ed403b, type: 3}
-      propertyPath: sceneName
-      value: LevelArena
-      objectReference: {fileID: 0}
     - target: {fileID: 3315606066892808162, guid: 9b41676bf34d7a042ba7fa8c81ed403b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
