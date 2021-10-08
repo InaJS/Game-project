@@ -57,30 +57,35 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaAmplitude: 1
-    - _AlphaDuration: 0.79
+    - _AlphaDuration: 0.2
     - _AlphaFrequency: 1
-    - _BlueAmplitude: 1.2
-    - _BlueFrequency: 0.8
-    - _BrightnessAmplitude: 0.9
-    - _BrightnessDuration: 1
+    - _BlueAmplitude: 1
+    - _BlueFrequency: 0.2
+    - _BrightnessAmplitude: 1
+    - _BrightnessDuration: 0.2
     - _BrightnessFrequency: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _DelayBetweenFlashes: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FlashDuration: 0.2
+    - _FlashStrength: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GreenAmplitude: 1.3
-    - _GreenFrequency: 0.5
+    - _GreenAmplitude: 1
+    - _GreenFrequency: 0.7
     - _Metallic: 0
-    - _MinAlpha: 0.3
-    - _MinBrightness: 0.2
+    - _MinAlpha: 0.4
+    - _MinAlphaValue: 0.8
+    - _MinBrightness: 0.1
+    - _MinColorValue: 0.4
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RedAmplitude: 1.5
-    - _RedFrequency: 0.3
+    - _RedAmplitude: 1
+    - _RedFrequency: 0.9
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -88,6 +93,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.19686721, g: 0.5283019, b: 0.22806107, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

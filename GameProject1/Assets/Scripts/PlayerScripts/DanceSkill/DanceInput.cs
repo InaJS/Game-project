@@ -25,7 +25,7 @@ public class DanceInput : MonoBehaviour
         // 1. raise both timers and update the debug.text
         
         timerInternal += Time.deltaTime;
-        // debugTimerText.text = timerInternal.ToString();
+        debugTimerText.text = timerInternal.ToString();
 
         if (blockedTime > 0)
         {
