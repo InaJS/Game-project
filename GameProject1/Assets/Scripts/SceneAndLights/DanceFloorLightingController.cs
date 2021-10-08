@@ -9,7 +9,7 @@ public class DanceFloorLightingController : MonoBehaviour
     private FloorOrganizer organizer;
     [SerializeField] private List<LightGroup> tileLights;
     [SerializeField] private float timeOffset;
-    [SerializeField] private FloatValue timeDelay;
+    [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private FloatValue flashDuration;
     [SerializeField] private Color correctColor;
     [SerializeField] private Color wrongColor;
@@ -76,7 +76,7 @@ public class DanceFloorLightingController : MonoBehaviour
             {
                 spriteRenderer.sharedMaterial = tileLights[i].lightGroupMaterial;
                 spriteRenderer.sharedMaterial.SetFloat("_TimeOffset", i * timeOffset);
-                spriteRenderer.sharedMaterial.SetFloat("_DelayBetweenFlashes", timeDelay.value);
+                spriteRenderer.sharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.value);
                 spriteRenderer.sharedMaterial.SetFloat("_FlashDuration", flashDuration.value);
             }
         }

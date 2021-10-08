@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DanceInput : MonoBehaviour
 {
     [SerializeField] private string danceButtonName;
-    [SerializeField] private FloatValue timeBetweenBeats;
+    [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
     [SerializeField] private Text debugTimerText;
@@ -35,7 +35,7 @@ public class DanceInput : MonoBehaviour
 
         // 2. then try to reset the timer if it's over the tempo
         
-        bool passedInputWindow = timerInternal > timeBetweenBeats.value;
+        bool passedInputWindow = timerInternal > currentSongBpm.value;
 
         if (passedInputWindow)
         {
@@ -53,8 +53,8 @@ public class DanceInput : MonoBehaviour
         
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = timerInternal >= timeBetweenBeats.value - inputErrorMargin.value &&
-                                 timerInternal <= timeBetweenBeats.value;
+        bool withinInputWindow = timerInternal >= currentSongBpm.value - inputErrorMargin.value &&
+                                 timerInternal <= currentSongBpm.value;
 
         if (Input.GetButtonDown(danceButtonName))
         {

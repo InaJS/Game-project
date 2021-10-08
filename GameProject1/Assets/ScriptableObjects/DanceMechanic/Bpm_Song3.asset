@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8084438d3edec7e478a5f1cfba0ff135, type: 3}
-  m_Name: Song2BeatTiming
+  m_Script: {fileID: 11500000, guid: 47824ed257aa40c8ac66d91860c6f81e, type: 3}
+  m_Name: Bpm_Song3
   m_EditorClassIdentifier: 
-  value: 1
+  bpm: 140
+  value: 0.42857143
