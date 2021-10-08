@@ -89,6 +89,9 @@ TextureImporter:
   - first:
       213: -6989156353922179008
     second: Joker Sprite Sheet_29
+  - first:
+      213: 191711463136017530
+    second: Joker Sprite Sheet_28
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -181,10 +184,10 @@ TextureImporter:
       name: Joker Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 160
-        y: 2422
-        width: 165
-        height: 453
+        x: 0
+        y: 2400
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +205,10 @@ TextureImporter:
       name: Joker Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 640
-        y: 2422
-        width: 166
-        height: 453
+        x: 480
+        y: 2400
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +226,10 @@ TextureImporter:
       name: Joker Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 2422
-        width: 166
-        height: 453
+        x: 960
+        y: 2400
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +247,10 @@ TextureImporter:
       name: Joker Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 1588
-        y: 2422
-        width: 172
-        height: 453
+        x: 1440
+        y: 2400
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +268,10 @@ TextureImporter:
       name: Joker Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 2069
-        y: 2422
-        width: 171
-        height: 453
+        x: 1920
+        y: 2400
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +289,10 @@ TextureImporter:
       name: Joker Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 148
-        y: 1943
-        width: 172
-        height: 453
+        x: 0
+        y: 1920
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +310,10 @@ TextureImporter:
       name: Joker Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 640
-        y: 1943
-        width: 159
-        height: 453
+        x: 480
+        y: 1920
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +331,10 @@ TextureImporter:
       name: Joker Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 1943
-        width: 190
-        height: 453
+        x: 960
+        y: 1920
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +352,10 @@ TextureImporter:
       name: Joker Sprite Sheet_8
       rect:
         serializedVersion: 2
-        x: 1601
-        y: 1943
-        width: 159
-        height: 453
+        x: 1440
+        y: 1920
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +373,10 @@ TextureImporter:
       name: Joker Sprite Sheet_9
       rect:
         serializedVersion: 2
-        x: 2080
-        y: 1943
-        width: 160
-        height: 453
+        x: 1920
+        y: 1920
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +394,10 @@ TextureImporter:
       name: Joker Sprite Sheet_10
       rect:
         serializedVersion: 2
-        x: 130
-        y: 1462
-        width: 190
-        height: 454
+        x: 0
+        y: 1440
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +415,10 @@ TextureImporter:
       name: Joker Sprite Sheet_11
       rect:
         serializedVersion: 2
-        x: 640
-        y: 1462
-        width: 159
-        height: 454
+        x: 480
+        y: 1440
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +436,10 @@ TextureImporter:
       name: Joker Sprite Sheet_12
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 1462
-        width: 160
-        height: 430
+        x: 960
+        y: 1440
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +457,10 @@ TextureImporter:
       name: Joker Sprite Sheet_13
       rect:
         serializedVersion: 2
-        x: 1511
-        y: 1462
-        width: 249
-        height: 430
+        x: 1440
+        y: 1440
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,10 +478,10 @@ TextureImporter:
       name: Joker Sprite Sheet_14
       rect:
         serializedVersion: 2
-        x: 2020
-        y: 1462
-        width: 220
-        height: 430
+        x: 1920
+        y: 1440
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +499,10 @@ TextureImporter:
       name: Joker Sprite Sheet_15
       rect:
         serializedVersion: 2
-        x: 160
-        y: 982
-        width: 160
-        height: 429
+        x: 0
+        y: 960
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +520,10 @@ TextureImporter:
       name: Joker Sprite Sheet_16
       rect:
         serializedVersion: 2
-        x: 640
-        y: 982
-        width: 249
-        height: 429
+        x: 480
+        y: 960
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,10 +541,10 @@ TextureImporter:
       name: Joker Sprite Sheet_17
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 982
-        width: 219
-        height: 429
+        x: 960
+        y: 960
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +562,10 @@ TextureImporter:
       name: Joker Sprite Sheet_18
       rect:
         serializedVersion: 2
-        x: 1577
-        y: 982
-        width: 183
-        height: 429
+        x: 1440
+        y: 960
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +583,10 @@ TextureImporter:
       name: Joker Sprite Sheet_19
       rect:
         serializedVersion: 2
-        x: 2027
-        y: 982
-        width: 213
-        height: 429
+        x: 1920
+        y: 960
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +604,10 @@ TextureImporter:
       name: Joker Sprite Sheet_20
       rect:
         serializedVersion: 2
-        x: 160
-        y: 503
-        width: 160
-        height: 429
+        x: 0
+        y: 480
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,10 +625,10 @@ TextureImporter:
       name: Joker Sprite Sheet_21
       rect:
         serializedVersion: 2
-        x: 635
-        y: 503
-        width: 183
-        height: 429
+        x: 480
+        y: 480
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +646,10 @@ TextureImporter:
       name: Joker Sprite Sheet_22
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 503
-        width: 214
-        height: 429
+        x: 960
+        y: 480
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +667,10 @@ TextureImporter:
       name: Joker Sprite Sheet_23
       rect:
         serializedVersion: 2
-        x: 1594
-        y: 503
-        width: 166
-        height: 429
+        x: 1440
+        y: 480
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,10 +688,10 @@ TextureImporter:
       name: Joker Sprite Sheet_24
       rect:
         serializedVersion: 2
-        x: 2080
-        y: 503
-        width: 160
-        height: 453
+        x: 1920
+        y: 480
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +709,10 @@ TextureImporter:
       name: Joker Sprite Sheet_25
       rect:
         serializedVersion: 2
-        x: 160
-        y: 22
-        width: 160
-        height: 454
+        x: 0
+        y: 0
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -727,10 +730,10 @@ TextureImporter:
       name: Joker Sprite Sheet_26
       rect:
         serializedVersion: 2
-        x: 640
-        y: 22
-        width: 159
-        height: 454
+        x: 480
+        y: 0
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,10 +751,10 @@ TextureImporter:
       name: Joker Sprite Sheet_27
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 22
-        width: 160
-        height: 454
+        x: 960
+        y: 0
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,13 +769,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Joker Sprite Sheet_29
+      name: Joker Sprite Sheet_28
       rect:
         serializedVersion: 2
-        x: 1497
-        y: 64
-        width: 383
-        height: 372
+        x: 1440
+        y: 0
+        width: 480
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -780,8 +783,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040edc48357810f90800000000000000
-      internalID: -6989156353922179008
+      spriteID: a7cb79b5f8819a200800000000000000
+      internalID: 191711463136017530
       vertices: []
       indices: 
       edges: []
