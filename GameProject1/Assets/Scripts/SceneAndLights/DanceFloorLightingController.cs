@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(FloorOrganizer))]public class DanceFloorLightingController : MonoBehaviour
+[RequireComponent(typeof(FloorOrganizer))]
+public class DanceFloorLightingController : MonoBehaviour
 {
     private FloorOrganizer organizer;
     [SerializeField] private List<LightGroup> tileLights;
     [SerializeField] private float timeOffset;
+    [SerializeField] private FloatValue timeDelay;
+    [SerializeField] private FloatValue flashDuration;
+    [SerializeField] private Color correctColor;
+    [SerializeField] private Color wrongColor;
+
     [Header("If using random")]
     [SerializeField] private bool useRandomFill;
     [Range(1, 10)] [SerializeField] private int lightGroupCount;
+    
+    [Header("If using single")]
+    [SerializeField] private bool useSingleLight;
+    [SerializeField] private Material singleGroupMaterial;
 
     private void Awake()
     {
@@ -45,17 +55,50 @@ using Random = UnityEngine.Random;
             }
         }
 
-        SetGroupLightsTimeOffset();
+        if (useSingleLight)
+        {
+            tileLights.Clear(); 
+            tileLights = new List<LightGroup>();
+            tileLights.Add(new LightGroup());
+            // tileLights[0].renderers = new List<SpriteRenderer>(organizer.Tiles.Count);
+            tileLights[0].renderers = organizer.Tiles;
+            tileLights[0].lightGroupMaterial = singleGroupMaterial;
+        }
+
+        SetGroupLightsTime();
     }
 
-    private void SetGroupLightsTimeOffset()
+    private void SetGroupLightsTime()
     {
         for (int i = 0; i < tileLights.Count; i++)
         {
-            foreach (var spriteRenderer in tileLights[i].renderers)
+            foreach (SpriteRenderer spriteRenderer in tileLights[i].renderers)
             {
                 spriteRenderer.sharedMaterial = tileLights[i].lightGroupMaterial;
                 spriteRenderer.sharedMaterial.SetFloat("_TimeOffset", i * timeOffset);
+                spriteRenderer.sharedMaterial.SetFloat("_DelayBetweenFlashes", timeDelay.value);
+                spriteRenderer.sharedMaterial.SetFloat("_FlashDuration", flashDuration.value);
+            }
+        }
+    }
+
+    public void SetCorrectColor()
+    {
+        SetDanceFloorColor(correctColor);
+    }
+    
+    public void SetWrongColor()
+    {
+        SetDanceFloorColor(wrongColor);
+    }
+
+    private void SetDanceFloorColor(Color color)
+    {
+        for (int i = 0; i < tileLights.Count; i++)
+        {
+            foreach (SpriteRenderer spriteRenderer in tileLights[i].renderers)
+            {
+                spriteRenderer.sharedMaterial.SetColor("_Color", color);
             }
         }
     }

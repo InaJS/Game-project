@@ -47,11 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 3106313529502463325, guid: 1607d974289e0f44780b2f6e767f4598, type: 3}
   tilesHolder: {fileID: 0}
-  tileScale: 0.7
-  horizontalCount: 8
-  horizontalSpacing: 3.3
-  vertitalCount: 7
-  vertitalSpacing: 3.1
+  tileScale: 0.6
+  tiles: []
+  horizontalCount: 12
+  horizontalSpacing: 2.2
+  vertitalCount: 9
+  vertitalSpacing: 2.2
 --- !u!114 &1701330233523875362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,74 +65,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b71ccba2ab9474f82af1cb28a5d557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileLights:
-  - renderers:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    lightGroupMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
-  - renderers:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    lightGroupMaterial: {fileID: 2100000, guid: ae6e82460409aab45bfae6baea3d23c3, type: 2}
-  - renderers:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    lightGroupMaterial: {fileID: 2100000, guid: 656bcd547c9b45d4497d96b0ea11e1d7, type: 2}
-  - renderers:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    lightGroupMaterial: {fileID: 2100000, guid: 0db43fea1a22c7143a52a0e6db0fbcba, type: 2}
-  timeOffset: 0.4
+  tileLights: []
+  timeOffset: 0.3
+  timeDelay: {fileID: 11400000, guid: 0c2b0f653dcf43e479663d737ae8decd, type: 2}
+  flashDuration: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
+  correctColor: {r: 0.38437277, g: 0.8113208, b: 0.35590956, a: 1}
+  wrongColor: {r: 0.5566038, g: 0.06038627, b: 0.06038627, a: 1}
   useRandomFill: 0
   lightGroupCount: 4
+  useSingleLight: 1
+  singleGroupMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
 --- !u!114 &1080362520449931561
 MonoBehaviour:
   m_ObjectHideFlags: 0

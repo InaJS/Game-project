@@ -43,9 +43,9 @@ public class DanceInput : MonoBehaviour
             {
                 onNoInput.Invoke();
             }
-            
+
             timerInternal = 0;
-            
+
             dancedOnTime = false;
             dancedOutOfTime = false;
             return;
@@ -62,12 +62,14 @@ public class DanceInput : MonoBehaviour
             {
                 onCorrectInput.Invoke();
                 dancedOnTime = true;
+                Debug.Log("danced on time");
             }
             else
             {
                 onWrongInput.Invoke();
                 blockedTime = disableTime.value; // blocks the input for N seconds
                 dancedOutOfTime = true;
+                Debug.Log("danced out of time");
             }
         }
     }

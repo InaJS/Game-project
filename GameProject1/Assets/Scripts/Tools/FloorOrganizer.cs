@@ -8,7 +8,7 @@ public class FloorOrganizer : MonoBehaviour
     [SerializeField] private SpriteRenderer tilePrefab;
     [SerializeField] private GameObject tilesHolder;
     [SerializeField] private float tileScale;
-    private List<SpriteRenderer> tiles = new List<SpriteRenderer>();
+    [SerializeField] private List<SpriteRenderer> tiles = new List<SpriteRenderer>();
 
     public List<SpriteRenderer> Tiles => tiles;
 
@@ -38,6 +38,15 @@ public class FloorOrganizer : MonoBehaviour
                 newTile.gameObject.name = "(" + i + "," + j + ")";
                 tiles.Add(newTile);
             }
+        }
+    }
+
+    private void Awake()
+    {
+        // This should not be necessary, I don't know why the list is being cleared on play though
+        foreach (Transform transform in tilesHolder.transform)
+        {
+            tiles.Add(transform.gameObject.GetComponent<SpriteRenderer>());
         }
     }
 }

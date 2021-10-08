@@ -36,11 +36,11 @@ public class EnemyOnCollision : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Projectile")) {
-                Debug.Log("Enemy has been Hit!");
+                // Debug.Log("Enemy has been Hit!");
         }
         
         if (collision.gameObject.CompareTag("Player")) {
-                Debug.Log("Player has been hit!");
+                // Debug.Log("Player has been hit!");
                 collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(damageAmount);
                 // attack = StartCoroutine(attackTimer());
         }

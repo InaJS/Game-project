@@ -10,6 +10,7 @@ Shader "Unlit/ColorWaveDanceTiles"
         _FlashStrength ("Flash Strength", float) = 1
         _DelayBetweenFlashes ("Delay Time", float) = 1
         _FlashDuration ("Flash Duration", float) = 1
+        
         _MinColorValue ("Minimum color", float) = 0.1
         _MinAlphaValue ("Minimum alpha", float) = 0.1
     }
@@ -81,12 +82,13 @@ Shader "Unlit/ColorWaveDanceTiles"
             fixed4 frag(v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
-                
                 // The idea is to use a BW mask and recolor it within the shader using simple waves
 
-                col.rgb *= _Color.xyz * _FlashStrength * spikeWave(frac((_TimeOffset + _Time.y)/_DelayBetweenFlashes), _FlashDuration/_DelayBetweenFlashes) + _MinColorValue;
+                float time = frac((_TimeOffset + _Time.y)/_DelayBetweenFlashes);
+                float flashDuration = _FlashDuration/_DelayBetweenFlashes;
 
-                col.a *= _FlashStrength * spikeWave(frac((_TimeOffset + _Time.y)/_DelayBetweenFlashes), _FlashDuration/_DelayBetweenFlashes) + _MinAlphaValue;
+                col.rgb *= _Color.xyz * _FlashStrength * spikeWave(time, flashDuration) + _MinColorValue;
+                col.a *= _FlashStrength * spikeWave(time, flashDuration) + _MinAlphaValue;
 
                 // https://www.desmos.com/calculator/n1stbulhpe
                 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using ExtensionMethods;
 using UnityEngine;
 
-[RequireComponent(typeof(PolygonCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 public class HitboxGenerator : MonoBehaviour
 {
     [Range(0.05f, 0.5f)] [SerializeField] private float duration;
