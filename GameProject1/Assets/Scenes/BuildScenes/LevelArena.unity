@@ -10854,6 +10854,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1531713110}
     m_Modifications:
+    - target: {fileID: 7278505509907261826, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: spawnZones.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278505509907261826, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: spawnZones.Array.data[0].Width
+      value: 11.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278505509907261826, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: spawnZones.Array.data[1].Width
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278505509907261826, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: spawnZones.Array.data[0].Height
+      value: 15.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278505509907261826, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: spawnZones.Array.data[1].Height
+      value: 11.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7745658061841121456, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: m_Name
       value: Crowd
