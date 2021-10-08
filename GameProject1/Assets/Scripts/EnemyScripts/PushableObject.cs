@@ -13,6 +13,10 @@ public class PushableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag(this.gameObject.tag) || other.CompareTag("Untagged"))
+        {
+           return; 
+        }
         Vector3 pushDirection = this.transform.position - other.transform.position;
         TryPush(pushDirection,bouncyness + pushBuff.value,stunTime);
     }
@@ -24,12 +28,13 @@ public class PushableObject : MonoBehaviour
             return;
         }
 
-        isBeingPushed = true;
         StartCoroutine(Push(dir.normalized, force, duration));
     }
 
     private IEnumerator Push(Vector3 dir, float force, float duration)
     {
+        isBeingPushed = true;
+        
         while (duration > 0)
         {
             transform.position += dir * force * Time.deltaTime;

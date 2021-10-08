@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour {
     [SerializeField] private float playerHealth = 10f;
     [Tooltip("How often the player can get damaged")]
     [SerializeField]private float damageDelay = 1f;
+    [SerializeField]private UnityEvent onDeath;
 
     private float currentPlayerHealth;
 
@@ -30,10 +32,12 @@ public class PlayerHealth : MonoBehaviour {
         currentPlayerHealth = 10f;
     }
 
-    void Update() {
+    void Update() 
+    {
         if (currentPlayerHealth <= 0 && isDead == false) {
             isDead = true;
             Debug.Log("Cringe, you died :I");
+            onDeath.Invoke();
         }
     }
 }

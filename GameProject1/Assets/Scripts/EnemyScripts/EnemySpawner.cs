@@ -22,11 +22,16 @@ public class EnemySpawner : MonoBehaviour {
     void Spawn() {
         spawnPosition.x = Random.Range(transform.position.x - cubeWidth / 2 , transform.position.x + cubeWidth / 2);
         spawnPosition.y = Random.Range(transform.position.y - cubeHeight /2 , transform.position.y + cubeHeight / 2);
+
         Instantiate(enemyList[Random.Range(0, enemyList.Count)], spawnPosition, Quaternion.identity);
     }
 
     private void OnValidate() {
         sizeOfCube = new Vector3(cubeWidth, cubeHeight);
+
+        // Some really cursed transform.scale stuff happened, I just did a minor fix to adjust it
+        // old code for reference
+        // sizeOfCube = new Vector3(cubeWidth, cubeHeight);
     }
 
     private void OnDrawGizmos() {
