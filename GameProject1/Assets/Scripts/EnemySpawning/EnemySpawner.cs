@@ -7,23 +7,22 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private List<EnemyWave> enemyWaveList;
     [SerializeField] private bool enableGizmo;
-    [SerializeField] private List<SpawnZone> spawnZones;
+    [SerializeField] private SpawnZone[] spawnZones;
+    // [SerializeField] private float spawnTime = 3f;
+    [SerializeField] private List<EnemyWave> enemyWaveList;
     
-    [Range(0f, 25f)] [SerializeField] private float cubeHeight = 5f;
-    [Range(0f, 25f)] [SerializeField] private float cubeWidth = 5f;
-    [SerializeField] private float spawnTime = 3f;
+    public List<EnemyWave> EnemyWaveList => enemyWaveList;
 
     private void Start()
     {
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        // InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
     public void SpawnOnZone(SpawnZone zone)
     {
         EnemyWave randomWave = enemyWaveList[Random.Range(0, enemyWaveList.Count)];
-        EnemyAI randomEnemy = randomWave.enemies[Random.Range(0, enemyWaveList.Count)].Enemy;
+        EnemyAI randomEnemy = randomWave.Enemies[Random.Range(0, enemyWaveList.Count)].Enemy;
 
         Spawn(randomEnemy, zone);
     }
@@ -31,8 +30,8 @@ public class EnemySpawner : MonoBehaviour
     void Spawn(EnemyAI enemy, SpawnZone zone)
     {
         Vector3 spawnPosition = new Vector3();
-        spawnPosition.x = Random.Range(transform.position.x - cubeWidth / 2, transform.position.x + cubeWidth / 2);
-        spawnPosition.y = Random.Range(transform.position.y - cubeHeight / 2, transform.position.y + cubeHeight / 2);
+        spawnPosition.x = Random.Range(zone.Center.x - zone.Width / 2, zone.Center.x + zone.Width / 2);
+        spawnPosition.y = Random.Range(zone.Center.y - zone.Height / 2, zone.Center.y + zone.Height / 2);
 
         Instantiate(enemy, spawnPosition, Quaternion.identity);
     }
@@ -56,6 +55,6 @@ public class EnemySpawner : MonoBehaviour
 public class SpawnZone
 {
     public Vector3 Center;
-    [Range(0f, 25f)] public float Width;
-    [Range(0f, 25f)] public float Height;
+    [Range(0f, 50f)] public float Width;
+    [Range(0f, 50f)] public float Height;
 }

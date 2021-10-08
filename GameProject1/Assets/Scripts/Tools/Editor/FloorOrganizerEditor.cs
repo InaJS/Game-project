@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Tools.Editor
 {
     [CanEditMultipleObjects, CustomEditor(typeof(FloorOrganizer))]
-    public class FloorOrganizerWindow : UnityEditor.Editor
+    public class FloorOrganizerEditor : UnityEditor.Editor
     {
         public SerializedObject so;
         public FloorOrganizer reference;

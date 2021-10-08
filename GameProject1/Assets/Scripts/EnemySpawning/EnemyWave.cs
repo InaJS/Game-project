@@ -6,16 +6,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/EnemyWaves")]
 public class EnemyWave : ScriptableObject
 {
-    public List<SpawnInfo> enemies;
+    public List<SpawnInfo> Enemies;
 }
-
-public enum SpawnPosition
+[Serializable] 
+public class SpawnInfo
 {
-    left,down,right
-}
-
-[Serializable] public class SpawnInfo
-{
+    [Tooltip("The enemy prefab to spawn")]
     public EnemyAI Enemy;
-    public SpawnPosition Position;
+    [Tooltip("The zone in which it will spawn (1 = left, 2 = down, 3 = right)")]
+    [Range(1,3)] public int Position = 1;
 }
