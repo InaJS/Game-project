@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1080362520449931559}
   - component: {fileID: 1080362520449931558}
   - component: {fileID: 1701330233523875362}
-  - component: {fileID: 1080362520449931561}
   m_Layer: 0
   m_Name: FloorTilesManager
   m_TagString: Untagged
@@ -75,18 +74,3 @@ MonoBehaviour:
   lightGroupCount: 4
   useSingleLight: 1
   singleGroupMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
---- !u!114 &1080362520449931561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080362520449931556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0adc1604341eab46872c3ad1d65304e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  memo: This requires an Empty game object to work - Unity is weird about destroying/parenting
-    game objects that are childeren to prefabs;
-  lock: 1

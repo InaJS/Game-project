@@ -29,6 +29,7 @@ public class SceneTransitionManager : MonoBehaviour
         }
         
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 0;
     }
     
 }
