@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour {
-    [SerializeField] private List <EnemyAI> enemyList = new List <EnemyAI>();
+    [SerializeField] private List<EnemyWave> enemyWaveList;
     [SerializeField] private bool enableGizmo;
     [Range(0f, 25f)] [SerializeField] private float cubeHeight = 5f;
     [Range(0f, 25f)] [SerializeField] private float cubeWidth = 5f;
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour {
         spawnPosition.x = Random.Range(transform.position.x - cubeWidth / 2 , transform.position.x + cubeWidth / 2);
         spawnPosition.y = Random.Range(transform.position.y - cubeHeight /2 , transform.position.y + cubeHeight / 2);
 
-        Instantiate(enemyList[Random.Range(0, enemyList.Count)], spawnPosition, Quaternion.identity);
+        Instantiate(enemyWaveList[Random.Range(0, enemyWaveList.Count)], spawnPosition, Quaternion.identity);
     }
 
     private void OnValidate() {
