@@ -17,6 +17,10 @@ public class MenuScript : MonoBehaviour
 
     }
 
+    public void Disclaimer()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
     
     //Quit the Application.
     public void Quit()
