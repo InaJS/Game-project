@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1080362520449931559}
   - component: {fileID: 1080362520449931558}
   - component: {fileID: 1701330233523875362}
+  - component: {fileID: 4680801933047553978}
+  - component: {fileID: 2348748311606289083}
   m_Layer: 0
   m_Name: FloorTilesManager
   m_TagString: Untagged
@@ -65,12 +67,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileLights: []
-  timeOffset: 0.05
-  currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
-  flashDuration: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
   correctColor: {r: 0.38437277, g: 0.8113208, b: 0.35590956, a: 1}
   wrongColor: {r: 0.5566038, g: 0.06038627, b: 0.06038627, a: 1}
   useRandomFill: 0
   lightGroupCount: 4
   useSingleLight: 1
   singleGroupMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
+--- !u!114 &4680801933047553978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080362520449931556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 3e9fd23b2e57f264cbeed6ad6b24820e, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1701330233523875362}
+        m_TargetAssemblyTypeName: DanceFloorLightingController, Assembly-CSharp
+        m_MethodName: SetCorrectColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2348748311606289083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080362520449931556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 7c7f7aa72e9d277438b4fb673a12d0d3, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1701330233523875362}
+        m_TargetAssemblyTypeName: DanceFloorLightingController, Assembly-CSharp
+        m_MethodName: SetWrongColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bpm_Song1
   m_EditorClassIdentifier: 
   bpm: 120
-  value: 0.5
+  secsValue: 0.5

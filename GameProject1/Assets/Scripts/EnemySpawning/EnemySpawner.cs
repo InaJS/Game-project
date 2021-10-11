@@ -33,11 +33,12 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
 
-        if (currentWave >= SongWaves.Count)
+        if (currentWave >= SongWaves[currentSong].EnemyWaves.Count)
         {
             currentSong++;
             currentWave = 0;
             onNewSong.Invoke();
+            return;
         }
 
         SpawnWave(SongWaves[currentSong].EnemyWaves[currentWave]);
