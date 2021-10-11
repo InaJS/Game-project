@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -36,6 +37,14 @@ public class EnemySpawner : MonoBehaviour
         if (currentWave >= SongWaves[currentSong].EnemyWaves.Count)
         {
             currentSong++;
+            
+            if (currentSong >= songWaves.Count)
+            {
+                Debug.Log("Victory");
+                SceneManager.LoadScene("4_WinScreen");
+                return;
+            }
+            
             currentWave = 0;
             onNewSong.Invoke();
             return;
