@@ -9105,7 +9105,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.225
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -11099,6 +11099,30 @@ PrefabInstance:
       propertyPath: spawnZones.Array.data[1].Height
       value: 11.7
       objectReference: {fileID: 0}
+    - target: {fileID: 7745658061653930015, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658061653930015, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1669941157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658061666709116, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658061666709116, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658061769871473, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658061769871473, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
     - target: {fileID: 7745658061841121456, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: m_Name
       value: Crowd_EnemySpawner
@@ -11146,6 +11170,70 @@ PrefabInstance:
     - target: {fileID: 7745658061841121457, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062214499810, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062214499810, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062365338394, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062365338394, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062444778454, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062444778454, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1669941157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062647374106, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062647374106, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062726106890, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062726106890, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1669941157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062925712751, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062925712751, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062933687578, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658062933687578, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658063475678852, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745658063475678852, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1176337013
       objectReference: {fileID: 0}
     - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: songWaves.Array.size
