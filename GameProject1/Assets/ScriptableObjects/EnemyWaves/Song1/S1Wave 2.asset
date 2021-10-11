@@ -19,3 +19,7 @@ MonoBehaviour:
     Position: 2
   - Enemy: {fileID: 2875840601992728630, guid: 5126183b586f5a84298894727a0a20d2, type: 3}
     Position: 3
+  - Enemy: {fileID: 3702350968236354255, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
+    Position: 1
+  - Enemy: {fileID: 3702350968236354255, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
+    Position: 3
