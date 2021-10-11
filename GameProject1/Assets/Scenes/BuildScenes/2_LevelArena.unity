@@ -9102,7 +9102,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ee3c1eeedc0af68469056c1954021299, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f2398c5245f59ea4994ffe55e6444b9b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.225
   m_Pitch: 1
@@ -9214,7 +9214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f059748319804646b661387e451d5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songPosition: 0
   currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
   flashDuration: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
   audio: {fileID: 1751549062}
