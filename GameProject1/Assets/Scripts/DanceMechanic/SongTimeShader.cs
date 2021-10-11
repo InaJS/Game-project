@@ -10,7 +10,9 @@ public class SongTimeShader : MonoBehaviour
     [SerializeField] private float songPosInBeats;
     [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private AudioSource audio;
+    [SerializeField] private AudioClip[] songs;
     private float secPerBeat;
+    private int currentSong;
     private float dsptimesong;
 
     private void Awake()
@@ -19,7 +21,6 @@ public class SongTimeShader : MonoBehaviour
         {
             audio = GetComponent<AudioSource>();
         }
-        
     }
 
     void NewSong()
@@ -31,12 +32,13 @@ public class SongTimeShader : MonoBehaviour
         //record the time when the song starts
         dsptimesong = (float) AudioSettings.dspTime;
 
+        audio.clip = songs[currentSong];
         //start the song
         audio.Play();
     }
 
-    private void Update()
-    {
-        throw new NotImplementedException();
-    }
+    // void Update()
+    // {
+    //     songPosition = (float) (AudioSettings.dspTime - dsptimesong);
+    // }
 }

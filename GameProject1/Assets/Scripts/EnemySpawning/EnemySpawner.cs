@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+        currentWave = 0;
         currentSong = 0;
         NewSong();
         enemiesAlive.Clear();
