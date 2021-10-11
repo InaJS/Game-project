@@ -1728,6 +1728,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1043824434703498531, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043824434703498531, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
       propertyPath: spawnZones.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1735,6 +1739,10 @@ PrefabInstance:
       propertyPath: enemyWaveList.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1043824434703498531, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
+      propertyPath: enemyWaveList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
 --- !u!1 &340154299
