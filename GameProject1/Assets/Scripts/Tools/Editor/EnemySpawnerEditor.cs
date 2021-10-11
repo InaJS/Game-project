@@ -19,14 +19,19 @@ public class EnemySpawnerEditor : Editor
 
         for (int i = 0; i < EnemyWaveList.Count; i++)
         {
+            if (EnemyWaveList[i] == null)
+            {
+                continue;
+            }
+
             EnemyWave wave = EnemyWaveList[i];
             EditorGUILayout.LabelField(wave.name);
 
             for (int j = 0; j < wave.Enemies.Count; j++)
             {
                 SpawnInfo spawnInfo = wave.Enemies[j];
-                
-                if(spawnInfo == null || spawnInfo.Enemy == null)
+
+                if (spawnInfo == null || spawnInfo.Enemy == null)
                     continue;
 
                 var positionString = "";
