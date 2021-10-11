@@ -5,47 +5,60 @@ using UnityEngine;
 [CanEditMultipleObjects, CustomEditor(typeof(EnemySpawner))]
 public class EnemySpawnerEditor : Editor
 {
-    public List<EnemyWave> EnemyWaveList;
+    public List<SongWaves> WaveListsPerSong;
 
     private void OnEnable()
     {
         EnemySpawner spawner = (EnemySpawner) target;
-        EnemyWaveList = spawner.EnemyWaveList;
+        WaveListsPerSong = spawner.SongWaves;
     }
 
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
-        for (int i = 0; i < EnemyWaveList.Count; i++)
+        for (int i = 0; i < WaveListsPerSong.Count; i++)
         {
-            if (EnemyWaveList[i] == null)
+            SongWaves song = WaveListsPerSong[i];
+            
+            if (song == null)
             {
                 continue;
             }
 
-            EnemyWave wave = EnemyWaveList[i];
-            EditorGUILayout.LabelField(wave.name);
+            EditorGUILayout.LabelField(song.name);
 
-            for (int j = 0; j < wave.Enemies.Count; j++)
+            for (int j = 0; j < WaveListsPerSong[i].waves.Count; j++)
             {
-                SpawnInfo spawnInfo = wave.Enemies[j];
-
-                if (spawnInfo == null || spawnInfo.Enemy == null)
-                    continue;
-
-                var positionString = "";
-
-                positionString = spawnInfo.Position switch
+                EnemyWave wave = WaveListsPerSong[i].waves[j];
+                
+                if (wave == null)
                 {
-                    1 => "left",
-                    2 => "down",
-                    3 => "right",
-                    _ => positionString
-                };
+                    continue;
+                }
 
-                GUILayout.Label("   Enemy " + j + ": " + spawnInfo?.Enemy?.gameObject.name + " - " + positionString +
-                                " position.");
+                EditorGUILayout.LabelField("    "+ wave.name);
+                
+                for (int k = 0; k < wave.Enemies.Count; k++)
+                {
+                    SpawnInfo spawnInfo = wave.Enemies[k];
+
+                    if (spawnInfo == null || spawnInfo.Enemy == null)
+                        continue;
+
+                    var positionString = "";
+
+                    positionString = spawnInfo.Position switch
+                    {
+                        1 => "left",
+                        2 => "down",
+                        3 => "right",
+                        _ => positionString
+                    };
+
+                    GUILayout.Label("       Enemy " + k + ": " + spawnInfo?.Enemy?.gameObject.name + " - " + positionString +
+                                    " position.");
+                }
             }
         }
     }

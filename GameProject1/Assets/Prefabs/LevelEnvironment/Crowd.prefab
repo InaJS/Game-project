@@ -311,7 +311,12 @@ MonoBehaviour:
     Height: 35
   enemyWaveList:
   - {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
+  - {fileID: 11400000, guid: f884ccdc72fb5554794bd32a190c6303, type: 2}
+  - {fileID: 11400000, guid: 5084930e31507eb448316cdf3157c10f, type: 2}
   enemiesAlive: []
+  onNewSong:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7745658062214499812
 GameObject:
   m_ObjectHideFlags: 0

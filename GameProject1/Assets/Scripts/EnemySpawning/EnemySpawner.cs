@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -9,21 +10,27 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private bool enableGizmo;
     [SerializeField] private SpawnZone[] spawnZones;
-    [SerializeField] private List<EnemyWave> enemyWaveList;
-    [SerializeField] private List<EnemyAI> enemiesAlive;
+    [SerializeField] private List<SongWaves> songWaves;
+    [SerializeField] private UnityEvent onNewSong;
 
-    public List<EnemyWave> EnemyWaveList => enemyWaveList;
+    private List<EnemyAI> enemiesAlive = new List<EnemyAI>();
     private int currentWave = 0;
+    private int currentSong = 0;
+    
+    public List<SongWaves> SongWaves => songWaves;
 
     private void Awake()
     {
+        currentSong = 0;
         NewSong();
         enemiesAlive.Clear();
     }
 
     public void NewSong()
     {
+        onNewSong.Invoke();
         currentWave = 0;
+        currentSong++;
     }
 
     private void Update()
@@ -32,9 +39,13 @@ public class EnemySpawner : MonoBehaviour
         {
             return;
         }
-        
-        SpawnWave(enemyWaveList[currentWave]);
 
+        if (currentWave >= SongWaves.Count)
+        {
+            NewSong();
+        }
+
+        SpawnWave(SongWaves[currentSong].waves[currentWave]);
         currentWave++;
     }
 

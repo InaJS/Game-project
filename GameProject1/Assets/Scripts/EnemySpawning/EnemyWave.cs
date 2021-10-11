@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/EnemyWaves")]
+[CreateAssetMenu(menuName = "ScriptableObjects/EnemySpawn/EnemyWaves")]
 public class EnemyWave : ScriptableObject
 {
     public List<SpawnInfo> Enemies;
