@@ -298,20 +298,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c3adb41a83fbd459f6f15800ddbd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyWaveList:
-  - {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
   enableGizmo: 1
   spawnZones:
-  - Center: {x: 33, y: -8, z: 0}
+  - Center: {x: -25, y: -8, z: 0}
     Width: 5
     Height: 35
   - Center: {x: 4, y: -32, z: 0}
     Width: 47
     Height: 5
-  - Center: {x: -25, y: -8, z: 0}
+  - Center: {x: 33, y: -8, z: 0}
     Width: 5
     Height: 35
-  spawnTime: 0
+  enemyWaveList:
+  - {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
+  enemiesAlive: []
 --- !u!1 &7745658062214499812
 GameObject:
   m_ObjectHideFlags: 0

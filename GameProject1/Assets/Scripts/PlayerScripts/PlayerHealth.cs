@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private UnityEvent onDeath;
 
     private float currentPlayerHealth;
-    
+
     public void DamagePlayer(float damageAmount)
     {
         currentPlayerHealth -= damageAmount;
@@ -45,16 +45,16 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            EnemyAI enemy = other.GetComponent<EnemyAI>();
+            EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
             if (!enemy)
             {
                 return;
             }
-            
+
             int damage = (int) enemy.GetDamage();
             DamagePlayer(damage);
         }

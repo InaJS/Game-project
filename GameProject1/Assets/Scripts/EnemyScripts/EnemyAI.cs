@@ -13,12 +13,14 @@ public class EnemyAI : MonoBehaviour {
     private Coroutine attack;
     private float time = 1f;
     private PlayerHealth player;
+    
+    public delegate void OnDeath();
+
+    public OnDeath onDeath;
 
 
     private void Awake() {
-        // I changed the check for damage to be a responsibility of the player scripts
-        // old code for reference
-        // playerHealth = GameObject.Find("Player").GetComponent <PlayerHealth>();
+        onDeath += () => Destroy(gameObject);
     }
 
     public float GetDamage()
@@ -32,11 +34,11 @@ public class EnemyAI : MonoBehaviour {
         if (collision.gameObject.CompareTag("Projectile")) {
             enemyHealth--;
             if (enemyHealth <= 0) {
-                Destroy(gameObject);
+                onDeath.Invoke();
             }
         }
     }
-    
+
     // private IEnumerator attackTimer() {
     //     while (true) {
     //         if (playerHealth.GetHealth() <= 0) {

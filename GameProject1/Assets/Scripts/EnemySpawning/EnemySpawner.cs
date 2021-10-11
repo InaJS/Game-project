@@ -9,33 +9,54 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private bool enableGizmo;
     [SerializeField] private SpawnZone[] spawnZones;
-    // [SerializeField] private float spawnTime = 3f;
     [SerializeField] private List<EnemyWave> enemyWaveList;
-    
+    [SerializeField] private List<EnemyAI> enemiesAlive;
+
     public List<EnemyWave> EnemyWaveList => enemyWaveList;
+    private int currentWave = 0;
 
-    private void Start()
+    private void Awake()
     {
-        // InvokeRepeating("Spawn", spawnTime, spawnTime);
+        NewSong();
+        enemiesAlive.Clear();
     }
 
-    public void SpawnOnZone(SpawnZone zone)
+    public void NewSong()
     {
-        EnemyWave randomWave = enemyWaveList[Random.Range(0, enemyWaveList.Count)];
-        EnemyAI randomEnemy = randomWave.Enemies[Random.Range(0, enemyWaveList.Count)].Enemy;
-
-        Spawn(randomEnemy, zone);
+        currentWave = 0;
     }
 
-    void Spawn(EnemyAI enemy, SpawnZone zone)
+    private void Update()
+    {
+        if (enemiesAlive.Count > 0)
+        {
+            return;
+        }
+        
+        SpawnWave(enemyWaveList[currentWave]);
+
+        currentWave++;
+    }
+
+    private void SpawnWave(EnemyWave wave)
+    {
+        foreach (SpawnInfo spawnInfo in wave.Enemies)
+        {
+            EnemyAI enemy = Spawn(spawnInfo.Enemy, spawnZones[spawnInfo.Position-1]);
+            enemiesAlive.Add(enemy);
+            enemy.onDeath += () => enemiesAlive.Remove(enemy);
+        }
+    }
+
+    private EnemyAI Spawn(EnemyAI enemy, SpawnZone zone)
     {
         Vector3 spawnPosition = new Vector3();
         spawnPosition.x = Random.Range(zone.Center.x - zone.Width / 2, zone.Center.x + zone.Width / 2);
         spawnPosition.y = Random.Range(zone.Center.y - zone.Height / 2, zone.Center.y + zone.Height / 2);
 
-        Instantiate(enemy, spawnPosition, Quaternion.identity);
+        return Instantiate(enemy, spawnPosition, Quaternion.identity);
     }
-    
+
     private void OnDrawGizmos()
     {
         if (!enableGizmo)
