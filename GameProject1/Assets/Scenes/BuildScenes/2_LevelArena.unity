@@ -1737,10 +1737,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1043824434703498531, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
       propertyPath: enemyWaveList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1043824434703498531, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
       propertyPath: enemyWaveList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
+    - target: {fileID: 1043824434703498531, guid: 8ee93d834de631347b1d1e56701db974, type: 3}
+      propertyPath: enemyWaveList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
     m_RemovedComponents: []
