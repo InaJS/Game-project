@@ -156,8 +156,8 @@ GameObject:
   - component: {fileID: 4679205255910048268}
   - component: {fileID: 2368507965179732025}
   - component: {fileID: 8516657686239002003}
-  - component: {fileID: 7441108525622716312}
   - component: {fileID: 4632435882284748487}
+  - component: {fileID: 3853739202154225965}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -259,80 +259,6 @@ MonoBehaviour:
   fireRate: 5
   bulletPrefab: {fileID: 2727611965551835193, guid: b7963e4bc402f5f4680526b3b1fce194, type: 3}
   bulletStart: {fileID: 1122340965819363496}
---- !u!114 &7441108525622716312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4679205255910048264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57f1c98066c347540a77438deb011fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  danceButtonName: Fire2
-  currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
-  inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
-  disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
-  debugTimerText: {fileID: 0}
-  onCorrectInput:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DanceFloorLightingController, Assembly-CSharp
-        m_MethodName: SetCorrectColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3854382797915682449}
-        m_TargetAssemblyTypeName: DanceColliderActivate, Assembly-CSharp
-        m_MethodName: TriggerHitbox
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onWrongInput:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DanceFloorLightingController, Assembly-CSharp
-        m_MethodName: SetWrongColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onNoInput:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DanceFloorLightingController, Assembly-CSharp
-        m_MethodName: SetWrongColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &4632435882284748487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,9 +276,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
+      - m_Target: {fileID: 11400000, guid: b31b60a0779a07e48acdfc711a09fba2, type: 2}
+        m_TargetAssemblyTypeName: CustomEventSystem.VoidEvent, Assembly-CSharp
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -365,6 +291,34 @@ MonoBehaviour:
       - m_Target: {fileID: 11400000, guid: 044f5c84e4209d14a9d4a4de026a7d60, type: 2}
         m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
         m_MethodName: ChangeToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3853739202154225965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679205255910048264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 3e9fd23b2e57f264cbeed6ad6b24820e, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3854382797915682449}
+        m_TargetAssemblyTypeName: DanceColliderActivate, Assembly-CSharp
+        m_MethodName: TriggerHitbox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

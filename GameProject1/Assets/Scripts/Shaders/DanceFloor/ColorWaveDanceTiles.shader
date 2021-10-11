@@ -54,6 +54,7 @@ Shader "Unlit/ColorWaveDanceTiles"
             float _FlashStrength;
             float _DelayBetweenFlashes;
             float _FlashDuration;
+            
             float _MinColorValue;
             float _MinAlphaValue;
 

@@ -3,29 +3,56 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(PlayerMovement))]
+[RequireComponent(typeof(AudioSource))]
 public class DanceInput : MonoBehaviour
 {
     [SerializeField] private string danceButtonName;
     [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
-    [SerializeField] private Text debugTimerText;
     [SerializeField] private UnityEvent onCorrectInput;
     [SerializeField] private UnityEvent onWrongInput;
     [SerializeField] private UnityEvent onNoInput;
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private Material danceFloorSharedMaterial;
+    [SerializeField] private AudioClip[] songs;
     
     private float timerInternal;
     private float blockedTime;
     private bool dancedOnTime;
     private bool dancedOutOfTime;
+    private float songPosition;
+    private int currentSong;
+    private float audioStartTime;
+
+    private void Awake()
+    {
+        if (audio == null)
+        {
+            audio = GetComponent<AudioSource>();
+        }
+    }
+    
+    void NewSong()
+    {
+        audio.Stop();
+        audioStartTime = (float) AudioSettings.dspTime;
+
+        audio.clip = songs[currentSong];
+        audio.Play();
+        
+        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.secsValue);
+        danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
+    }
     
     void Update()
     {
+        songPosition = (float) (AudioSettings.dspTime - audioStartTime);
+        
+        danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text
         
-        timerInternal += Time.deltaTime;
-        debugTimerText.text = timerInternal.ToString();
+        timerInternal = songPosition % currentSongBpm.secsValue;
 
         if (blockedTime > 0)
         {

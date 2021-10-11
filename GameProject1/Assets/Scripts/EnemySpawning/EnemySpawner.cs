@@ -23,15 +23,7 @@ public class EnemySpawner : MonoBehaviour
     {
         currentWave = 0;
         currentSong = 0;
-        ChangeSong(currentSong);
         enemiesAlive.Clear();
-    }
-
-    public void ChangeSong(int songIndex)
-    {
-        currentSong = songIndex;
-        currentWave = 0;
-        onNewSong.Invoke();
     }
 
     private void Update()
@@ -44,7 +36,8 @@ public class EnemySpawner : MonoBehaviour
         if (currentWave >= SongWaves.Count)
         {
             currentSong++;
-            ChangeSong(currentSong);
+            currentWave = 0;
+            onNewSong.Invoke();
         }
 
         SpawnWave(SongWaves[currentSong].EnemyWaves[currentWave]);
