@@ -11176,7 +11176,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: ca3587a791ae13345bc7803186cd0655, type: 2}
     - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -11185,10 +11185,22 @@ PrefabInstance:
     - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 2573e2025452d9c4e87bd467c4d1f31e, type: 2}
     - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
       propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CustomEventSystem.VoidEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
+      propertyPath: onNewSong.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}

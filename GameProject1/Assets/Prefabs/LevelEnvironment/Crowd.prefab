@@ -309,14 +309,23 @@ MonoBehaviour:
   - Center: {x: 33, y: -8, z: 0}
     Width: 5
     Height: 35
-  enemyWaveList:
-  - {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
-  - {fileID: 11400000, guid: f884ccdc72fb5554794bd32a190c6303, type: 2}
-  - {fileID: 11400000, guid: 5084930e31507eb448316cdf3157c10f, type: 2}
-  enemiesAlive: []
+  songWaves:
+  - {fileID: 11400000, guid: ca3587a791ae13345bc7803186cd0655, type: 2}
   onNewSong:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2573e2025452d9c4e87bd467c4d1f31e, type: 2}
+        m_TargetAssemblyTypeName: CustomEventSystem.VoidEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7745658062214499812
 GameObject:
   m_ObjectHideFlags: 0
