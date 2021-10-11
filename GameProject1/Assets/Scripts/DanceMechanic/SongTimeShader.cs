@@ -6,14 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SongTimeShader : MonoBehaviour
 {
-    [SerializeField] private float songPosition;
-    [SerializeField] private float songPosInBeats;
     [SerializeField] private BpmValue currentSongBpm;
+    [SerializeField] private FloatValue flashDuration;
     [SerializeField] private AudioSource audio;
+    [SerializeField] private Material danceFloorSharedMaterial;
     [SerializeField] private AudioClip[] songs;
-    private float secPerBeat;
+    private float songPosition;
     private int currentSong;
-    private float dsptimesong;
+    private float audioStartTime;
 
     private void Awake()
     {
@@ -25,20 +25,20 @@ public class SongTimeShader : MonoBehaviour
 
     void NewSong()
     {
-        //calculate how many seconds is one beat
-        //we will see the declaration of bpm later
-        secPerBeat = currentSongBpm.secsValue;
-
-        //record the time when the song starts
-        dsptimesong = (float) AudioSettings.dspTime;
+        audio.Stop();
+        audioStartTime = (float) AudioSettings.dspTime;
 
         audio.clip = songs[currentSong];
-        //start the song
         audio.Play();
+        
+        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.secsValue);
+        danceFloorSharedMaterial.SetFloat("_FlashDuration", flashDuration.value);
     }
 
-    // void Update()
-    // {
-    //     songPosition = (float) (AudioSettings.dspTime - dsptimesong);
-    // }
+    void Update()
+    {
+        songPosition = (float) (AudioSettings.dspTime - audioStartTime);
+        
+        danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
+    }
 }

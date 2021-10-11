@@ -9215,9 +9215,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songPosition: 0
-  songPosInBeats: 0
-  currentSongBpm: {fileID: 0}
-  audio: {fileID: 0}
+  currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
+  flashDuration: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
+  audio: {fileID: 1751549062}
+  danceFloorSharedMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
+  songs:
+  - {fileID: 8300000, guid: ee3c1eeedc0af68469056c1954021299, type: 3}
+  - {fileID: 0}
 --- !u!1 &1763749410
 GameObject:
   m_ObjectHideFlags: 0
