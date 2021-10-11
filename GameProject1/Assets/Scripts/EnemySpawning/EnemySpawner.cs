@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
             NewSong();
         }
 
-        SpawnWave(SongWaves[currentSong].waves[currentWave]);
+        SpawnWave(SongWaves[currentSong].EnemyWaves[currentWave]);
         currentWave++;
     }
 

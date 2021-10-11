@@ -28,9 +28,9 @@ public class EnemySpawnerEditor : Editor
 
             EditorGUILayout.LabelField(song.name);
 
-            for (int j = 0; j < WaveListsPerSong[i].waves.Count; j++)
+            for (int j = 0; j < WaveListsPerSong[i].EnemyWaves.Count; j++)
             {
-                EnemyWave wave = WaveListsPerSong[i].waves[j];
+                EnemyWave wave = WaveListsPerSong[i].EnemyWaves[j];
                 
                 if (wave == null)
                 {

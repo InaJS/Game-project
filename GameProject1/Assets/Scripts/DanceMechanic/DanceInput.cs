@@ -35,7 +35,7 @@ public class DanceInput : MonoBehaviour
 
         // 2. then try to reset the timer if it's over the tempo
         
-        bool passedInputWindow = timerInternal > currentSongBpm.value;
+        bool passedInputWindow = timerInternal > currentSongBpm.secsValue;
 
         if (passedInputWindow)
         {
@@ -53,7 +53,7 @@ public class DanceInput : MonoBehaviour
         
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = (timerInternal >= currentSongBpm.value - inputErrorMargin.value && timerInternal <= currentSongBpm.value) || timerInternal < inputErrorMargin.value;
+        bool withinInputWindow = (timerInternal >= currentSongBpm.secsValue - inputErrorMargin.value && timerInternal <= currentSongBpm.secsValue) || timerInternal < inputErrorMargin.value;
 
         if (Input.GetButtonDown(danceButtonName))
         {

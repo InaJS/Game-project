@@ -76,7 +76,7 @@ public class DanceFloorLightingController : MonoBehaviour
             {
                 spriteRenderer.sharedMaterial = tileLights[i].lightGroupMaterial;
                 spriteRenderer.sharedMaterial.SetFloat("_TimeOffset", i * timeOffset);
-                spriteRenderer.sharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.value);
+                spriteRenderer.sharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.secsValue);
                 spriteRenderer.sharedMaterial.SetFloat("_FlashDuration", flashDuration.value);
             }
         }
@@ -95,20 +95,7 @@ public class DanceFloorLightingController : MonoBehaviour
     private void SetDanceFloorColor(Color color)
     {
         singleGroupMaterial.SetColor("_Color", color);
-        
-        // for (int i = 0; i < tileLights.Count; i++)
-        // {
-        //     foreach (SpriteRenderer spriteRenderer in tileLights[i].renderers)
-        //     {
-        //         spriteRenderer.sharedMaterial.SetColor("_Color", color);
-        //     }
-        // }
     }
-
-    // private void OnValidate() TODO
-    // {
-    //     tileLights.Capacity = lightGroupCount;
-    // }
 }
 
 [Serializable]

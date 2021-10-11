@@ -7,7 +7,7 @@ Shader "Unlit/ColorWaveDanceTiles"
 
         _Color("Color", Color) = (1,1,0,1) 
         
-        _LoadingTimeOffset ("Load Offset", float) = 1
+        _SongTime ("Song Time", float) = 0
         _FlashStrength ("Flash Strength", float) = 1
         _DelayBetweenFlashes ("Delay Time", float) = 1
         _FlashDuration ("Flash Duration", float) = 1
@@ -50,7 +50,7 @@ Shader "Unlit/ColorWaveDanceTiles"
 
             float4 _Color;
             
-            float _LoadingTimeOffset;
+            float _SongTime;
             float _FlashStrength;
             float _DelayBetweenFlashes;
             float _FlashDuration;
@@ -86,7 +86,7 @@ Shader "Unlit/ColorWaveDanceTiles"
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // The idea is to use a BW mask and recolor it within the shader using simple waves
 
-                float time = frac((_Time.y - _TimeOffset - _LoadingTimeOffset)/_DelayBetweenFlashes);
+                float time = frac((_SongTime - _TimeOffset)/_DelayBetweenFlashes);
                 float flashDuration = _FlashDuration/_DelayBetweenFlashes;
 
                 col.rgb *= _Color.xyz * _FlashStrength * spikeWave(time, flashDuration) + _MinColorValue;

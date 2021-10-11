@@ -5,11 +5,11 @@ using UnityEngine;
 public class BpmValue : ScriptableObject
 {
     public int bpm = 1;
-    public float value;
+    public float secsValue;
 
     private void OnValidate()
     {
         bpm = Mathf.Clamp(bpm, 1, bpm);
-        value = 60.0f / bpm;
+        secsValue = 60.0f / bpm;
     }
 }
