@@ -82,50 +82,39 @@ public class DanceInput : MonoBehaviour
         
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text
-    
-        bool inputTimerReset = timerInternalprevious > timerInternal;
-        bool timerPastErrorMargin = timerInternal > inputErrorMargin.value;
-    
-        if (!inputTimerReset || timerPastErrorMargin)
-        {
-            timerInternalprevious = timerInternal;
-            dancedOnTime = false;
-            dancedOutOfTime = false;
-        }
-    
+        
         timerInternal = songPosition % currentSongBpm.secsValue;
-    
+
         if (blockedTime > 0)
         {
             blockedTime -= Time.deltaTime;
             return;
         }
-    
+
         // 2. then try to reset the timer if it's over the tempo
-    
-        bool didNotDance = !dancedOnTime && !dancedOutOfTime;
         
-        bool lowerBoundForInputTiming = timerInternal >= currentSongBpm.secsValue - inputErrorMargin.value;
-        bool overshotBeatTiming = timerInternal < inputErrorMargin.value;
-        
-        if (didNotDance && !lowerBoundForInputTiming && !overshotBeatTiming) // checking if the player did not dance
+        bool passedInputWindow = timerInternal > currentSongBpm.secsValue;
+
+        if (passedInputWindow)
         {
-            onNoInput.Invoke();
+            if (!dancedOnTime && !dancedOutOfTime) // if you didnt dance this beat, you dont get a debuff
+            {
+                onNoInput.Invoke();
+            }
+
             timerInternal = 0;
-            
-            Debug.Log("no dancin?");
+
+            dancedOnTime = false;
+            dancedOutOfTime = false;
             return;
         }
-    
-    
+        
         // 3. lastly, if you're under the tempo, try to dance!
-    
+        
+        bool withinInputWindow = (timerInternal >= currentSongBpm.secsValue - inputErrorMargin.value && timerInternal <= currentSongBpm.secsValue) || timerInternal < inputErrorMargin.value;
+
         if (Input.GetButtonDown(danceButtonName))
         {
-            bool upperBoundForInputTiming = timerInternal <= currentSongBpm.secsValue;
-    
-            bool withinInputWindow = ( lowerBoundForInputTiming && upperBoundForInputTiming) || overshotBeatTiming;
-            
             if (withinInputWindow)
             {
                 onCorrectInput.Invoke();
