@@ -24,6 +24,8 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private FloatValue durationBuff;
     [SerializeField] private FloatValue distanceBuff;
     [SerializeField] private int maxBuffStacks = 0;
+    [SerializeField] private float durationIncrement = 0;
+    [SerializeField] private float distanceIncrement = 0;
     [SerializeField] private Material danceFloorSharedMaterial;
 
     private float timerInternal;
@@ -43,6 +45,9 @@ public class DanceInput : MonoBehaviour
         {
             audio = GetComponent<AudioSource>();
         }
+        
+        onCorrectInput.AddListener(BuffUp);
+        onWrongInput.AddListener(ResetBuffs);
     }
     
     void NewSong()
@@ -57,10 +62,18 @@ public class DanceInput : MonoBehaviour
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
     }
 
-    void BuffUp()
+    public void BuffUp()
     {
         buffStacks++;
         buffStacks = Mathf.Clamp(buffStacks, 0, maxBuffStacks);
+
+        durationBuff.value = durationIncrement * buffStacks;
+        distanceBuff.value = distanceIncrement * buffStacks;
+    }
+    
+    public void ResetBuffs()
+    {
+        buffStacks = 0;
     }
 
     void Update()

@@ -148,7 +148,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 23710bd87e2becb418d8cc3252942544, type: 3}
   - {fileID: 8300000, guid: ecb75fcaf9f14df4ca41c6237e84a088, type: 3}
   danceButtonName: Dance
-  songTimeOffset: -0.05
+  songTimeOffset: -0.1
   onCorrectInput:
     m_PersistentCalls:
       m_Calls:
@@ -197,6 +197,11 @@ MonoBehaviour:
   currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
   inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
   disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
+  durationBuff: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
+  distanceBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
+  maxBuffStacks: 5
+  durationIncrement: 0.1
+  distanceIncrement: 0.2
   danceFloorSharedMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
 --- !u!114 &2724690226980110104
 MonoBehaviour:
