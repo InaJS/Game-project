@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth Instance;
     [SerializeField] private float playerHealth = 10f;
+    [SerializeField] private UnityEvent onPlayerHit;
 
     [Tooltip("How often the player can get damaged")] [SerializeField]
     private float damageDelay = 1f;
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     void DamagePlayer(float damageAmount)
     {
+        onPlayerHit.Invoke();
         currentPlayerHealth -= damageAmount;
     }
 
