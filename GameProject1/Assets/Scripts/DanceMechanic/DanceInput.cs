@@ -59,7 +59,8 @@ public class DanceInput : MonoBehaviour
 
     void BuffUp()
     {
-        
+        buffStacks++;
+        buffStacks = Mathf.Clamp(buffStacks, 0, maxBuffStacks);
     }
 
     void Update()

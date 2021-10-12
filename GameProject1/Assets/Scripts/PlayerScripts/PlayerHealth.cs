@@ -9,15 +9,16 @@ public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth Instance;
     [SerializeField] private float playerHealth = 10f;
+    [SerializeField] private SpriteRenderer coneRenderer;
+
+    [Tooltip("How often the player can get damaged")] 
+    [SerializeField] private float damageDelay = 1f;
+
     [SerializeField] private UnityEvent onPlayerHit;
-
-    [Tooltip("How often the player can get damaged")] [SerializeField]
-    private float damageDelay = 1f;
-    private float damageTimer = 0;
-
     [SerializeField] private UnityEvent onDeath;
 
-    [SerializeField] private float currentPlayerHealth;
+    private float currentPlayerHealth;
+    private float damageTimer = 0;
 
     public void TryDamagePlayer(float damageAmount)
     {
@@ -32,6 +33,10 @@ public class PlayerHealth : MonoBehaviour
     void DamagePlayer(float damageAmount)
     {
         onPlayerHit.Invoke();
+
+        Color adjustedColor = coneRenderer.color;
+        adjustedColor.a = currentPlayerHealth / playerHealth;
+        coneRenderer.color = adjustedColor;
         currentPlayerHealth -= damageAmount;
     }
 

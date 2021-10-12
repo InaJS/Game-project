@@ -7,6 +7,7 @@ Shader "Unlit/PlayerDancePulse"
         _Color2 ("Color2", Color) = (0.1,0.1,0.1,0)
         _Frequency ("Frequency", float ) = 1
         _Rings ("Rings", float ) = 1
+        _Transparency ("Transparency", float ) = 1
     }
     SubShader
     {
@@ -14,6 +15,8 @@ Shader "Unlit/PlayerDancePulse"
         {
             "RenderType"="Opaque" "Queue" = "Transparent"
         }
+        Blend SrcAlpha OneMinusSrcAlpha
+        
         Pass
         {
             CGPROGRAM
@@ -40,6 +43,7 @@ Shader "Unlit/PlayerDancePulse"
             float4 _Color2;
             float _Frequency;
             float _Rings;
+            float _Transparency;
 
             v2f vert(appdata v)
             {
@@ -62,7 +66,7 @@ Shader "Unlit/PlayerDancePulse"
 
                 float4 result = lerp(_Color1,_Color2,wave);
                 
-                return result;
+                return float4(result);
             }
             ENDCG
         }
