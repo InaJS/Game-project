@@ -88,10 +88,10 @@ Material:
     - _RedAmplitude: 1
     - _RedFrequency: 0.9
     - _SmoothnessTextureChannel: 0
-    - _SongTime: 1531.9467
+    - _SongTime: 1787.136
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeOffset: 0.05
+    - _TimeOffset: 0.09
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

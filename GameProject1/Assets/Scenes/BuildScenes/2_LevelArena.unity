@@ -11145,6 +11145,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3148438238348651529, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
+      propertyPath: songTimeOffset
+      value: -0.09
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
 --- !u!1001 &7745658062590906166
