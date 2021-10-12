@@ -17,4 +17,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f884ccdc72fb5554794bd32a190c6303, type: 2}
   - {fileID: 11400000, guid: 5084930e31507eb448316cdf3157c10f, type: 2}
   - {fileID: 11400000, guid: c305661eef34f3b4880b9c349c2725e3, type: 2}
+  - {fileID: 11400000, guid: 06ed7a4acd23f9b439e8dbd2815dfa62, type: 2}
+  - {fileID: 11400000, guid: b871dd2677dd141499db82decc39cc79, type: 2}
+  - {fileID: 11400000, guid: 4be62bb57aff8584684f174a7d5fa604, type: 2}
+  - {fileID: 11400000, guid: 3766f578a2000014185cc30ace6a5eb2, type: 2}
+  - {fileID: 11400000, guid: 90041b48b8424e244998d669eb1eb803, type: 2}
+  - {fileID: 11400000, guid: 10fe6a7fc0a163d41b1c3bc53255dd5c, type: 2}
   SongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
