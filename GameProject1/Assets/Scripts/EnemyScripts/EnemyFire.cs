@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class EnemyFire : MonoBehaviour
 {
-    [SerializeField] private GameObject projectile;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float startTimeBetweenShots;
     [SerializeField] private EnemyProjectile[] ShootEffectPrefabs;
 
     private float timeBetweenShots;
-    public float startTimeBetweenShots;
     private Transform player;
 
     void Start()
@@ -23,12 +22,10 @@ public class EnemyFire : MonoBehaviour
     {
         if (timeBetweenShots <= 0)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBetweenShots = startTimeBetweenShots;
-
             Vector3 direction = (player.position - this.transform.position).normalized;
-            
+
             FireBullet(direction);
+            timeBetweenShots = startTimeBetweenShots;
         }
         else
         {

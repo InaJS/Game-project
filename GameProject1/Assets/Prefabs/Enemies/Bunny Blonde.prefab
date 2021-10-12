@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3702350968236354252}
   - component: {fileID: 3702350968236354255}
   - component: {fileID: -454092326678676345}
+  - component: {fileID: 42475073759694930}
   m_Layer: 0
   m_Name: Bunny Blonde
   m_TagString: Enemy
@@ -110,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634ee7b6964b4674e9c1faceaeeb2ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDelay: 1
   damageAmount: 1
   enemyHealth: 3
 --- !u!114 &-454092326678676345
@@ -129,6 +129,23 @@ MonoBehaviour:
   pushBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
   pushBuffDistance: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
   stunTime: 0.4
+--- !u!114 &42475073759694930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3702350968236354250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf57a5e6f5640c8a4feef8d94b73f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 15
+  startTimeBetweenShots: 1.2
+  ShootEffectPrefabs:
+  - {fileID: 1333406568718211677, guid: 83841dde63f9dc94c9bd401a42ec9a67, type: 3}
+  - {fileID: 1333406568718211677, guid: 177f374aafa975945ae512450c6145ca, type: 3}
 --- !u!1 &7696738959460193972
 GameObject:
   m_ObjectHideFlags: 0

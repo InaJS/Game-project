@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using PlayerScripts;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float fireRate = 10f;
-    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private ProjectileInstance[] shootEffectPrefabs;
     [SerializeField] private GameObject bulletStart;
 

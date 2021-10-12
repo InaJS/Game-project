@@ -13,9 +13,10 @@ public class ProjectileInstance : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
         if (collision.gameObject.CompareTag("Enemy")) {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

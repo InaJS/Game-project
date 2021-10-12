@@ -70,7 +70,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732636734032068334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732636734032068334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -216,6 +216,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  currentPlayerHealth: 0
 --- !u!61 &4397152347693754842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -356,7 +357,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 25
   fireRate: 5
-  bulletPrefab: {fileID: 2727611965551835193, guid: b7963e4bc402f5f4680526b3b1fce194, type: 3}
+  shootEffectPrefabs:
+  - {fileID: -370854555441363294, guid: c018b1e4aa9d61044814fd69625958ac, type: 3}
+  - {fileID: -370854555441363294, guid: 4398b901fe281e947a822a0da4644775, type: 3}
+  - {fileID: -370854555441363294, guid: a3d7cec4cebe7794f8990ecf1719f41e, type: 3}
+  - {fileID: -370854555441363294, guid: 2abb6a70a7ab38a4495124d6b5192625, type: 3}
   bulletStart: {fileID: 1122340965819363496}
 --- !u!114 &3853739202154225965
 MonoBehaviour:

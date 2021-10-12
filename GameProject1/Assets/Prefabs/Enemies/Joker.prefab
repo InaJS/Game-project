@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2840801206482625100}
   - component: {fileID: 8933032297863965498}
   - component: {fileID: 6322538659945525916}
+  - component: {fileID: 3014168983902037822}
   m_Layer: 0
   m_Name: Joker
   m_TagString: Untagged
@@ -70,7 +71,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.825511, y: 1.9143986}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -95,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26a9516becda64fa43b114faf892e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  minDistance: 0.5
+  moveSpeed: 3
+  minDistance: 20
   myAnim: {fileID: 2990811583667984047}
 --- !u!114 &8933032297863965498
 MonoBehaviour:
@@ -110,9 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634ee7b6964b4674e9c1faceaeeb2ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDelay: 1
-  damageAmount: 0
-  enemyHealth: 5
+  damageAmount: 1
+  enemyHealth: 2
 --- !u!114 &6322538659945525916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +129,24 @@ MonoBehaviour:
   pushBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
   pushBuffDistance: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
   stunTime: 0
+--- !u!114 &3014168983902037822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990811583448046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf57a5e6f5640c8a4feef8d94b73f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 30
+  startTimeBetweenShots: 3
+  ShootEffectPrefabs:
+  - {fileID: 870354132743963773, guid: 460343a4babbcff4192d7d0627fadc3d, type: 3}
+  - {fileID: 870354132743963773, guid: 76d22b73cdfd7a74eb17783c1a1b6903, type: 3}
+  - {fileID: 870354132743963773, guid: fe0b4d3f60d261b4b85b1e3a5ef99ae6, type: 3}
 --- !u!1 &2990811583667984044
 GameObject:
   m_ObjectHideFlags: 0
