@@ -7,9 +7,9 @@ namespace PlayerScripts
     [RequireComponent(typeof(SpriteRenderer))]
     public class Crosshair : MonoBehaviour
     {
-        private SpriteRenderer renderer; 
-        private Animator animator; 
+        private Animator animator;
         private static Crosshair instance;
+
         public static Crosshair Instance
         {
             get
@@ -28,18 +28,19 @@ namespace PlayerScripts
         {
             animator.ResetTrigger("Fire");
         }
-        
+
         public void SetFireAnimationTrigger()
         {
             animator.SetTrigger("Fire");
         }
-        
+
         private void Awake()
         {
-            renderer = this.GetComponent<SpriteRenderer>();
             animator = this.GetComponent<Animator>();
-            if(instance != null) Destroy(this);
-            DontDestroyOnLoad(this);
+            if (instance != null)
+            {
+                Destroy(this);
+            }
         }
     }
 }
