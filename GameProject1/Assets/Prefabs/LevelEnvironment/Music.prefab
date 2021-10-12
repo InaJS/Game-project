@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f1c98066c347540a77438deb011fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  danceButtonName: Fire2
+  danceButtonName: Dance
   currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
   inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
   disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
