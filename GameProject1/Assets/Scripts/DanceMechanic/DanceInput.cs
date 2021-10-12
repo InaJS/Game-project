@@ -51,34 +51,58 @@ public class DanceInput : MonoBehaviour
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
     }
     
+    // void Update()
+    // {
+    //     if (blockedTime > 0)
+    //     {
+    //         blockedTime -= Time.deltaTime;
+    //         return;
+    //     }
+    //
+    //     songPosition = (float) (AudioSettings.dspTime - audioStartTime);
+    //     
+    //     danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
+    //     
+    //     bool inputTimerReset = timerInternalprevious > timerInternal;
+    //     bool timerPastErrorMargin = timerInternal > inputErrorMargin.value;
+    //     
+    //     if (!inputTimerReset || timerPastErrorMargin)
+    //     {
+    //         timerInternalprevious = timerInternal;
+    //         dancedOnTime = false;
+    //         dancedOutOfTime = false;
+    //     }
+    //     
+    //     timerInternal = songPosition % currentSongBpm.secsValue;
+    // }
+    
     void Update()
     {
         songPosition = (float) (AudioSettings.dspTime - audioStartTime);
         
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text
-
+    
         bool inputTimerReset = timerInternalprevious > timerInternal;
         bool timerPastErrorMargin = timerInternal > inputErrorMargin.value;
-
+    
         if (!inputTimerReset || timerPastErrorMargin)
         {
             timerInternalprevious = timerInternal;
             dancedOnTime = false;
             dancedOutOfTime = false;
         }
-
+    
         timerInternal = songPosition % currentSongBpm.secsValue;
-
+    
         if (blockedTime > 0)
         {
             blockedTime -= Time.deltaTime;
             return;
         }
-
+    
         // 2. then try to reset the timer if it's over the tempo
-
-
+    
         bool didNotDance = !dancedOnTime && !dancedOutOfTime;
         
         bool lowerBoundForInputTiming = timerInternal >= currentSongBpm.secsValue - inputErrorMargin.value;
@@ -92,14 +116,14 @@ public class DanceInput : MonoBehaviour
             Debug.Log("no dancin?");
             return;
         }
-
-
+    
+    
         // 3. lastly, if you're under the tempo, try to dance!
-
+    
         if (Input.GetButtonDown(danceButtonName))
         {
             bool upperBoundForInputTiming = timerInternal <= currentSongBpm.secsValue;
-
+    
             bool withinInputWindow = ( lowerBoundForInputTiming && upperBoundForInputTiming) || overshotBeatTiming;
             
             if (withinInputWindow)
