@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float damageDelay = 1f;
 
     [SerializeField] private UnityEvent onPlayerHit;
+    [SerializeField] private UnityEvent onPlayerHeal;
     [SerializeField] private UnityEvent onDeath;
 
     private float currentPlayerHealth;
@@ -34,7 +35,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer(float healValue)
     {
-        DamagePlayer(-healValue);
+        onPlayerHeal.Invoke();
+        currentPlayerHealth += healValue;
+
+        float value = currentPlayerHealth / playerHealth;
+        Color adjustedColor = Color.Lerp(LowHealth, FullHealth,value);
+        coneRenderer.color = adjustedColor;
     }
 
     void DamagePlayer(float damageAmount)

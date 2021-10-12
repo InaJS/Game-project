@@ -75,7 +75,7 @@ public class DanceInput : MonoBehaviour
         durationBuff.value = durationIncrement * buffStacks;
         distanceBuff.value = distanceIncrement * buffStacks;
 
-        if (healCounter > healComboNumber)
+        if (healCounter >= healComboNumber)
         {
             PlayerHealth.Instance.HealPlayer(healValue);
             healCounter = 0;
