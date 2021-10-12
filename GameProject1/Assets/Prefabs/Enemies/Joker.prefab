@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2990811583448046632}
   - component: {fileID: -974075500174673575}
   - component: {fileID: 2013215341199532247}
+  - component: {fileID: 2840801206482625100}
+  - component: {fileID: 6322538659945525916}
+  - component: {fileID: 8933032297863965498}
   m_Layer: 0
   m_Name: Joker
   m_TagString: Untagged
@@ -41,19 +44,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2990811583448046647}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2013215341199532247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80,6 +83,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66272926, y: 2.4476645}
   m_EdgeRadius: 0
+--- !u!114 &2840801206482625100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990811583448046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d26a9516becda64fa43b114faf892e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  minDistance: 0.5
+  myAnim: {fileID: 0}
+  target: {fileID: 0}
+--- !u!114 &6322538659945525916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990811583448046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncyness: 0
+  pushBuff: {fileID: 0}
+  stunTime: 0
+--- !u!114 &8933032297863965498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990811583448046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634ee7b6964b4674e9c1faceaeeb2ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDelay: 1
+  damageAmount: 0
+  enemyHealth: 5
 --- !u!1 &2990811583667984044
 GameObject:
   m_ObjectHideFlags: 0

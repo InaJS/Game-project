@@ -18,7 +18,17 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private float currentPlayerHealth;
 
-    public void DamagePlayer(float damageAmount)
+    public void TryDamagePlayer(float damageAmount)
+    {
+        if (damageTimer > 0)
+        {
+            return;
+        }
+        
+        DamagePlayer(damageAmount);
+    }
+
+    void DamagePlayer(float damageAmount)
     {
         currentPlayerHealth -= damageAmount;
     }

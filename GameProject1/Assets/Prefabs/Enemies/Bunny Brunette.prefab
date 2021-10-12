@@ -113,6 +113,10 @@ GameObject:
   - component: {fileID: 4284284154485566024}
   - component: {fileID: 3510086702123800993}
   - component: {fileID: 1786174071970593369}
+  - component: {fileID: 2351000483301550360}
+  - component: {fileID: 8928197947200440792}
+  - component: {fileID: 1455079383724387402}
+  - component: {fileID: 4278741974788469845}
   m_Layer: 0
   m_Name: Bunny Brunette
   m_TagString: Untagged
@@ -143,19 +147,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4284284154485566026}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1786174071970593369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,3 +186,66 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7824402, y: 3.3569946}
   m_EdgeRadius: 0
+--- !u!114 &2351000483301550360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284284154485566026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d26a9516becda64fa43b114faf892e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  minDistance: 0.5
+  myAnim: {fileID: 0}
+  target: {fileID: 0}
+--- !u!114 &8928197947200440792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284284154485566026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncyness: 0
+  pushBuff: {fileID: 0}
+  stunTime: 0
+--- !u!114 &1455079383724387402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284284154485566026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634ee7b6964b4674e9c1faceaeeb2ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDelay: 1
+  damageAmount: 0
+  enemyHealth: 5
+--- !u!114 &4278741974788469845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284284154485566026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0cd60b1d68a4b4490d631a76d58a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+  player: {fileID: 0}
+  EnemyFirePoint: {fileID: 0}
+  ShootEffectPrefab: {fileID: 0}
+  startTimeBetweenShots: 0
