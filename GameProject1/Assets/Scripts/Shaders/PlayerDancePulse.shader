@@ -12,7 +12,7 @@ Shader "Unlit/PlayerDancePulse"
     {
         Tags
         {
-            "RenderType"="Opaque"
+            "RenderType"="Opaque" "Queue" = "Transparent"
         }
         Pass
         {
