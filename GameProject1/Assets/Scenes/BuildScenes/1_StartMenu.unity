@@ -206,35 +206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &710278707
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4666082216067776282, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_Name
-      value: Crosshair Singleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
 --- !u!1 &1350169550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2711959322808860233, guid: 4695ae7349417ff43916b252784d9959, type: 3}
