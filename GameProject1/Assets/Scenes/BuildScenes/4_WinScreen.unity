@@ -536,35 +536,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892119808}
   m_CullTransparentMesh: 1
---- !u!1001 &1173056343
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4666082216067776282, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_Name
-      value: Crosshair Singleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
 --- !u!1 &1234881987
 GameObject:
   m_ObjectHideFlags: 0

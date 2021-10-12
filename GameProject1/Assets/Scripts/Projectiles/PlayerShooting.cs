@@ -20,7 +20,6 @@ public class PlayerShooting : MonoBehaviour
         crosshairs = Crosshair.Instance;
         
         shootCooldown = 1.0f / fireRate;
-        Cursor.visible = false;
     }
 
     void Update()

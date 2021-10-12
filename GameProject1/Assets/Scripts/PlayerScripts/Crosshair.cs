@@ -4,10 +4,11 @@ using UnityEngine;
 
 namespace PlayerScripts
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class Crosshair : MonoBehaviour
     {
+        [SerializeField] private Texture2D cursorTexture;
         private Animator animator;
+        private Camera camera;
         private static Crosshair instance;
 
         public static Crosshair Instance
@@ -37,19 +38,21 @@ namespace PlayerScripts
         private void Awake()
         {
             animator = this.GetComponent<Animator>();
+            
             if (instance != null)
             {
-                Destroy(instance);
+                Destroy(instance.gameObject);
                 instance = this;
             }
             
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this.gameObject);
+            Cursor.SetCursor(cursorTexture, -Vector2.one*0.5f, CursorMode.Auto);
         }
 
         private void Update()
         {
-            Vector3 target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-            transform.position = new Vector2(target.x, target.y);
+            Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = new Vector3(target.x, target.y,0);
         }
     }
 }
