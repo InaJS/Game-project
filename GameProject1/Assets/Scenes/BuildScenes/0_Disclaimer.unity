@@ -688,9 +688,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crosshair Singleton
       objectReference: {fileID: 0}
+    - target: {fileID: 4666082216067776282, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4666082216067776283, guid: f06663ef735e56c448defae3e45bd5c7, type: 3}
       propertyPath: m_LocalPosition.x

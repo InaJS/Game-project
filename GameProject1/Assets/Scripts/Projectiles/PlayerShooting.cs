@@ -10,14 +10,14 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float fireRate = 10f;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject bulletStart;
-    private Crosshair crosshairs;
+    // private Crosshair crosshairs;
 
     private float shootCooldown;
     private Vector3 target;
 
     void Start()
     {
-        crosshairs = Crosshair.Instance;
+        // crosshairs = Crosshair.Instance;
         
         shootCooldown = 1.0f / fireRate;
     }
@@ -45,7 +45,7 @@ public class PlayerShooting : MonoBehaviour
 
     void fireBullet(Vector2 direction, float rotationZ)
     {
-        crosshairs.SetFireAnimationTrigger();
+        // crosshairs.SetFireAnimationTrigger();
         
         GameObject b = Instantiate(bulletPrefab) as GameObject;
         b.transform.position = bulletStart.transform.position;

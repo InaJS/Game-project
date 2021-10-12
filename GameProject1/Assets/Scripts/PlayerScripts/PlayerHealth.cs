@@ -12,19 +12,15 @@ public class PlayerHealth : MonoBehaviour
 
     [Tooltip("How often the player can get damaged")] [SerializeField]
     private float damageDelay = 1f;
+    private float damageTimer = 0;
 
     [SerializeField] private UnityEvent onDeath;
 
-    private float currentPlayerHealth;
+    [SerializeField] private float currentPlayerHealth;
 
     public void DamagePlayer(float damageAmount)
     {
         currentPlayerHealth -= damageAmount;
-    }
-
-    public float GetHealth()
-    {
-        return playerHealth;
     }
 
     private void Awake()
@@ -43,10 +39,20 @@ public class PlayerHealth : MonoBehaviour
         {
             onDeath.Invoke();
         }
+
+        if (damageTimer > 0)
+        {
+            damageTimer -= Time.deltaTime;
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
+        if (damageTimer > 0)
+        {
+            return;
+        }
+        
         if (other.gameObject.CompareTag("Enemy"))
         {
             EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
@@ -54,6 +60,8 @@ public class PlayerHealth : MonoBehaviour
             {
                 return;
             }
+
+            damageTimer = damageDelay;
 
             int damage = (int) enemy.GetDamage();
             DamagePlayer(damage);
