@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 1732636734032068334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4679205255910048271}
   m_RootOrder: 2
@@ -119,12 +119,12 @@ SpriteRenderer:
   m_SortingLayerID: -1469390551
   m_SortingLayer: 3
   m_SortingOrder: -20
-  m_Sprite: {fileID: -2413806693520163455, guid: e8d6f10d3269cfd49bf33c40c66e66cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b85241e4394a9a743a41b1775d2aab25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.7066667, y: 1.7066667}
+  m_Size: {x: 4.96, y: 3.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 1732228531898036616}
   m_Layer: 0
   m_Name: DamageCollider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

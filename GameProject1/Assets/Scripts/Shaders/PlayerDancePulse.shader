@@ -7,7 +7,8 @@ Shader "Unlit/PlayerDancePulse"
         _Color2 ("Color2", Color) = (0.1,0.1,0.1,0)
         _Frequency ("Frequency", float ) = 1
         _Rings ("Rings", float ) = 1
-        _Transparency ("Transparency", float ) = 1
+        _CenterTransparency ("Transparency", float ) = 1
+        _Radius ("Radius", float ) = 1
     }
     SubShader
     {
@@ -43,7 +44,8 @@ Shader "Unlit/PlayerDancePulse"
             float4 _Color2;
             float _Frequency;
             float _Rings;
-            float _Transparency;
+            float _CenterTransparency;
+            float _Radius;
 
             v2f vert(appdata v)
             {
@@ -65,6 +67,7 @@ Shader "Unlit/PlayerDancePulse"
                 float wave = sin01(dist* _Rings - _Time.y * _Frequency);
 
                 float4 result = lerp(_Color1,_Color2,wave);
+                result.a = _CenterTransparency * saturate(_Radius- dist);
                 
                 return float4(result);
             }
