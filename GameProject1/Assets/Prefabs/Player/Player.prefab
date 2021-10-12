@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 204721561390384202}
   - component: {fileID: 8818999916020409393}
   - component: {fileID: 4397152347693754842}
+  - component: {fileID: 1732228531898036616}
   m_Layer: 0
   m_Name: DamageCollider
   m_TagString: Untagged
@@ -188,6 +189,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 10
+  onPlayerHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1732228531898036616}
+        m_TargetAssemblyTypeName: DamageFeedback, Assembly-CSharp
+        m_MethodName: SpawnVFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damageDelay: 1
   onDeath:
     m_PersistentCalls:
@@ -243,6 +259,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6046238, y: 3.5797286}
   m_EdgeRadius: 0
+--- !u!114 &1732228531898036616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081458503912340749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5497d5be7a224f80a94ecd1101c666db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VFXPrefab: {fileID: 5066563819558071366, guid: 2436414af6a0e144f842a4c3c5c07979, type: 3}
+  particlesLifetime: 1.5
 --- !u!1 &4679205255910048264
 GameObject:
   m_ObjectHideFlags: 0
