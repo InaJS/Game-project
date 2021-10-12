@@ -23,9 +23,5 @@ MonoBehaviour:
     Position: 1
   - Enemy: {fileID: 3702350968236354255, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
     Position: 3
-  - Enemy: {fileID: 3702350968236354255, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
-    Position: 3
   - Enemy: {fileID: 8933032297863965498, guid: ad3fc888f01d1bc49b5d4bca18cd2cbd, type: 3}
-    Position: 3
-  - Enemy: {fileID: 3702350968236354255, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
     Position: 3
