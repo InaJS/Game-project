@@ -39,8 +39,11 @@ namespace PlayerScripts
             animator = this.GetComponent<Animator>();
             if (instance != null)
             {
-                Destroy(this);
+                Destroy(instance);
+                instance = this;
             }
+            
+            DontDestroyOnLoad(this);
         }
 
         private void Update()
