@@ -21,6 +21,9 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
+    [SerializeField] private FloatValue durationBuff;
+    [SerializeField] private FloatValue distanceBuff;
+    [SerializeField] private int maxBuffStacks = 0;
     [SerializeField] private Material danceFloorSharedMaterial;
 
     private float timerInternal;
@@ -32,6 +35,7 @@ public class DanceInput : MonoBehaviour
     private int currentSong;
     private float audioStartTime;
     private float lastDanced;
+    private int buffStacks = 0;
 
     private void Awake()
     {
@@ -51,6 +55,11 @@ public class DanceInput : MonoBehaviour
         
         danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.secsValue);
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
+    }
+
+    void BuffUp()
+    {
+        
     }
 
     void Update()
