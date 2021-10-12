@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public static PlayerHealth Instance;
     [SerializeField] private float playerHealth = 10f;
     [SerializeField] private SpriteRenderer coneRenderer;
+    [SerializeField] private Color FullHealth;
+    [SerializeField] private Color LowHealth;
 
     [Tooltip("How often the player can get damaged")] 
     [SerializeField] private float damageDelay = 1f;
@@ -33,11 +35,11 @@ public class PlayerHealth : MonoBehaviour
     void DamagePlayer(float damageAmount)
     {
         onPlayerHit.Invoke();
-
-        Color adjustedColor = coneRenderer.color;
-        adjustedColor.a = currentPlayerHealth / playerHealth;
-        coneRenderer.color = adjustedColor;
         currentPlayerHealth -= damageAmount;
+
+        float value = currentPlayerHealth / playerHealth;
+        Color adjustedColor = Color.Lerp(LowHealth, FullHealth,value);
+        coneRenderer.color = adjustedColor;
     }
 
     private void Awake()
@@ -46,6 +48,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Instance = this;
         }
+
+        coneRenderer.color = FullHealth;
 
         currentPlayerHealth = 10f;
     }

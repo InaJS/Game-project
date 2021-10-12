@@ -191,6 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 10
   coneRenderer: {fileID: 59673744382371639}
+  FullHealth: {r: 1, g: 1, b: 1, a: 1}
+  LowHealth: {r: 0, g: 0, b: 0, a: 0}
   damageDelay: 1
   onPlayerHit:
     m_PersistentCalls:
@@ -536,7 +538,7 @@ GameObject:
   - component: {fileID: 59673744382371639}
   - component: {fileID: 1974261121991281259}
   m_Layer: 0
-  m_Name: Light_cone
+  m_Name: Light Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
