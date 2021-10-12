@@ -7,7 +7,8 @@ using UnityEngine;
 public class PushableObject : MonoBehaviour
 {
     [SerializeField] private float bouncyness;
-    [SerializeField] private FloatValue pushBuff;
+    [SerializeField] private FloatValue pushBuffDuration;
+    [SerializeField] private FloatValue pushBuffDistance;
     [SerializeField] private float stunTime;
     private bool isBeingPushed;
 
@@ -18,7 +19,7 @@ public class PushableObject : MonoBehaviour
            return; 
         }
         Vector3 pushDirection = this.transform.position - other.transform.position;
-        TryPush(pushDirection,bouncyness + pushBuff.value,stunTime);
+        TryPush(pushDirection,bouncyness + pushBuffDistance.value,stunTime + pushBuffDuration.value);
     }
 
     public void TryPush(Vector3 dir, float force, float duration)

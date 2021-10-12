@@ -8,7 +8,7 @@ public class GoTowardsPlayer : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float minDistance = 0.5f;
     [SerializeField] private Animator myAnim;
-    public Transform target;
+    private Transform target;
 
     private void Awake()
     {

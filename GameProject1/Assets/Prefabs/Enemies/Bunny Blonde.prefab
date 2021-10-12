@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3702350968236354252}
   - component: {fileID: 3702350968236354255}
   - component: {fileID: -454092326678676345}
-  - component: {fileID: 960805093383569288}
   m_Layer: 0
   m_Name: Bunny Blonde
   m_TagString: Enemy
@@ -99,7 +98,6 @@ MonoBehaviour:
   moveSpeed: 4
   minDistance: 15
   myAnim: {fileID: 7696738959460193973}
-  target: {fileID: 2016128713196145712, guid: 47fd73e8c131b234f8deecd0f538644f, type: 3}
 --- !u!114 &3702350968236354255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,25 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bouncyness: 10
-  pushBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
+  pushBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
+  pushBuffDistance: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
   stunTime: 0.4
---- !u!114 &960805093383569288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3702350968236354250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c0cd60b1d68a4b4490d631a76d58a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  player: {fileID: 0}
-  EnemyFirePoint: {fileID: 0}
-  ShootEffectPrefab: {fileID: 0}
-  startTimeBetweenShots: 0
 --- !u!1 &7696738959460193972
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,9 +198,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1469390551
+  m_SortingLayer: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: -3410249581392400752, guid: 8fab50657a0faee47b3b685cc9c105c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

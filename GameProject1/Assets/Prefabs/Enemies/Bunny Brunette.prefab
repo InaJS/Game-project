@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4284284153494021767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.78, y: 9.72, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4284284154485566024}
@@ -88,9 +88,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1469390551
+  m_SortingLayer: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 2480111651789612494, guid: 8b1440cb48ef1d04da6a8c80f4ff30a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,9 +114,8 @@ GameObject:
   - component: {fileID: 3510086702123800993}
   - component: {fileID: 1786174071970593369}
   - component: {fileID: 2351000483301550360}
-  - component: {fileID: 8928197947200440792}
   - component: {fileID: 1455079383724387402}
-  - component: {fileID: 4278741974788469845}
+  - component: {fileID: 8928197947200440792}
   m_Layer: 0
   m_Name: Bunny Brunette
   m_TagString: Untagged
@@ -200,23 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   minDistance: 0.5
-  myAnim: {fileID: 0}
-  target: {fileID: 0}
---- !u!114 &8928197947200440792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4284284154485566026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bouncyness: 0
-  pushBuff: {fileID: 0}
-  stunTime: 0
+  myAnim: {fileID: 4284284153494021765}
 --- !u!114 &1455079383724387402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +215,7 @@ MonoBehaviour:
   damageDelay: 1
   damageAmount: 0
   enemyHealth: 5
---- !u!114 &4278741974788469845
+--- !u!114 &8928197947200440792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,11 +224,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4284284154485566026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c0cd60b1d68a4b4490d631a76d58a62, type: 3}
+  m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  player: {fileID: 0}
-  EnemyFirePoint: {fileID: 0}
-  ShootEffectPrefab: {fileID: 0}
-  startTimeBetweenShots: 0
+  bouncyness: 0
+  pushBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
+  pushBuffDistance: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
+  stunTime: 0
