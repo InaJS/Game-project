@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  minDistance: 20
+  minDistance: 25
   myAnim: {fileID: 2990811583667984047}
 --- !u!114 &8933032297863965498
 MonoBehaviour:
