@@ -141,10 +141,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f1c98066c347540a77438deb011fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 3148438238348651526}
+  songs:
+  - {fileID: 8300000, guid: f2398c5245f59ea4994ffe55e6444b9b, type: 3}
+  - {fileID: 8300000, guid: 4abcbb237e011f547b6c1d6110c2b042, type: 3}
+  - {fileID: 8300000, guid: 23710bd87e2becb418d8cc3252942544, type: 3}
+  - {fileID: 8300000, guid: ecb75fcaf9f14df4ca41c6237e84a088, type: 3}
   danceButtonName: Dance
-  currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
-  inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
-  disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
+  songTimeOffset: -0.05
   onCorrectInput:
     m_PersistentCalls:
       m_Calls:
@@ -190,13 +194,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  audio: {fileID: 3148438238348651526}
+  currentSongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
+  inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
+  disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
   danceFloorSharedMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
-  songs:
-  - {fileID: 8300000, guid: f2398c5245f59ea4994ffe55e6444b9b, type: 3}
-  - {fileID: 8300000, guid: 4abcbb237e011f547b6c1d6110c2b042, type: 3}
-  - {fileID: 8300000, guid: 23710bd87e2becb418d8cc3252942544, type: 3}
-  - {fileID: 8300000, guid: ecb75fcaf9f14df4ca41c6237e84a088, type: 3}
 --- !u!114 &2724690226980110104
 MonoBehaviour:
   m_ObjectHideFlags: 0

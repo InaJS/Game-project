@@ -26,8 +26,7 @@ public class PlayerShooting : MonoBehaviour
     void Update()
     {
         shootCooldown -= Time.deltaTime;
-        target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        crosshairs.transform.position = new Vector2(target.x, target.y);
+        Vector3 target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
 
         Vector3 difference = target - this.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
