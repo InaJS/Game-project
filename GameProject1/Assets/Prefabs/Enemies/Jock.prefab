@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634ee7b6964b4674e9c1faceaeeb2ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDelay: 1
-  damageAmount: 1
-  enemyHealth: 5
+  damageDelay: 3
+  damageAmount: 2
+  enemyHealth: 6
 --- !u!114 &-5698239151902676787
 MonoBehaviour:
   m_ObjectHideFlags: 0

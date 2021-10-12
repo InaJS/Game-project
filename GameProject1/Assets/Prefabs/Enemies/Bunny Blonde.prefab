@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageDelay: 1
   damageAmount: 1
-  enemyHealth: 5
+  enemyHealth: 3
 --- !u!114 &-454092326678676345
 MonoBehaviour:
   m_ObjectHideFlags: 0
