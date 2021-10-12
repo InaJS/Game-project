@@ -23,6 +23,8 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private FloatValue disableTime;
     [SerializeField] private FloatValue durationBuff;
     [SerializeField] private FloatValue distanceBuff;
+    [SerializeField] private int healComboNumber = 5;
+    [SerializeField] private int healValue = 1;
     [SerializeField] private int maxBuffStacks = 0;
     [SerializeField] private float durationIncrement = 0;
     [SerializeField] private float distanceIncrement = 0;
@@ -38,6 +40,7 @@ public class DanceInput : MonoBehaviour
     private float audioStartTime;
     private float lastDanced;
     private int buffStacks = 0;
+    private int healCounter = 0;
 
     private void Awake()
     {
@@ -65,15 +68,24 @@ public class DanceInput : MonoBehaviour
     public void BuffUp()
     {
         buffStacks++;
+        healCounter++;
+        
         buffStacks = Mathf.Clamp(buffStacks, 0, maxBuffStacks);
 
         durationBuff.value = durationIncrement * buffStacks;
         distanceBuff.value = distanceIncrement * buffStacks;
+
+        if (healCounter > healComboNumber)
+        {
+            PlayerHealth.Instance.HealPlayer(healValue);
+            healCounter = 0;
+        }
     }
     
     public void ResetBuffs()
     {
         buffStacks = 0;
+        healCounter = 0;
     }
 
     void Update()

@@ -9,6 +9,7 @@ Shader "Unlit/PlayerDancePulse"
         _Rings ("Rings", float ) = 1
         _CenterTransparency ("Transparency", float ) = 1
         _Radius ("Radius", float ) = 1
+        _PixelFactor ("Pixel Factor", int ) = 32
     }
     SubShader
     {
@@ -46,6 +47,7 @@ Shader "Unlit/PlayerDancePulse"
             float _Rings;
             float _CenterTransparency;
             float _Radius;
+            int _PixelFactor;
 
             v2f vert(appdata v)
             {
@@ -62,7 +64,7 @@ Shader "Unlit/PlayerDancePulse"
 
             fixed4 frag(v2f i) : SV_Target
             {
-                float dist = length(i.uv - float2(0.5, 0.5));
+                float dist = ceil(length(i.uv - float2(0.5, 0.5)) * _PixelFactor)/_PixelFactor;
 
                 float wave = sin01(dist* _Rings - _Time.y * _Frequency);
 

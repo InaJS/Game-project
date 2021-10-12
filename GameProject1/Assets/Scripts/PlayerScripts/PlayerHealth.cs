@@ -32,6 +32,11 @@ public class PlayerHealth : MonoBehaviour
         DamagePlayer(damageAmount);
     }
 
+    public void HealPlayer(float healValue)
+    {
+        DamagePlayer(-healValue);
+    }
+
     void DamagePlayer(float damageAmount)
     {
         onPlayerHit.Invoke();
