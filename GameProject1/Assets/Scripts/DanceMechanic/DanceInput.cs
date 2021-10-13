@@ -24,6 +24,7 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private FloatValue distanceBuff;
     [SerializeField] private int healComboNumber = 5;
     [SerializeField] private int healValue = 1;
+    [SerializeField] private FloatValue buffStacks;
     [SerializeField] private FloatValue maxBuffStacks;
     [SerializeField] private float durationIncrement = 0;
     [SerializeField] private float distanceIncrement = 0;
@@ -38,7 +39,6 @@ public class DanceInput : MonoBehaviour
     private int currentSong;
     private float audioStartTime;
     private float lastDanced;
-    private int buffStacks = 0;
     private int healCounter = 0;
 
     private void Awake()
@@ -50,6 +50,8 @@ public class DanceInput : MonoBehaviour
         
         onCorrectInput.AddListener(BuffUp);
         onWrongInput.AddListener(ResetBuffs);
+
+        buffStacks.value = 0;
 
         AdjustSong();
     }
@@ -69,13 +71,13 @@ public class DanceInput : MonoBehaviour
 
     public void BuffUp()
     {
-        buffStacks++;
+        buffStacks.value++;
         healCounter++;
         
-        buffStacks = (int) Mathf.Clamp(buffStacks, 0, maxBuffStacks.value);
+        buffStacks.value = (int) Mathf.Clamp(buffStacks.value, 0, maxBuffStacks.value);
 
-        durationBuff.value = durationIncrement * buffStacks;
-        distanceBuff.value = distanceIncrement * buffStacks;
+        durationBuff.value = durationIncrement * buffStacks.value;
+        distanceBuff.value = distanceIncrement * buffStacks.value;
 
         if (healCounter >= healComboNumber)
         {
@@ -86,7 +88,7 @@ public class DanceInput : MonoBehaviour
     
     public void ResetBuffs()
     {
-        buffStacks = 0;
+        buffStacks.value = 0;
         healCounter = 0;
     }
 

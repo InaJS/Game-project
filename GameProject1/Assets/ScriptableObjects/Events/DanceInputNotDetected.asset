@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8084438d3edec7e478a5f1cfba0ff135, type: 3}
-  m_Name: MaxBuffs
+  m_Script: {fileID: 11500000, guid: 8cc108451a434db893894b66dd816dbe, type: 3}
+  m_Name: DanceInputNotDetected
   m_EditorClassIdentifier: 
-  value: 10
