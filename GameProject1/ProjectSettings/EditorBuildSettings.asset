@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BuildScenes/1_StartMenu.unity
     guid: cce0d7c4a0647454b8691f9c24ceb645
   - enabled: 1
+    path: Assets/Scenes/BuildScenes/1.5_SongSelect.unity
+    guid: 8b132063b17414f4bbc30dc327f48a14
+  - enabled: 1
     path: Assets/Scenes/BuildScenes/2_LevelArena.unity
     guid: 52cee37185431f9499fd6ce4164bd917
   - enabled: 1

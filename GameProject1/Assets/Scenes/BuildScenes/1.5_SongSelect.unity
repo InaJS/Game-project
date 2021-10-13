@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 185776196}
   - component: {fileID: 185776195}
   - component: {fileID: 185776194}
+  - component: {fileID: 185776197}
   m_Layer: 5
   m_Name: PumperkinButton
   m_TagString: Untagged
@@ -413,6 +414,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185776192}
   m_CullTransparentMesh: 1
+--- !u!114 &185776197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185776192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3948adfbc312d6f4e92e2d566de3f59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 2_LevelArena
+  blackScreen: {fileID: 258924190}
+  fadeTime: 1
+--- !u!1 &258924188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258924189}
+  - component: {fileID: 258924191}
+  - component: {fileID: 258924190}
+  m_Layer: 5
+  m_Name: Fade Black
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &258924189
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258924188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 496940961}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &258924190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258924188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &258924191
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258924188}
+  m_CullTransparentMesh: 1
 --- !u!1 &496940957
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +603,7 @@ RectTransform:
   - {fileID: 870923023}
   - {fileID: 185776193}
   - {fileID: 536592672}
+  - {fileID: 258924189}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -532,6 +624,7 @@ GameObject:
   - component: {fileID: 536592675}
   - component: {fileID: 536592674}
   - component: {fileID: 536592673}
+  - component: {fileID: 536592676}
   m_Layer: 5
   m_Name: GhastlyButton
   m_TagString: Untagged
@@ -640,6 +733,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536592671}
   m_CullTransparentMesh: 1
+--- !u!114 &536592676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536592671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3948adfbc312d6f4e92e2d566de3f59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 2_LevelArena
+  blackScreen: {fileID: 258924190}
+  fadeTime: 1
 --- !u!1 &870923022
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +760,7 @@ GameObject:
   - component: {fileID: 870923026}
   - component: {fileID: 870923025}
   - component: {fileID: 870923024}
+  - component: {fileID: 870923027}
   m_Layer: 5
   m_Name: SpotlightButton
   m_TagString: Untagged
@@ -760,6 +869,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870923022}
   m_CullTransparentMesh: 1
+--- !u!114 &870923027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870923022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3948adfbc312d6f4e92e2d566de3f59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 2_LevelArena
+  blackScreen: {fileID: 258924190}
+  fadeTime: 1
 --- !u!1 &1188815320
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +1054,7 @@ GameObject:
   - component: {fileID: 1672552880}
   - component: {fileID: 1672552879}
   - component: {fileID: 1672552878}
+  - component: {fileID: 1672552881}
   m_Layer: 5
   m_Name: BubonicButton
   m_TagString: Untagged
@@ -1038,6 +1163,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672552876}
   m_CullTransparentMesh: 1
+--- !u!114 &1672552881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672552876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3948adfbc312d6f4e92e2d566de3f59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 2_LevelArena
+  blackScreen: {fileID: 258924190}
+  fadeTime: 1
 --- !u!1 &1961102658
 GameObject:
   m_ObjectHideFlags: 0

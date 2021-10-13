@@ -8,7 +8,7 @@ public class DanceInput : MonoBehaviour
 {
     [Header("Audio references ---------------------------------------")]
     [SerializeField] private AudioSource audio;
-    [SerializeField] private AudioClip[] songs;
+    [SerializeField] private SongWaves songSettings;
 
     [Header("Input ---------------------------------------")]
     [SerializeField] private string danceButtonName;
@@ -18,7 +18,6 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private UnityEvent onNoInput;
 
     [Header("Shader variables ---------------------------------------")]
-    [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
     [SerializeField] private FloatValue durationBuff;
@@ -58,10 +57,10 @@ public class DanceInput : MonoBehaviour
         audio.Stop();
         audioStartTime = (float) AudioSettings.dspTime;
 
-        audio.clip = songs[currentSong];
+        audio.clip = songSettings.SongAudio;
         audio.Play();
         
-        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.secsValue);
+        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
     }
 
@@ -95,7 +94,7 @@ public class DanceInput : MonoBehaviour
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text
         
-        timerInternal = songPosition % currentSongBpm.secsValue;
+        timerInternal = songPosition % songSettings.SongBpm.secsValue;
 
         if (blockedTime > 0)
         {
@@ -105,7 +104,7 @@ public class DanceInput : MonoBehaviour
 
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = (timerInternal >= currentSongBpm.secsValue - inputErrorMargin.value && timerInternal <= currentSongBpm.secsValue) || timerInternal < inputErrorMargin.value;
+        bool withinInputWindow = (timerInternal >= songSettings.SongBpm.secsValue - inputErrorMargin.value && timerInternal <= songSettings.SongBpm.secsValue) || timerInternal < inputErrorMargin.value;
 
         if (Input.GetButtonDown(danceButtonName))
         {
@@ -127,7 +126,7 @@ public class DanceInput : MonoBehaviour
             return;
         }
         
-        if (songPosition - lastDanced >= currentSongBpm.secsValue)
+        if (songPosition - lastDanced >= songSettings.SongBpm.secsValue)
         {
             onNoInput.Invoke();
             dancedOnTime = false;

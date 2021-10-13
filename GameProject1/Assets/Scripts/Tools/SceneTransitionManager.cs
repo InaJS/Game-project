@@ -19,6 +19,8 @@ public class SceneTransitionManager : MonoBehaviour
     {
         float elapsedTime = 0.0f;
         Color c = blackScreen.color;
+
+        blackScreen.raycastTarget = true;
         
         while (elapsedTime < fadeTime)
         {
