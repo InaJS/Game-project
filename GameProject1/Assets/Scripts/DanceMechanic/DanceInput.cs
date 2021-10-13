@@ -50,12 +50,20 @@ public class DanceInput : MonoBehaviour
         
         onCorrectInput.AddListener(BuffUp);
         onWrongInput.AddListener(ResetBuffs);
+        onNoInput.AddListener(ResetBuffs);
 
         buffStacks.value = 0;
 
         AdjustSong();
     }
-    
+
+    private void OnDisable()
+    {
+        onCorrectInput.RemoveAllListeners();
+        onWrongInput.RemoveAllListeners();
+        onNoInput.RemoveAllListeners();
+    }
+
     void AdjustSong()
     {
         audio.Stop();
@@ -118,7 +126,7 @@ public class DanceInput : MonoBehaviour
                 onCorrectInput.Invoke();
                 dancedOnTime = true;
                 lastDanced = songPosition;
-                Debug.Log("danced on time");
+                // Debug.Log("danced on time");
             }
             else
             {
@@ -126,16 +134,17 @@ public class DanceInput : MonoBehaviour
                 blockedTime = disableTime.value; // blocks the input for N seconds on player mistake
                 dancedOutOfTime = true;
                 lastDanced = songPosition;
-                Debug.Log("danced out of time");
+                // Debug.Log("danced out of time");
             }
             return;
         }
         
-        if (songPosition - lastDanced >= songSettings.SongBpm.secsValue)
+        if (songPosition - lastDanced >= songSettings.SongBpm.secsValue + inputErrorMargin.value)
         {
             onNoInput.Invoke();
             dancedOnTime = false;
             dancedOutOfTime = false;
+            // Debug.Log("Missed the input window: current time" + songPosition + " last input time:" + lastDanced);
         }
     }
 }

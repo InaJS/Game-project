@@ -10,7 +10,7 @@ public class BuffHolder : MonoBehaviour
     [SerializeField] private FloatValue maxBuffs;
     [SerializeField] private FloatValue currentBuffs;
     [SerializeField] private SpriteRenderer buffPrefab;
-    private float buffStacksBefore;
+    public float buffStacksBefore;
 
     private void Awake()
     {
@@ -33,11 +33,16 @@ public class BuffHolder : MonoBehaviour
         if (buffStacksBefore < currentBuffs.value)
         {
             AddBuff();
+            return;
         }
+        
+        RemoveBuffs();
     }
 
     public void RemoveBuffs()
     {
+        buffStacksBefore = 0;
+        
         foreach (Transform transform in holder)
         {
             Destroy(transform.gameObject);
@@ -46,6 +51,7 @@ public class BuffHolder : MonoBehaviour
 
     public void AddBuff()
     {
+        buffStacksBefore++;
         float radius = Random.Range(1.5f, 2.0f);
         float rotation = Random.Range(0.0f, 1.0f);
 
