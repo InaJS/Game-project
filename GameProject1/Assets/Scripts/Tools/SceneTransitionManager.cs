@@ -8,6 +8,8 @@ public class SceneTransitionManager : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     [SerializeField] private Image blackScreen;
+    [SerializeField] private SongWaves currentSong;
+    [SerializeField] private SongWaves selectedSong;
     [SerializeField] private float fadeTime = 1.0f;
 
     public void FadeToSceneTransition()
@@ -21,6 +23,13 @@ public class SceneTransitionManager : MonoBehaviour
         Color c = blackScreen.color;
 
         blackScreen.raycastTarget = true;
+
+        if (currentSong != null)
+        {
+            currentSong.SongAudio = selectedSong.SongAudio;
+            currentSong.SongBpm.bpm = selectedSong.SongBpm.bpm;
+            currentSong.EnemyWaves = selectedSong.EnemyWaves;
+        }
         
         while (elapsedTime < fadeTime)
         {

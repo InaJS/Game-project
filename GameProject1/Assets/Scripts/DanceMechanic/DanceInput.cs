@@ -50,9 +50,11 @@ public class DanceInput : MonoBehaviour
         
         onCorrectInput.AddListener(BuffUp);
         onWrongInput.AddListener(ResetBuffs);
+
+        AdjustSong();
     }
     
-    void NewSong()
+    void AdjustSong()
     {
         audio.Stop();
         audioStartTime = (float) AudioSettings.dspTime;
@@ -60,6 +62,7 @@ public class DanceInput : MonoBehaviour
         audio.clip = songSettings.SongAudio;
         audio.Play();
         
+        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
         danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
     }

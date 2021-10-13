@@ -375,7 +375,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 185776195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 185776197}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: FadeToSceneTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &185776195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,6 +440,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 2_LevelArena
   blackScreen: {fileID: 258924190}
+  currentSong: {fileID: 11400000, guid: 2669088210a4fde42a7669bb67871cef, type: 2}
+  selectedSong: {fileID: 11400000, guid: 590743fa6451e564cabf3c687b7778b0, type: 2}
   fadeTime: 1
 --- !u!1 &258924188
 GameObject:
@@ -694,7 +708,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 536592674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 536592676}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: FadeToSceneTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &536592674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,6 +773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 2_LevelArena
   blackScreen: {fileID: 258924190}
+  currentSong: {fileID: 11400000, guid: 2669088210a4fde42a7669bb67871cef, type: 2}
+  selectedSong: {fileID: 11400000, guid: 42db5500ac68f5a428599e6ad0bf7058, type: 2}
   fadeTime: 1
 --- !u!1 &870923022
 GameObject:
@@ -830,7 +858,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 870923025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870923027}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: FadeToSceneTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &870923025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +923,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 2_LevelArena
   blackScreen: {fileID: 258924190}
+  currentSong: {fileID: 11400000, guid: 2669088210a4fde42a7669bb67871cef, type: 2}
+  selectedSong: {fileID: 11400000, guid: e0662e6034e7d0e4085fbb9e666d7620, type: 2}
   fadeTime: 1
 --- !u!1 &1188815320
 GameObject:
@@ -1124,7 +1166,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672552879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672552881}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: FadeToSceneTransition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1672552879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,6 +1231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 2_LevelArena
   blackScreen: {fileID: 258924190}
+  currentSong: {fileID: 11400000, guid: 2669088210a4fde42a7669bb67871cef, type: 2}
+  selectedSong: {fileID: 11400000, guid: ca3587a791ae13345bc7803186cd0655, type: 2}
   fadeTime: 1
 --- !u!1 &1961102658
 GameObject:

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32822acb7cc9460cbb33655ce77ccd39, type: 3}
-  m_Name: Song1
+  m_Name: Song_Spotlight
   m_EditorClassIdentifier: 
   EnemyWaves:
   - {fileID: 11400000, guid: c3919e0d4a596804fb96099f44ec8655, type: 2}
@@ -33,4 +33,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e24c43f102556ef44afd35e3893100fc, type: 2}
   - {fileID: 11400000, guid: 51e5ee4731469a446909110d70152b08, type: 2}
   - {fileID: 11400000, guid: 25e04d034d2436e42a377b4079625f4d, type: 2}
-  SongBpm: {fileID: 11400000, guid: e56bd95a582f10141a7cfd34bb01c917, type: 2}
+  SongAudio: {fileID: 8300000, guid: 4abcbb237e011f547b6c1d6110c2b042, type: 3}
+  SongBpm: {fileID: 11400000, guid: 539ee4a692bcffa4cbb716de57207894, type: 2}
