@@ -15,6 +15,7 @@ public class GoTowardsPlayer : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         myAnim = GetComponentInChildren<Animator>();
+        pushable = GetComponent<PushableObject>();
     }
 
     void Update()

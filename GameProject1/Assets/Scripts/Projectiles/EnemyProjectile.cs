@@ -12,13 +12,15 @@ public class EnemyProjectile : MonoBehaviour
         lifeTime -= Time.deltaTime;
         if ( lifeTime < 0 )
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Player")) {
+    private void OnTriggerStay2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Player")) 
+        {
             PlayerHealth.Instance.TryDamagePlayer(damage);
+            Destroy(this.gameObject,0.02f);
         }
     }
 }

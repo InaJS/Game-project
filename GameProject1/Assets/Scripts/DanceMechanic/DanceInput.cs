@@ -24,7 +24,7 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private FloatValue distanceBuff;
     [SerializeField] private int healComboNumber = 5;
     [SerializeField] private int healValue = 1;
-    [SerializeField] private int maxBuffStacks = 0;
+    [SerializeField] private FloatValue maxBuffStacks;
     [SerializeField] private float durationIncrement = 0;
     [SerializeField] private float distanceIncrement = 0;
     [SerializeField] private Material danceFloorSharedMaterial;
@@ -72,7 +72,7 @@ public class DanceInput : MonoBehaviour
         buffStacks++;
         healCounter++;
         
-        buffStacks = Mathf.Clamp(buffStacks, 0, maxBuffStacks);
+        buffStacks = (int) Mathf.Clamp(buffStacks, 0, maxBuffStacks.value);
 
         durationBuff.value = durationIncrement * buffStacks;
         distanceBuff.value = distanceIncrement * buffStacks;

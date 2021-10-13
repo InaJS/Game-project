@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class EnemyFire : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float startTimeBetweenShots;
     [SerializeField] private EnemyProjectile[] ShootEffectPrefabs;
-    [SerializeField] private PushableObject pushable;
+    private PushableObject pushable;
 
     private float timeBetweenShots;
     private Transform player;
@@ -15,6 +16,7 @@ public class EnemyFire : MonoBehaviour
     void Start()
     {
         player = PlayerHealth.Instance.gameObject.transform;
+        pushable = GetComponent<PushableObject>();
 
         timeBetweenShots = startTimeBetweenShots;
     }

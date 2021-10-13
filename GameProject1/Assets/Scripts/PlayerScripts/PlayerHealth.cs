@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private UnityEvent onDeath;
 
     private float currentPlayerHealth;
-    private float damageTimer = 0;
+    private float damageTimer = -1;
 
     public void TryDamagePlayer(float damageAmount)
     {
@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     {
         onPlayerHit.Invoke();
         currentPlayerHealth -= damageAmount;
+        damageTimer = damageDelay;
 
         float value = currentPlayerHealth / playerHealth;
         Color adjustedColor = Color.Lerp(LowHealth, FullHealth,value);
@@ -76,28 +77,6 @@ public class PlayerHealth : MonoBehaviour
         if (damageTimer > 0)
         {
             damageTimer -= Time.deltaTime;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (damageTimer > 0)
-        {
-            return;
-        }
-        
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
-            if (!enemy)
-            {
-                return;
-            }
-
-            damageTimer = damageDelay;
-
-            int damage = (int) enemy.GetDamage();
-            DamagePlayer(damage);
         }
     }
 }
