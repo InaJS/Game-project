@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26a9516becda64fa43b114faf892e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 6
   minDistance: 1
   myAnim: {fileID: 3878928991649079374}
 --- !u!114 &2875840601992728630
