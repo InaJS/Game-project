@@ -211,7 +211,7 @@ MonoBehaviour:
   baseBouncyness: 4
   pushBuffMultiplier: 1
   pushBuffDistance: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
-  baseStunTime: 0.1
+  baseStunTime: 0.5
   stunBuffMultiplier: 1
   stunBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
   isBeingPushed: 0
