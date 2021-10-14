@@ -39,6 +39,8 @@ public class PlayerHealth : MonoBehaviour
         currentPlayerHealth += healValue;
         currentPlayerHealth = Mathf.Clamp(currentPlayerHealth, 0, playerHealth);
 
+        currentPlayerHealth = Mathf.Clamp(currentPlayerHealth, 0, playerHealth);
+
         float value = currentPlayerHealth / playerHealth;
         Color adjustedColor = Color.Lerp(LowHealth, FullHealth,value);
         coneRenderer.color = adjustedColor;
