@@ -4,15 +4,11 @@ using System.Collections.Generic;
 using Bolt;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour {
-    [Tooltip("How often the player will take damage")]
+public class EnemyAI : MonoBehaviour 
+{
     [SerializeField] private float damageAmount;
     [SerializeField] private int enemyHealth = 5;
 
-    private Coroutine attack;
-    private float time = 1f;
-    private PlayerHealth player;
-    
     public delegate void OnDeath();
 
     public OnDeath onDeath;

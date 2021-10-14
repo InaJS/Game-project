@@ -194,6 +194,7 @@ MonoBehaviour:
   FullHealth: {r: 1, g: 1, b: 1, a: 1}
   LowHealth: {r: 0, g: 0, b: 0, a: 0}
   damageDelay: 1
+  onPlayerHeal: {fileID: 11400000, guid: 1b03523aa1c0047499433cf06b8aaef1, type: 2}
   onPlayerHit:
     m_PersistentCalls:
       m_Calls:
@@ -209,7 +210,6 @@ MonoBehaviour:
           m_StringArgument: PlayerHit
           m_BoolArgument: 0
         m_CallState: 2
-  onPlayerHeal: {fileID: 11400000, guid: 1b03523aa1c0047499433cf06b8aaef1, type: 2}
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 2368507965179732025}
   - component: {fileID: 8516657686239002003}
   - component: {fileID: 3853739202154225965}
+  - component: {fileID: 8616604608948769740}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -418,6 +419,46 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DanceColliderActivate, Assembly-CSharp
         m_MethodName: TriggerHitbox
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8616604608948769740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679205255910048264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: b31b60a0779a07e48acdfc711a09fba2, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4679205255910048268}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8516657686239002003}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -557,6 +598,7 @@ GameObject:
   - component: {fileID: 2103611544993565313}
   - component: {fileID: 163868600527774776}
   - component: {fileID: 1049181603793923462}
+  - component: {fileID: 7966804328839311751}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -648,6 +690,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7966804328839311751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012377295333094828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: b31b60a0779a07e48acdfc711a09fba2, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1049181603793923462}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9135794882310150078
 GameObject:
   m_ObjectHideFlags: 0
