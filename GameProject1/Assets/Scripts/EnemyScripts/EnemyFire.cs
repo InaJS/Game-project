@@ -18,7 +18,9 @@ public class EnemyFire : MonoBehaviour
         player = PlayerHealth.Instance.gameObject.transform;
         pushable = GetComponent<PushableObject>();
 
-        timeBetweenShots = startTimeBetweenShots;
+        float startTime = Random.Range(0, startTimeBetweenShots);
+
+        timeBetweenShots = startTime;
     }
 
     void Update()
