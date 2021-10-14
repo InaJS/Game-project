@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class HeartVisuals : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class HeartVisuals : MonoBehaviour
 
     public void RefreshHearts()
     {
-        if (Mathf.Approximately(_heartsBefore, _comboNumber.value) && 
+        if (_heartsBefore <= _comboNumber.value && 
             Mathf.Approximately(_currentHeartBuffs.value,_comboNumber.value))
         {
             return;
@@ -27,20 +27,34 @@ public class HeartVisuals : MonoBehaviour
             AddHearts();
             return;
         }
-        
-        RemoveHearts();
+
+        if (_heartsBefore > _currentHeartBuffs.value)
+        {
+            RemoveHearts();
+        }
     }
 
     private void RemoveHearts()
     {
-        _heartsBefore = 0;
-
         for (var index = hearts.Count - 1; index >= 0; index--)
         {
             DropParticles dropper = hearts[index];
-            dropper.DestroyHeart();
+            dropper.LoseHearts();
         }
 
+        _heartsBefore = 0;
+        hearts.Clear();
+    }
+
+    public void UseHearts()
+    {
+        for (var index = hearts.Count - 1; index >= 0; index--)
+        {
+            DropParticles dropper = hearts[index];
+            dropper.ConsumeHearts();
+        }
+
+        _heartsBefore = 0;
         hearts.Clear();
     }
 
@@ -48,12 +62,6 @@ public class HeartVisuals : MonoBehaviour
     {
         _heartsBefore++;
 
-        if (_heartsBefore == _comboNumber.value)
-        {
-            RemoveHearts();
-            return;
-        }
-        
         int index = Random.Range(0, spawnZones.Length);
 
         float horizontalRange = Random.Range(-1, 1)*0.5f;

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Bolt;
+using CustomEventSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,8 +17,8 @@ public class PlayerHealth : MonoBehaviour
     [Tooltip("How often the player can get damaged")] 
     [SerializeField] private float damageDelay = 1f;
 
+    [SerializeField] private VoidEvent onPlayerHeal;
     [SerializeField] private UnityEvent onPlayerHit;
-    [SerializeField] private UnityEvent onPlayerHeal;
     [SerializeField] private UnityEvent onDeath;
 
     private float currentPlayerHealth;
@@ -35,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealPlayer(float healValue)
     {
-        onPlayerHeal.Invoke();
+        onPlayerHeal.Raise();
         currentPlayerHealth += healValue;
         currentPlayerHealth = Mathf.Clamp(currentPlayerHealth, 0, playerHealth);
 

@@ -114,6 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 2490735253488078574}
+  renderer: {fileID: 0}
+  fadeSpeed: 5
+  floating: {fileID: 0}
 --- !u!1 &7824161408525428944
 GameObject:
   m_ObjectHideFlags: 0

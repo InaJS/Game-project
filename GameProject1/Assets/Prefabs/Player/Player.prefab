@@ -209,21 +209,7 @@ MonoBehaviour:
           m_StringArgument: PlayerHit
           m_BoolArgument: 0
         m_CallState: 2
-  onPlayerHeal:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1974261121991281259}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PlayerHealed
-          m_BoolArgument: 0
-        m_CallState: 2
+  onPlayerHeal: {fileID: 11400000, guid: 1b03523aa1c0047499433cf06b8aaef1, type: 2}
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -559,6 +545,7 @@ MonoBehaviour:
   maxBuffs: {fileID: 11400000, guid: 7b4cd650cfff46543b77120b04943c87, type: 2}
   currentBuffs: {fileID: 11400000, guid: 911ae15737162224fa7bdca10f7dff81, type: 2}
   buffPrefab: {fileID: 6972148108135910008, guid: fc5d115dd465c3643b334cf7f5c4c112, type: 3}
+  buffStacksBefore: 0
 --- !u!1 &9012377295333094828
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +659,7 @@ GameObject:
   - component: {fileID: 6837206478656154234}
   - component: {fileID: 59673744382371639}
   - component: {fileID: 1974261121991281259}
+  - component: {fileID: 5655344176469462525}
   m_Layer: 0
   m_Name: Light Cone
   m_TagString: Untagged
@@ -763,3 +751,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5655344176469462525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135794882310150078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 1b03523aa1c0047499433cf06b8aaef1, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974261121991281259}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PlayerHealed
+          m_BoolArgument: 0
+        m_CallState: 2

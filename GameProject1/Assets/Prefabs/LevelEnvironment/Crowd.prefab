@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 9056466257690768088}
   - component: {fileID: 3255835969204198049}
   - component: {fileID: 7726791415983027196}
+  - component: {fileID: 4123011210544337894}
   m_Layer: 0
   m_Name: Crowd
   m_TagString: Untagged
@@ -384,7 +385,7 @@ MonoBehaviour:
   - Center: {x: 29.4, y: -5.33, z: 0}
     Width: 1.8
     Height: 33.4
-  _heartVisual: {fileID: 3454825123262416053, guid: 9e94766b9c991fa4185ed823f87ed4fd, type: 3}
+  _heartVisual: {fileID: 3697503720396771424, guid: 9e94766b9c991fa4185ed823f87ed4fd, type: 3}
   _holder: {fileID: 2471623825181712699}
   _heartsBefore: 0
   enableGizmo: 1
@@ -435,6 +436,34 @@ MonoBehaviour:
       - m_Target: {fileID: 9056466257690768088}
         m_TargetAssemblyTypeName: HeartVisuals, Assembly-CSharp
         m_MethodName: RefreshHearts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4123011210544337894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745658061841121456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 1b03523aa1c0047499433cf06b8aaef1, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9056466257690768088}
+        m_TargetAssemblyTypeName: HeartVisuals, Assembly-CSharp
+        m_MethodName: UseHearts
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
