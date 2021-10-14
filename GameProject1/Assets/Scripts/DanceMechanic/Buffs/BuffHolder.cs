@@ -39,7 +39,7 @@ public class BuffHolder : MonoBehaviour
         RemoveBuffs();
     }
 
-    public void RemoveBuffs()
+    private void RemoveBuffs()
     {
         buffStacksBefore = 0;
         
@@ -49,7 +49,7 @@ public class BuffHolder : MonoBehaviour
         }
     }
 
-    public void AddBuff()
+    private void AddBuff()
     {
         buffStacksBefore++;
         float radius = Random.Range(1.5f, 2.0f);

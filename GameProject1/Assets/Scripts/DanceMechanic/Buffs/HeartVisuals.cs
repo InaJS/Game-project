@@ -28,7 +28,7 @@ public class HeartVisuals : MonoBehaviour
         RemoveHearts();
     }
 
-    public void RemoveHearts()
+    private void RemoveHearts()
     {
         _heartsBefore = 0;
         
@@ -38,7 +38,7 @@ public class HeartVisuals : MonoBehaviour
         }
     }
 
-    public void AddHearts()
+    private void AddHearts()
     {
         _heartsBefore++;
         int index = Random.Range(0, spawnZones.Length);
