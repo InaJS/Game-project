@@ -8,6 +8,7 @@ public class EnemyFire : MonoBehaviour
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float startTimeBetweenShots;
     [SerializeField] private EnemyProjectile[] ShootEffectPrefabs;
+    [SerializeField] private AudioSource audio;
     private PushableObject pushable;
 
     private float timeBetweenShots;
@@ -15,6 +16,7 @@ public class EnemyFire : MonoBehaviour
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         player = PlayerHealth.Instance.gameObject.transform;
         pushable = GetComponent<PushableObject>();
 
@@ -50,5 +52,7 @@ public class EnemyFire : MonoBehaviour
         EnemyProjectile b = Instantiate(bulletPrefab);
         b.transform.position = transform.position;
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        
+        audio.Play();
     }
 }
