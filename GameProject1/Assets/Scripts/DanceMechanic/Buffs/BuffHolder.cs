@@ -8,7 +8,9 @@ public class BuffHolder : MonoBehaviour
 {
     [SerializeField] private Transform holder;
     [SerializeField] private FloatValue maxBuffs;
+    [SerializeField] private FloatValue currentBuffs;
     [SerializeField] private SpriteRenderer buffPrefab;
+    public float buffStacksBefore;
 
     private void Awake()
     {
@@ -16,10 +18,31 @@ public class BuffHolder : MonoBehaviour
         {
             holder = this.transform;
         }
+
+        buffStacksBefore = 0;
+    }
+
+    public void RefreshBuffs()
+    {
+        if (Mathf.Approximately(buffStacksBefore, maxBuffs.value) && 
+            Mathf.Approximately(currentBuffs.value,maxBuffs.value))
+        {
+            return;
+        }
+
+        if (buffStacksBefore < currentBuffs.value)
+        {
+            AddBuff();
+            return;
+        }
+        
+        RemoveBuffs();
     }
 
     public void RemoveBuffs()
     {
+        buffStacksBefore = 0;
+        
         foreach (Transform transform in holder)
         {
             Destroy(transform.gameObject);
@@ -28,13 +51,13 @@ public class BuffHolder : MonoBehaviour
 
     public void AddBuff()
     {
-        if (holder.childCount >= maxBuffs.value)
-        {
-            return;
-        }
+        buffStacksBefore++;
+        float radius = Random.Range(1.5f, 2.0f);
+        float rotation = Random.Range(0.0f, 1.0f);
 
-        float randomizer = Random.Range(0.5f, 1.0f);
+        Quaternion rotationQuat = Quaternion.AngleAxis(rotation * 360.0f, Vector3.forward);
 
-        Instantiate(buffPrefab, transform.position + randomizer * Vector3.right ,Quaternion.identity,this.transform);
+        Instantiate(buffPrefab, transform.position + rotationQuat * Vector3.right * radius, Quaternion.identity,
+            this.transform);
     }
 }

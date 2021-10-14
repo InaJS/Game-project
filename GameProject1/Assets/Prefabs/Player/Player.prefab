@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56829851c738a494985f884854e67216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1
+  rotationSpeed: 0.6
 --- !u!114 &1616724602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1616724604}
         m_TargetAssemblyTypeName: BuffHolder, Assembly-CSharp
-        m_MethodName: AddBuff
+        m_MethodName: RefreshBuffs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -533,7 +533,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1616724604}
         m_TargetAssemblyTypeName: BuffHolder, Assembly-CSharp
-        m_MethodName: RemoveBuffs
+        m_MethodName: RefreshBuffs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -557,6 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder: {fileID: 313364543720071363}
   maxBuffs: {fileID: 11400000, guid: 7b4cd650cfff46543b77120b04943c87, type: 2}
+  currentBuffs: {fileID: 11400000, guid: 911ae15737162224fa7bdca10f7dff81, type: 2}
   buffPrefab: {fileID: 6972148108135910008, guid: fc5d115dd465c3643b334cf7f5c4c112, type: 3}
 --- !u!1 &9012377295333094828
 GameObject:

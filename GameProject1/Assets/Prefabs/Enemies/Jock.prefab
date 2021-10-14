@@ -98,6 +98,7 @@ MonoBehaviour:
   moveSpeed: 6
   minDistance: 1
   myAnim: {fileID: 3878928991649079374}
+  pushable: {fileID: 0}
 --- !u!114 &2875840601992728630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,10 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656fc96eef0e2c84090fe1ce5d9481b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bouncyness: 5
-  pushBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
+  baseBouncyness: -0.2
+  pushBuffMultiplier: 1
   pushBuffDistance: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
-  stunTime: 0.3
+  baseStunTime: 0.1
+  stunBuffMultiplier: 1
+  stunBuffDuration: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
+  isBeingPushed: 0
 --- !u!1 &3940413167080568620
 GameObject:
   m_ObjectHideFlags: 0

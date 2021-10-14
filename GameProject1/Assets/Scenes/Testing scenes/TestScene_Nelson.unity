@@ -484,10 +484,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4679205255910048264, guid: 342c50ffae976b944822128ff04a4671, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4679205255910048271, guid: 342c50ffae976b944822128ff04a4671, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -534,87 +530,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342c50ffae976b944822128ff04a4671, type: 3}
---- !u!1 &1616724600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4968976191595743767, guid: 342c50ffae976b944822128ff04a4671, type: 3}
-  m_PrefabInstance: {fileID: 1616724599}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1616724601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616724600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: 7c7f7aa72e9d277438b4fb673a12d0d3, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1616724602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616724600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45405982c76b4a719ed8aa130cbb4be9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: 3e9fd23b2e57f264cbeed6ad6b24820e, type: 2}
-  UnityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1616724603 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 313364543720071363, guid: 342c50ffae976b944822128ff04a4671, type: 3}
-  m_PrefabInstance: {fileID: 1616724599}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1616724604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616724600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0957cb9909687da45801864f4d779e22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holder: {fileID: 1616724603}
-  maxBuffs: {fileID: 11400000, guid: 7b4cd650cfff46543b77120b04943c87, type: 2}
-  buffPrefab: {fileID: 0}
 --- !u!1001 &1670315494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -735,10 +650,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8423607644430842150, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
-      propertyPath: songWaves.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 590743fa6451e564cabf3c687b7778b0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
 --- !u!1 &1842795589
@@ -945,10 +856,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3148438238348651529, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
-      propertyPath: maxBuffStacks
-      value: 
-      objectReference: {fileID: 11400000, guid: 7b4cd650cfff46543b77120b04943c87, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
 --- !u!1001 &2025449386

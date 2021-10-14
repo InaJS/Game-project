@@ -196,9 +196,10 @@ MonoBehaviour:
   distanceBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
   healComboNumber: 12
   healValue: 1
-  maxBuffStacks: 10
-  durationIncrement: 0.04
-  distanceIncrement: 0.01
+  buffStacks: {fileID: 11400000, guid: 911ae15737162224fa7bdca10f7dff81, type: 2}
+  maxBuffStacks: {fileID: 11400000, guid: 7b4cd650cfff46543b77120b04943c87, type: 2}
+  durationIncrement: 0.01
+  distanceIncrement: 0.08
   danceFloorSharedMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
 --- !u!114 &2724690226980110104
 MonoBehaviour:

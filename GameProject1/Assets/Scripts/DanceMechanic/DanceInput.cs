@@ -24,6 +24,7 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private FloatValue distanceBuff;
     [SerializeField] private int healComboNumber = 5;
     [SerializeField] private int healValue = 1;
+    [SerializeField] private FloatValue buffStacks;
     [SerializeField] private FloatValue maxBuffStacks;
     [SerializeField] private float durationIncrement = 0;
     [SerializeField] private float distanceIncrement = 0;
@@ -38,7 +39,6 @@ public class DanceInput : MonoBehaviour
     private int currentSong;
     private float audioStartTime;
     private float lastDanced;
-    private int buffStacks = 0;
     private int healCounter = 0;
 
     private void Awake()
@@ -50,10 +50,20 @@ public class DanceInput : MonoBehaviour
         
         onCorrectInput.AddListener(BuffUp);
         onWrongInput.AddListener(ResetBuffs);
+        onNoInput.AddListener(ResetBuffs);
+
+        buffStacks.value = 0;
 
         AdjustSong();
     }
-    
+
+    private void OnDisable()
+    {
+        onCorrectInput.RemoveAllListeners();
+        onWrongInput.RemoveAllListeners();
+        onNoInput.RemoveAllListeners();
+    }
+
     void AdjustSong()
     {
         audio.Stop();
@@ -69,13 +79,13 @@ public class DanceInput : MonoBehaviour
 
     public void BuffUp()
     {
-        buffStacks++;
+        buffStacks.value++;
         healCounter++;
         
-        buffStacks = (int) Mathf.Clamp(buffStacks, 0, maxBuffStacks.value);
+        buffStacks.value = (int) Mathf.Clamp(buffStacks.value, 0, maxBuffStacks.value);
 
-        durationBuff.value = durationIncrement * buffStacks;
-        distanceBuff.value = distanceIncrement * buffStacks;
+        durationBuff.value = durationIncrement * buffStacks.value;
+        distanceBuff.value = distanceIncrement * buffStacks.value;
 
         if (healCounter >= healComboNumber)
         {
@@ -86,7 +96,7 @@ public class DanceInput : MonoBehaviour
     
     public void ResetBuffs()
     {
-        buffStacks = 0;
+        buffStacks.value = 0;
         healCounter = 0;
     }
 
@@ -116,7 +126,7 @@ public class DanceInput : MonoBehaviour
                 onCorrectInput.Invoke();
                 dancedOnTime = true;
                 lastDanced = songPosition;
-                Debug.Log("danced on time");
+                // Debug.Log("danced on time");
             }
             else
             {
@@ -124,16 +134,17 @@ public class DanceInput : MonoBehaviour
                 blockedTime = disableTime.value; // blocks the input for N seconds on player mistake
                 dancedOutOfTime = true;
                 lastDanced = songPosition;
-                Debug.Log("danced out of time");
+                // Debug.Log("danced out of time");
             }
             return;
         }
         
-        if (songPosition - lastDanced >= songSettings.SongBpm.secsValue)
+        if (songPosition - lastDanced >= songSettings.SongBpm.secsValue + inputErrorMargin.value)
         {
             onNoInput.Invoke();
             dancedOnTime = false;
             dancedOutOfTime = false;
+            // Debug.Log("Missed the input window: current time" + songPosition + " last input time:" + lastDanced);
         }
     }
 }

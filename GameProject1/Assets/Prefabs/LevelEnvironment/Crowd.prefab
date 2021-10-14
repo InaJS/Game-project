@@ -310,7 +310,7 @@ MonoBehaviour:
     Width: 5
     Height: 35
   songWaves:
-  - {fileID: 11400000, guid: ca3587a791ae13345bc7803186cd0655, type: 2}
+  - {fileID: 11400000, guid: 2669088210a4fde42a7669bb67871cef, type: 2}
   onNewSong:
     m_PersistentCalls:
       m_Calls:
