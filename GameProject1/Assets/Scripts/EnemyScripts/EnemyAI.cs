@@ -18,16 +18,20 @@ public class EnemyAI : MonoBehaviour {
     public OnDeath onDeath;
 
 
-    private void Awake() {
+    private void Awake() 
+    {
         onDeath += () => Destroy(gameObject);
     }
     
-    private void OnTriggerStay2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Projectile")) {
+    private void OnTriggerStay2D(Collider2D collision) 
+    {
+        if (collision.gameObject.CompareTag("Projectile")) 
+        {
             enemyHealth--;
             if (enemyHealth <= 0) {
                 onDeath.Invoke();
             }
+            return;
         }
         
         if (collision.gameObject.CompareTag("Player")) 
