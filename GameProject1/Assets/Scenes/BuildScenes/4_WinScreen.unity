@@ -205,9 +205,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1234881992}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 11400000, guid: 4ec0eab0ee181754cb5976584c861f69, type: 2}
+        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+        m_MethodName: ChangeToScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

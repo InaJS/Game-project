@@ -6,5 +6,6 @@ using UnityEngine;
 public class SongWaves : ScriptableObject
 {
     public List<EnemyWave> EnemyWaves;
+    public AudioClip SongAudio;
     public BpmValue SongBpm;
 }

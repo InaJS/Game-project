@@ -8,17 +8,24 @@ public class GoTowardsPlayer : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float minDistance = 0.5f;
     [SerializeField] private Animator myAnim;
+    [SerializeField] private PushableObject pushable;
     private Transform target;
 
     private void Awake()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         myAnim = GetComponentInChildren<Animator>();
+        pushable = GetComponent<PushableObject>();
     }
 
     void Update()
     {
         if ((target.position - transform.position).magnitude < minDistance)
+        {
+            return;
+        }
+
+        if (pushable.isBeingPushed)
         {
             return;
         }

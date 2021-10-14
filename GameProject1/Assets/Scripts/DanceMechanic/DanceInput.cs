@@ -8,7 +8,7 @@ public class DanceInput : MonoBehaviour
 {
     [Header("Audio references ---------------------------------------")]
     [SerializeField] private AudioSource audio;
-    [SerializeField] private AudioClip[] songs;
+    [SerializeField] private SongWaves songSettings;
 
     [Header("Input ---------------------------------------")]
     [SerializeField] private string danceButtonName;
@@ -18,14 +18,14 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private UnityEvent onNoInput;
 
     [Header("Shader variables ---------------------------------------")]
-    [SerializeField] private BpmValue currentSongBpm;
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
     [SerializeField] private FloatValue durationBuff;
     [SerializeField] private FloatValue distanceBuff;
     [SerializeField] private int healComboNumber = 5;
     [SerializeField] private int healValue = 1;
-    [SerializeField] private int maxBuffStacks = 0;
+    [SerializeField] private FloatValue buffStacks;
+    [SerializeField] private FloatValue maxBuffStacks;
     [SerializeField] private float durationIncrement = 0;
     [SerializeField] private float distanceIncrement = 0;
     [SerializeField] private Material danceFloorSharedMaterial;
@@ -39,7 +39,6 @@ public class DanceInput : MonoBehaviour
     private int currentSong;
     private float audioStartTime;
     private float lastDanced;
-    private int buffStacks = 0;
     private int healCounter = 0;
 
     private void Awake()
@@ -51,29 +50,42 @@ public class DanceInput : MonoBehaviour
         
         onCorrectInput.AddListener(BuffUp);
         onWrongInput.AddListener(ResetBuffs);
+        onNoInput.AddListener(ResetBuffs);
+
+        buffStacks.value = 0;
+
+        AdjustSong();
     }
-    
-    void NewSong()
+
+    private void OnDisable()
+    {
+        onCorrectInput.RemoveAllListeners();
+        onWrongInput.RemoveAllListeners();
+        onNoInput.RemoveAllListeners();
+    }
+
+    void AdjustSong()
     {
         audio.Stop();
         audioStartTime = (float) AudioSettings.dspTime;
 
-        audio.clip = songs[currentSong];
+        audio.clip = songSettings.SongAudio;
         audio.Play();
         
-        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", currentSongBpm.secsValue);
+        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
+        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
     }
 
     public void BuffUp()
     {
-        buffStacks++;
+        buffStacks.value++;
         healCounter++;
         
-        buffStacks = Mathf.Clamp(buffStacks, 0, maxBuffStacks);
+        buffStacks.value = (int) Mathf.Clamp(buffStacks.value, 0, maxBuffStacks.value);
 
-        durationBuff.value = durationIncrement * buffStacks;
-        distanceBuff.value = distanceIncrement * buffStacks;
+        durationBuff.value = durationIncrement * buffStacks.value;
+        distanceBuff.value = distanceIncrement * buffStacks.value;
 
         if (healCounter >= healComboNumber)
         {
@@ -84,7 +96,7 @@ public class DanceInput : MonoBehaviour
     
     public void ResetBuffs()
     {
-        buffStacks = 0;
+        buffStacks.value = 0;
         healCounter = 0;
     }
 
@@ -95,7 +107,7 @@ public class DanceInput : MonoBehaviour
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text
         
-        timerInternal = songPosition % currentSongBpm.secsValue;
+        timerInternal = songPosition % songSettings.SongBpm.secsValue;
 
         if (blockedTime > 0)
         {
@@ -105,7 +117,7 @@ public class DanceInput : MonoBehaviour
 
         // 3. lastly, if you're under the tempo, try to dance!
         
-        bool withinInputWindow = (timerInternal >= currentSongBpm.secsValue - inputErrorMargin.value && timerInternal <= currentSongBpm.secsValue) || timerInternal < inputErrorMargin.value;
+        bool withinInputWindow = (timerInternal >= songSettings.SongBpm.secsValue - inputErrorMargin.value && timerInternal <= songSettings.SongBpm.secsValue) || timerInternal < inputErrorMargin.value;
 
         if (Input.GetButtonDown(danceButtonName))
         {
@@ -114,7 +126,7 @@ public class DanceInput : MonoBehaviour
                 onCorrectInput.Invoke();
                 dancedOnTime = true;
                 lastDanced = songPosition;
-                Debug.Log("danced on time");
+                // Debug.Log("danced on time");
             }
             else
             {
@@ -122,16 +134,17 @@ public class DanceInput : MonoBehaviour
                 blockedTime = disableTime.value; // blocks the input for N seconds on player mistake
                 dancedOutOfTime = true;
                 lastDanced = songPosition;
-                Debug.Log("danced out of time");
+                // Debug.Log("danced out of time");
             }
             return;
         }
         
-        if (songPosition - lastDanced >= currentSongBpm.secsValue)
+        if (songPosition - lastDanced >= songSettings.SongBpm.secsValue + inputErrorMargin.value)
         {
             onNoInput.Invoke();
             dancedOnTime = false;
             dancedOutOfTime = false;
+            // Debug.Log("Missed the input window: current time" + songPosition + " last input time:" + lastDanced);
         }
     }
 }

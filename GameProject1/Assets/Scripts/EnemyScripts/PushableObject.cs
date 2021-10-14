@@ -6,11 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class PushableObject : MonoBehaviour
 {
-    [SerializeField] private float bouncyness;
-    [SerializeField] private FloatValue pushBuffDuration;
+    [SerializeField] private float baseBouncyness;
+    [SerializeField] private float pushBuffMultiplier = 1;
     [SerializeField] private FloatValue pushBuffDistance;
-    [SerializeField] private float stunTime;
-    private bool isBeingPushed;
+    [SerializeField] private float baseStunTime;
+    [SerializeField] private float stunBuffMultiplier = 1;
+    [SerializeField] private FloatValue stunBuffDuration;
+    
+    [HideInInspector] public bool isBeingPushed;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,8 +21,18 @@ public class PushableObject : MonoBehaviour
         {
            return; 
         }
+        
         Vector3 pushDirection = this.transform.position - other.transform.position;
-        TryPush(pushDirection,bouncyness + pushBuffDistance.value,stunTime + pushBuffDuration.value);
+
+        float pushValue  = Mathf.Clamp(baseBouncyness + pushBuffDistance.value, 0, baseBouncyness + pushBuffDistance.value);
+        float pushtime = Mathf.Clamp(baseStunTime + stunBuffDuration.value, 0, baseStunTime + stunBuffDuration.value);
+
+        if (pushValue <= 0)
+        {
+            pushtime = 0;
+        }
+
+        TryPush(pushDirection, pushBuffMultiplier* pushValue,stunBuffMultiplier * pushtime);
     }
 
     public void TryPush(Vector3 dir, float force, float duration)
