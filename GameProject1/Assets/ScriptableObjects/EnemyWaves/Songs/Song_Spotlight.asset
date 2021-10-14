@@ -34,4 +34,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8369f08ca4bbb574eb2ab9b4dd33d4f8, type: 2}
   - {fileID: 11400000, guid: 0a3e1c3702f69784891cb563c5eecd6c, type: 2}
   SongAudio: {fileID: 8300000, guid: 4abcbb237e011f547b6c1d6110c2b042, type: 3}
-  SongBpm: {fileID: 11400000, guid: 539ee4a692bcffa4cbb716de57207894, type: 2}
+  SongBpm: {fileID: 11400000, guid: a49c7147f43bdf248b6469c21c5d62de, type: 2}

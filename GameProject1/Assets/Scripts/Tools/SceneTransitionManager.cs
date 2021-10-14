@@ -27,7 +27,7 @@ public class SceneTransitionManager : MonoBehaviour
         if (currentSong != null)
         {
             currentSong.SongAudio = selectedSong.SongAudio;
-            currentSong.SongBpm.bpm = selectedSong.SongBpm.bpm;
+            currentSong.SongBpm.BPM = selectedSong.SongBpm.BPM;
             currentSong.EnemyWaves = selectedSong.EnemyWaves;
         }
         
