@@ -13,7 +13,7 @@ public class GoTowardsPlayer : MonoBehaviour
 
     private void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = PlayerHealth.Instance.gameObject.transform;
         myAnim = GetComponentInChildren<Animator>();
         pushable = GetComponent<PushableObject>();
     }
