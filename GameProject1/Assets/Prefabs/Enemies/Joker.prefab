@@ -181,7 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  minDistance: 25
+  animationDistance: 25
+  moveDistance: 25
   myAnim: {fileID: 2990811583667984047}
   pushable: {fileID: 0}
 --- !u!114 &8933032297863965498
@@ -198,6 +199,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   enemyHealth: 3
+  deathCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2990811583667984047}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isDead
+          m_BoolArgument: 0
+        m_CallState: 2
+  movementAI: {fileID: 0}
 --- !u!114 &6322538659945525916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +374,7 @@ GameObject:
   - component: {fileID: 2990811583667984045}
   - component: {fileID: 2990811583667984047}
   - component: {fileID: 2990811583667984046}
+  - component: {fileID: 1358184480149413004}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -389,7 +407,7 @@ Animator:
   m_GameObject: {fileID: 2990811583667984044}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 805bbb1add2bc844eb9a009fad75732f, type: 2}
+  m_Controller: {fileID: 22100000, guid: 3b19fdb706677bb4ab69b0c84510a930, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -449,3 +467,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1358184480149413004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990811583667984044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68944a96d5ddeb245947101f2fbb700e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2990811583448046647}

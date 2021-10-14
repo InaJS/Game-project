@@ -11,7 +11,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float damageAmount;
     [SerializeField] private int enemyHealth = 5;
     [SerializeField] private UnityEvent deathCallback;
-    [SerializeField] private GoTowardsPlayer movementAI;
+    private GoTowardsPlayer movementAI;
+    private EnemyFire shootBehavior;
+    private Collider2D collider;
 
     public delegate void OnDeath();
 
@@ -21,10 +23,17 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         movementAI = this.GetComponent<GoTowardsPlayer>();
+        shootBehavior = this.GetComponent<EnemyFire>();
+        collider = this.GetComponent<Collider2D>();
         
-        onDeath += () => Destroy(gameObject);
         onDeath += () => deathCallback.Invoke();
         onDeath += () => movementAI.enabled = false;
+        onDeath += () => collider.enabled = false;
+
+        if (shootBehavior != null)
+        {
+            onDeath += () => shootBehavior.enabled = false;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision) 
@@ -44,12 +53,4 @@ public class EnemyAI : MonoBehaviour
             PlayerHealth.Instance.TryDamagePlayer(damageAmount);
         }
     }
-
-    // private void OnCollisionStay2D(Collision2D other)
-    // {
-    //     if (other.gameObject.CompareTag("Player")) 
-    //     {
-    //         PlayerHealth.Instance.TryDamagePlayer(damageAmount);
-    //     }
-    // }
 }

@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  minDistance: 15
+  animationDistance: 15
+  moveDistance: 15
   myAnim: {fileID: 7696738959460193973}
   pushable: {fileID: 0}
 --- !u!114 &3702350968236354255
@@ -116,6 +117,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   enemyHealth: 3
+  deathCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7696738959460193973}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isDead
+          m_BoolArgument: 0
+        m_CallState: 2
+  movementAI: {fileID: 0}
 --- !u!114 &-454092326678676345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,6 +373,7 @@ GameObject:
   - component: {fileID: 7696738959460193975}
   - component: {fileID: 7696738959460193974}
   - component: {fileID: 7696738959460193973}
+  - component: {fileID: 8018263085377711630}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Enemy
@@ -371,7 +389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7696738959460193972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.63, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6914805715938059955}
@@ -439,7 +457,7 @@ Animator:
   m_GameObject: {fileID: 7696738959460193972}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61703c585e28df84ba65e4fe43c78daf, type: 2}
+  m_Controller: {fileID: 22100000, guid: 5c5c43c82b14d6d42a02f4e472ebeb14, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -448,3 +466,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8018263085377711630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696738959460193972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68944a96d5ddeb245947101f2fbb700e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 3702350968236354250}

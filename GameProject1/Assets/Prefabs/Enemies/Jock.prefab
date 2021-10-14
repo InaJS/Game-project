@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  minDistance: 1
+  animationDistance: 4
+  moveDistance: 0.1
   myAnim: {fileID: 3878928991649079374}
   pushable: {fileID: 0}
 --- !u!114 &2875840601992728630
@@ -128,6 +129,7 @@ MonoBehaviour:
           m_StringArgument: isDead
           m_BoolArgument: 0
         m_CallState: 2
+  movementAI: {fileID: 0}
 --- !u!114 &-5698239151902676787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +160,7 @@ GameObject:
   - component: {fileID: 3718258928855358370}
   - component: {fileID: 7133392764468186888}
   - component: {fileID: 3878928991649079374}
+  - component: {fileID: 6085731462185205442}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Enemy
@@ -241,7 +244,7 @@ Animator:
   m_GameObject: {fileID: 3940413167080568620}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 529e78ca19c36b44b925de601b4fb7f3, type: 2}
+  m_Controller: {fileID: 22100000, guid: 79596e8dd1894b04e8e3ec5c19948824, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -250,6 +253,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6085731462185205442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3940413167080568620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68944a96d5ddeb245947101f2fbb700e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2875840601992728627}
 --- !u!1 &6044445222907363898
 GameObject:
   m_ObjectHideFlags: 0

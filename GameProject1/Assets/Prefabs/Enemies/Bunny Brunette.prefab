@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4284284153494021764}
   - component: {fileID: 4284284153494021765}
   - component: {fileID: 4284284153494021882}
+  - component: {fileID: 5624390666065510301}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Enemy
@@ -43,7 +44,7 @@ Animator:
   m_GameObject: {fileID: 4284284153494021767}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 856d18bdfe0baa1449f98913c6216f98, type: 2}
+  m_Controller: {fileID: 22100000, guid: bcf36c002e2fbb041a1568c7e682778e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -103,6 +104,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5624390666065510301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284284153494021767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68944a96d5ddeb245947101f2fbb700e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 4284284154485566026}
 --- !u!1 &4284284154485566026
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  minDistance: 15
+  animationDistance: 15
+  moveDistance: 15
   myAnim: {fileID: 4284284153494021765}
   pushable: {fileID: 0}
 --- !u!114 &1455079383724387402
@@ -219,6 +234,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   enemyHealth: 3
+  deathCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4284284153494021765}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: isDead
+          m_BoolArgument: 0
+        m_CallState: 2
+  movementAI: {fileID: 0}
 --- !u!114 &8928197947200440792
 MonoBehaviour:
   m_ObjectHideFlags: 0
