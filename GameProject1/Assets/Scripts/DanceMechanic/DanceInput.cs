@@ -10,24 +10,27 @@ public class DanceInput : MonoBehaviour
     [SerializeField] private AudioSource audio;
     [SerializeField] private SongWaves songSettings;
 
-    [Header("Input ---------------------------------------")]
+    [Header("Input timing ---------------------------------------")]
     [SerializeField] private string danceButtonName;
+    [SerializeField] private FloatValue inputErrorMargin;
+    [SerializeField] private FloatValue disableTime;
     [SerializeField] private float songTimeOffset = 0.1f;
     [SerializeField] private UnityEvent onCorrectInput;
     [SerializeField] private UnityEvent onWrongInput;
     [SerializeField] private UnityEvent onNoInput;
 
-    [Header("Shader variables ---------------------------------------")]
-    [SerializeField] private FloatValue inputErrorMargin;
-    [SerializeField] private FloatValue disableTime;
-    [SerializeField] private FloatValue durationBuff;
-    [SerializeField] private FloatValue distanceBuff;
-    [SerializeField] private int healComboNumber = 5;
-    [SerializeField] private int healValue = 1;
+    [Header("Buff variables ---------------------------------------")]
     [SerializeField] private FloatValue buffStacks;
     [SerializeField] private FloatValue maxBuffStacks;
+    [SerializeField] private FloatValue durationBuff;
+    [SerializeField] private FloatValue distanceBuff;
     [SerializeField] private float durationIncrement = 0;
     [SerializeField] private float distanceIncrement = 0;
+    [SerializeField] private FloatValue currentHealCounter;
+    [SerializeField] private FloatValue healComboNumber;
+    [SerializeField] private int healValue = 1;
+    
+    [Header("Shader Material ---------------------------------------")]
     [SerializeField] private Material danceFloorSharedMaterial;
 
     private float timerInternal;
@@ -39,7 +42,6 @@ public class DanceInput : MonoBehaviour
     private int currentSong;
     private float audioStartTime;
     private float lastDanced;
-    private int healCounter = 0;
 
     private void Awake()
     {
@@ -53,6 +55,7 @@ public class DanceInput : MonoBehaviour
         onNoInput.AddListener(ResetBuffs);
 
         buffStacks.value = 0;
+        currentHealCounter.value = 0;
 
         AdjustSong();
     }
@@ -80,28 +83,33 @@ public class DanceInput : MonoBehaviour
     public void BuffUp()
     {
         buffStacks.value++;
-        healCounter++;
+        currentHealCounter.value++;
         
         buffStacks.value = (int) Mathf.Clamp(buffStacks.value, 0, maxBuffStacks.value);
 
         durationBuff.value = durationIncrement * buffStacks.value;
         distanceBuff.value = distanceIncrement * buffStacks.value;
 
-        if (healCounter >= healComboNumber)
+        if (currentHealCounter.value >= healComboNumber.value)
         {
             PlayerHealth.Instance.HealPlayer(healValue);
-            healCounter = 0;
+            currentHealCounter.value = 0;
         }
     }
     
     public void ResetBuffs()
     {
         buffStacks.value = 0;
-        healCounter = 0;
+        currentHealCounter.value = 0;
     }
 
     void Update()
     {
+        if (Time.timeScale < 0.1f)
+        {
+            return;
+        }
+        
         songPosition = (float) (AudioSettings.dspTime - audioStartTime); //  - songTimeOffset;
         
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);

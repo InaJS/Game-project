@@ -144,6 +144,8 @@ MonoBehaviour:
   audio: {fileID: 3148438238348651526}
   songSettings: {fileID: 11400000, guid: 2669088210a4fde42a7669bb67871cef, type: 2}
   danceButtonName: Dance
+  inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
+  disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
   songTimeOffset: -0.1
   onCorrectInput:
     m_PersistentCalls:
@@ -190,16 +192,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  inputErrorMargin: {fileID: 11400000, guid: 4c403cbaab0724a4aa0973b1b4450cf2, type: 2}
-  disableTime: {fileID: 11400000, guid: a07ef49d38f8cda4d88133545c83f51b, type: 2}
-  durationBuff: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
-  distanceBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
-  healComboNumber: 12
-  healValue: 1
   buffStacks: {fileID: 11400000, guid: 911ae15737162224fa7bdca10f7dff81, type: 2}
   maxBuffStacks: {fileID: 11400000, guid: 7b4cd650cfff46543b77120b04943c87, type: 2}
+  durationBuff: {fileID: 11400000, guid: 4fe2257445bc4df4fa5bdc0472e34cca, type: 2}
+  distanceBuff: {fileID: 11400000, guid: ad4a5fdac3fe855498a7d19821e73d2b, type: 2}
   durationIncrement: 0.01
   distanceIncrement: 0.08
+  currentHealCounter: {fileID: 11400000, guid: 6814ee1b6bf49f847905242fc08a0a84, type: 2}
+  healComboNumber: {fileID: 11400000, guid: c1808caddf9d25e41925c24625887019, type: 2}
+  healValue: 1
   danceFloorSharedMaterial: {fileID: 2100000, guid: dc1ac48345727864486569255b928fef, type: 2}
 --- !u!114 &2724690226980110104
 MonoBehaviour:

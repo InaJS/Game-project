@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 102200308}
   - component: {fileID: 102200307}
   - component: {fileID: 102200306}
+  - component: {fileID: 102200310}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -611,6 +612,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &102200310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102200305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c39adc307e1fb8429ffeeed36197a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyName: Cancel
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1443887403}
+        m_TargetAssemblyTypeName: PauseUIController, Assembly-CSharp
+        m_MethodName: SwitchObjectActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &117530470
 GameObject:
   m_ObjectHideFlags: 0
@@ -5046,6 +5075,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7745658061841121457, guid: 6855f2bac68ff6a44b0f7cc66e1e0468, type: 3}
   m_PrefabInstance: {fileID: 7745658062590906166}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &887237545 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3148438238348651526, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
+  m_PrefabInstance: {fileID: 3148438239830976640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &900975103
 GameObject:
   m_ObjectHideFlags: 0
@@ -7920,6 +7954,7 @@ GameObject:
   - component: {fileID: 1443887399}
   - component: {fileID: 1443887401}
   - component: {fileID: 1443887400}
+  - component: {fileID: 1443887403}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -7987,6 +8022,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443887398}
   m_CullTransparentMesh: 1
+--- !u!114 &1443887403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443887398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b772357c6ba148eb836745b7c6250f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 887237545}
 --- !u!1 &1459995231
 GameObject:
   m_ObjectHideFlags: 0
@@ -11652,6 +11700,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3148438238348651529, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
+      propertyPath: healCounter
+      value: 
+      objectReference: {fileID: 11400000, guid: 6814ee1b6bf49f847905242fc08a0a84, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
 --- !u!1001 &7745658062590906166

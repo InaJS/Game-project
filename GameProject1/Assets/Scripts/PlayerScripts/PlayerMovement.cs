@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale < 0.1f)
+        {
+            return;
+        }
+        
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         
@@ -32,16 +37,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("XSpeed", horizontal);
         animator.SetFloat("YSpeed", vertical);
         //Do not touch!!
-        
-        
     }
 
     private void FixedUpdate()
     {
         playerBody.velocity = new Vector2(horizontal, vertical).normalized * moveSpeed;
-        
-        // I changed this a bit because the vector was not normalized, so diagonal movement was going faster,
-        // old code for reference:
-        // playerBody.velocity = new Vector2(horizontal* moveSpeed, vertical* moveSpeed);
     }
 }
