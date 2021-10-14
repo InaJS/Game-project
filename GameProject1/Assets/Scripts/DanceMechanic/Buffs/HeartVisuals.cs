@@ -64,8 +64,8 @@ public class HeartVisuals : MonoBehaviour
 
         int index = Random.Range(0, spawnZones.Length);
 
-        float horizontalRange = Random.Range(-1, 1)*0.5f;
-        float verticalRange = Random.Range(-1, 1)*0.5f;
+        float horizontalRange = Random.Range(-1.0f, 1.0f)*0.5f;
+        float verticalRange = Random.Range(-1.0f, 1.0f)*0.5f;
 
         Vector3 center = spawnZones[index].Center;
 
