@@ -6,6 +6,7 @@ public class HeartVisuals : MonoBehaviour
 {
     [SerializeField] private FloatValue _currentHeartBuffs;
     [SerializeField] private FloatValue _comboNumber;
+    [SerializeField] private SpawnZone[] spawnZones;
     [SerializeField] private SpriteRenderer _heartVisual;
     [SerializeField] private Transform _holder;
     [SerializeField] private int _heartsBefore;
@@ -20,14 +21,14 @@ public class HeartVisuals : MonoBehaviour
 
         if (_heartsBefore < _currentHeartBuffs.value)
         {
-            AddBuff();
+            AddHearts();
             return;
         }
         
-        RemoveBuffs();
+        RemoveHearts();
     }
 
-    public void RemoveBuffs()
+    public void RemoveHearts()
     {
         _heartsBefore = 0;
         
@@ -37,15 +38,18 @@ public class HeartVisuals : MonoBehaviour
         }
     }
 
-    public void AddBuff()
+    public void AddHearts()
     {
         _heartsBefore++;
-        float radius = Random.Range(1.5f, 2.0f);
-        float rotation = Random.Range(0.0f, 1.0f);
+        int index = Random.Range(0, spawnZones.Length);
 
-        Quaternion rotationQuat = Quaternion.AngleAxis(rotation * 360.0f, Vector3.forward);
+        float horizontalRange = Random.Range(-1, 1)*0.5f;
+        float verticalRange = Random.Range(-1, 1)*0.5f;
 
-        Instantiate(_heartVisual, transform.position + rotationQuat * Vector3.right * radius, Quaternion.identity,
-            this.transform);
+        Vector3 center = spawnZones[index].Center;
+
+        Vector3 position = center + new Vector3(horizontalRange * spawnZones[index].Width, verticalRange * spawnZones[index].Height);
+
+        Instantiate(_heartVisual, position, Quaternion.identity, _holder);
     }
 }
