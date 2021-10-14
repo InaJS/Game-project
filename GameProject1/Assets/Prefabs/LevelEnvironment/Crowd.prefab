@@ -257,6 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7745658061841121457}
   - component: {fileID: 8423607644430842150}
+  - component: {fileID: 9056466257690768088}
   m_Layer: 0
   m_Name: Crowd
   m_TagString: Untagged
@@ -326,6 +327,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9056466257690768088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745658061841121456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68703892e9f5cfb4f8e49b861da58095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7745658062214499812
 GameObject:
   m_ObjectHideFlags: 0
