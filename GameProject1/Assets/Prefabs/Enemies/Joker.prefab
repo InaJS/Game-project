@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6322538659945525916}
   - component: {fileID: 3014168983902037822}
   - component: {fileID: 3165048302887983666}
+  - component: {fileID: 5385463668076021317}
   m_Layer: 0
   m_Name: Joker
   m_TagString: Enemy
@@ -138,7 +139,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &2013215341199532247
@@ -331,6 +332,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5385463668076021317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990811583448046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91918aa00f2f449eb0e939dfbe1bdf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 11400000, guid: f0d5b119389de8f4c9798762959b5809, type: 2}
+  audio: {fileID: 3165048302887983666}
 --- !u!1 &2990811583667984044
 GameObject:
   m_ObjectHideFlags: 0

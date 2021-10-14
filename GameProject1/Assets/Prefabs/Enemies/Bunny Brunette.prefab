@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 8928197947200440792}
   - component: {fileID: 3658674944239657397}
   - component: {fileID: -3632262645684446253}
+  - component: {fileID: 202235824899225255}
   m_Layer: 0
   m_Name: Bunny Brunette
   m_TagString: Enemy
@@ -159,7 +160,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &1786174071970593369
@@ -351,6 +352,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &202235824899225255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284284154485566026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91918aa00f2f449eb0e939dfbe1bdf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 11400000, guid: f0d5b119389de8f4c9798762959b5809, type: 2}
+  audio: {fileID: -3632262645684446253}
 --- !u!1 &6259185127315987786
 GameObject:
   m_ObjectHideFlags: 0
