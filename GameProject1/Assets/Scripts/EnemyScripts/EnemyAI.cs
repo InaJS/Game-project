@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Bolt;
+using CustomEventSystem;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour 
@@ -27,6 +28,7 @@ public class EnemyAI : MonoBehaviour
             if (enemyHealth <= 0) {
                 onDeath.Invoke();
             }
+            
             return;
         }
         
@@ -35,4 +37,12 @@ public class EnemyAI : MonoBehaviour
             PlayerHealth.Instance.TryDamagePlayer(damageAmount);
         }
     }
+
+    // private void OnCollisionStay2D(Collision2D other)
+    // {
+    //     if (other.gameObject.CompareTag("Player")) 
+    //     {
+    //         PlayerHealth.Instance.TryDamagePlayer(damageAmount);
+    //     }
+    // }
 }

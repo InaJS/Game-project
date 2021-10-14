@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3148438238348651526}
   - component: {fileID: 3148438238348651529}
   - component: {fileID: 2724690226980110104}
+  - component: {fileID: 1007075433086221982}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -230,3 +231,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1007075433086221982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148438238348651525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91918aa00f2f449eb0e939dfbe1bdf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 11400000, guid: f0d5b119389de8f4c9798762959b5809, type: 2}
+  audio: {fileID: 3148438238348651526}
