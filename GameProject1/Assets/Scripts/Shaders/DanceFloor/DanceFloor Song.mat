@@ -66,7 +66,7 @@ Material:
     - _BrightnessFrequency: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DelayBetweenFlashes: 0.5
+    - _DelayBetweenFlashes: 0.42857143
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FlashDuration: 0.15
@@ -88,10 +88,10 @@ Material:
     - _RedAmplitude: 1
     - _RedFrequency: 0.9
     - _SmoothnessTextureChannel: 0
-    - _SongTime: 2.5813384
+    - _SongTime: 81.877304
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeOffset: 0.09
+    - _TimeOffset: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

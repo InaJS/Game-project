@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47824ed257aa40c8ac66d91860c6f81e, type: 3}
   m_Name: CurrentBPM
   m_EditorClassIdentifier: 
-  bpm: 120
-  secsValue: 0.5
+  bpm: 140
+  secsValue: 0.42857143

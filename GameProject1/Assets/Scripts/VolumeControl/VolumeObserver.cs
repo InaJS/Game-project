@@ -14,6 +14,7 @@ public class VolumeObserver : MonoBehaviour
         audio = GetComponent<AudioSource>();
         baseVolume = audio.volume;
         volume.callback.AddListener(AdjustAudioVolume);
+        volume.SetValue(volume.value);
     }
 
     private void AdjustAudioVolume()

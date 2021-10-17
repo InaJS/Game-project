@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8084438d3edec7e478a5f1cfba0ff135, type: 3}
   m_Name: VolumeMultiplier
   m_EditorClassIdentifier: 
-  value: 0
+  value: 1
+  callback:
+    m_PersistentCalls:
+      m_Calls: []

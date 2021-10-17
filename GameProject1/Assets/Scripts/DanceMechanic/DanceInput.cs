@@ -117,7 +117,7 @@ public class DanceInput : MonoBehaviour
             return;
         }
 
-        songPosition = (float) (AudioSettings.dspTime - audioStartTime); //  - songTimeOffset;
+        songPosition = (float) (AudioSettings.dspTime - audioStartTime) + songTimeOffset;
 
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text
