@@ -16,7 +16,7 @@ public class DanceInput : MonoBehaviour
 
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
-    [SerializeField] private float songTimeOffset = 0.1f;
+    // [SerializeField] private float songTimeOffset = 0.1f;
     [SerializeField] private UnityEvent onCorrectInput;
     [SerializeField] private UnityEvent onWrongInput;
     [SerializeField] private UnityEvent onNoInput;
@@ -78,7 +78,7 @@ public class DanceInput : MonoBehaviour
         audio.clip = songSettings.SongAudio;
         audio.Play();
 
-        danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
+        danceFloorSharedMaterial.SetFloat("_TimeOffset", inputErrorMargin.value);
         danceFloorSharedMaterial.SetFloat("_DelayBetweenFlashes", songSettings.SongBpm.secsValue);
         danceFloorSharedMaterial.SetFloat("_FlashDuration", inputErrorMargin.value);
     }
@@ -117,7 +117,7 @@ public class DanceInput : MonoBehaviour
             return;
         }
 
-        songPosition = (float) (AudioSettings.dspTime - audioStartTime) + songTimeOffset;
+        songPosition = (float) (AudioSettings.dspTime - audioStartTime) - inputErrorMargin.value;
 
         danceFloorSharedMaterial.SetFloat("_SongTime", songPosition);
         // 1. raise both timers and update the debug.text

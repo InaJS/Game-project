@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DanceFloor Song
-  m_Shader: {fileID: 4800000, guid: b691e35c842ae6b4fad21eb42a4fcafa, type: 3}
+  m_Name: PlayerDancePixelated
+  m_Shader: {fileID: 4800000, guid: 9d7c7a3cb91dc984798a08dd7377ece1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b85241e4394a9a743a41b1775d2aab25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -56,45 +56,32 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AlphaAmplitude: 1
-    - _AlphaDuration: 0.2
-    - _AlphaFrequency: 1
-    - _BlueAmplitude: 1
-    - _BlueFrequency: 0.2
-    - _BrightnessAmplitude: 1
-    - _BrightnessDuration: 0.2
-    - _BrightnessFrequency: 1
     - _BumpScale: 1
+    - _CenterTransparency: 2
     - _Cutoff: 0.5
-    - _DelayBetweenFlashes: 0.5217391
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FlashDuration: 0.15
-    - _FlashStrength: 1.5
+    - _Frequency: 20
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GreenAmplitude: 1
-    - _GreenFrequency: 0.7
-    - _LoadingTimeOffset: 0
     - _Metallic: 0
-    - _MinAlpha: 0.4
-    - _MinAlphaValue: 0.8
-    - _MinBrightness: 0.1
-    - _MinColorValue: 0.4
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RedAmplitude: 1
-    - _RedFrequency: 0.9
+    - _PixelFactor: 25
+    - _Radius: 0.34
+    - _Rings: 7
     - _SmoothnessTextureChannel: 0
-    - _SongTime: 18.666
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeOffset: 0.15
+    - _Steps: 1.39
+    - _Transparency: 2.43
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.38437277, g: 0.8113208, b: 0.35590956, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.9245283, g: 0.5498482, b: 0.28346387, a: 1}
+    - _Color2: {r: 0.3584906, g: 0.26147524, b: 0.18093629, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

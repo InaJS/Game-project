@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2990811583448046647, guid: ad3fc888f01d1bc49b5d4bca18cd2cbd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad3fc888f01d1bc49b5d4bca18cd2cbd, type: 3}
@@ -262,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3702350968236354250, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3702350968236354251, guid: dbf86d9635c909f41a978d75383c1644, type: 3}
       propertyPath: m_RootOrder
@@ -367,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284284154485566026, guid: 9d18b627644060e4e9db5363764868ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d18b627644060e4e9db5363764868ac, type: 3}
@@ -608,6 +608,10 @@ PrefabInstance:
     - target: {fileID: 4679205255910048271, guid: 342c50ffae976b944822128ff04a4671, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132424525541831885, guid: 342c50ffae976b944822128ff04a4671, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 342c50ffae976b944822128ff04a4671, type: 3}
@@ -895,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3148438238348651525, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3148438238348651527, guid: 77fd0a498692e5e4eb1dda07e66fafae, type: 3}
       propertyPath: m_RootOrder
@@ -1000,7 +1004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2875840601992728627, guid: 5126183b586f5a84298894727a0a20d2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5126183b586f5a84298894727a0a20d2, type: 3}
