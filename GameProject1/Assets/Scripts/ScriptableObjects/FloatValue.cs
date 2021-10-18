@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class FloatValue : ScriptableObject
 {
     public float value;
+    
     public UnityEvent callback;
 
     public void SetValue(float passedValue)
