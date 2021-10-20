@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float fireRate = 10f;
-    [SerializeField] private PlayerProjectileInstance[] shootEffectPrefabs;
+    [SerializeField] private PlayerProjectileInstance[] projectilePrefabs;
     [SerializeField] private GameObject bulletStart;
 
     private float shootCooldown;
@@ -43,7 +43,7 @@ public class PlayerShooting : MonoBehaviour
     {
         // crosshairs.SetFireAnimationTrigger();
         
-        PlayerProjectileInstance bulletPrefab = shootEffectPrefabs[Random.Range(0, shootEffectPrefabs.Length)];
+        PlayerProjectileInstance bulletPrefab = projectilePrefabs[Random.Range(0, projectilePrefabs.Length)];
         
         PlayerProjectileInstance b = Instantiate(bulletPrefab);
         b.transform.position = bulletStart.transform.position;

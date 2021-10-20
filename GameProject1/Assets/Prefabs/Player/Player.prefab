@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 25
   fireRate: 5
-  shootEffectPrefabs:
+  projectilePrefabs:
   - {fileID: -370854555441363294, guid: c018b1e4aa9d61044814fd69625958ac, type: 3}
   - {fileID: -370854555441363294, guid: 4398b901fe281e947a822a0da4644775, type: 3}
   - {fileID: -370854555441363294, guid: a3d7cec4cebe7794f8990ecf1719f41e, type: 3}
