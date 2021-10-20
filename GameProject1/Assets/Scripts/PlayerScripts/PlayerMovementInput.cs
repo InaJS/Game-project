@@ -2,7 +2,7 @@
 
 namespace PlayerScripts
 {
-    public class PlayerInput : MonoBehaviour
+    public class PlayerMovementInput : MonoBehaviour
     {
         
     }

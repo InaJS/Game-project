@@ -9,7 +9,7 @@ public class ProjectileLauncher : MonoBehaviour
     [SerializeField] private PlayerProjectileInstance[] shootEffectPrefabs;
     [SerializeField] private UnityEvent onBulletFired;
     
-    void FireBullet(Vector2 direction)
+    public void FireBullet(Vector2 direction)
     {
         direction.Normalize();
         

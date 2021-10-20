@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Projectile : MonoBehaviour
+public class CollisionProjectile : MonoBehaviour
 {
     [SerializeField] private string[] tagsToCollideWith;
     [SerializeField] private GameObject VFXPrefab;
