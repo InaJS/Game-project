@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileInstance : MonoBehaviour
+public class PlayerProjectileInstance : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 5;
 
