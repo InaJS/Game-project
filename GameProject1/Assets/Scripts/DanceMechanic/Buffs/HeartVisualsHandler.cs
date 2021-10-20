@@ -2,17 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class HeartVisuals : MonoBehaviour
+public class HeartVisualsHandler : MonoBehaviour
 {
     [SerializeField] private FloatValue _currentHeartBuffs;
     [SerializeField] private FloatValue _comboNumber;
     [SerializeField] private SpawnZone[] spawnZones;
-    [SerializeField] private DropParticles _heartVisual;
+    [SerializeField] private CrowdHeartsAnimation _heartVisual;
     [SerializeField] private Transform _holder;
     [SerializeField] private int _heartsBefore;
     [SerializeField] private bool enableGizmo;
 
-    private List<DropParticles> hearts = new List<DropParticles>();
+    private List<CrowdHeartsAnimation> hearts = new List<CrowdHeartsAnimation>();
 
     public void RefreshHearts()
     {
@@ -38,7 +38,7 @@ public class HeartVisuals : MonoBehaviour
     {
         for (var index = hearts.Count - 1; index >= 0; index--)
         {
-            DropParticles dropper = hearts[index];
+            CrowdHeartsAnimation dropper = hearts[index];
             dropper.LoseHearts();
         }
 
@@ -50,7 +50,7 @@ public class HeartVisuals : MonoBehaviour
     {
         for (var index = hearts.Count - 1; index >= 0; index--)
         {
-            DropParticles dropper = hearts[index];
+            CrowdHeartsAnimation dropper = hearts[index];
             dropper.ConsumeHearts();
         }
 
@@ -71,7 +71,7 @@ public class HeartVisuals : MonoBehaviour
 
         Vector3 position = center + new Vector3(horizontalRange * spawnZones[index].Width, verticalRange * spawnZones[index].Height);
 
-        DropParticles newHeart = Instantiate(_heartVisual, position, Quaternion.identity, _holder);
+        CrowdHeartsAnimation newHeart = Instantiate(_heartVisual, position, Quaternion.identity, _holder);
 
         newHeart.floating.startPosition = position;
         

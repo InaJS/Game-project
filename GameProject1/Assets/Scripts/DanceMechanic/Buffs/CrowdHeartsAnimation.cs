@@ -5,7 +5,7 @@ using System.Security;
 using Bolt;
 using UnityEngine;
 
-public class DropParticles : MonoBehaviour
+public class CrowdHeartsAnimation : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particles;
     [SerializeField] private SpriteRenderer renderer;

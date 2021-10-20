@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class InputListener : MonoBehaviour
+public class SimpleInputListener : MonoBehaviour
 {
     [SerializeField] private string keyName;
     [SerializeField] private UnityEvent callback;

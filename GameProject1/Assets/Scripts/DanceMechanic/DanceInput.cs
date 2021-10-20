@@ -16,7 +16,6 @@ public class DanceInput : MonoBehaviour
 
     [SerializeField] private FloatValue inputErrorMargin;
     [SerializeField] private FloatValue disableTime;
-    // [SerializeField] private float songTimeOffset = 0.1f;
     [SerializeField] private UnityEvent onCorrectInput;
     [SerializeField] private UnityEvent onWrongInput;
     [SerializeField] private UnityEvent onNoInput;

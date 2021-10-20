@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 
 
-public class EventAfterTime : MonoBehaviour
+public class TimerEventSingle : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 5;
     [SerializeField] private UnityEvent callback;
