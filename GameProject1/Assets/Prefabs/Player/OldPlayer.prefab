@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 3853739202154225965}
   - component: {fileID: 8616604608948769740}
   m_Layer: 0
-  m_Name: Player
+  m_Name: OldPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3854382797915682449}
         m_TargetAssemblyTypeName: DanceColliderActivate, Assembly-CSharp
-        m_MethodName: TriggerHitbox
+        m_MethodName: ActivateHitbox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

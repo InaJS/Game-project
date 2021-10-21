@@ -15,7 +15,7 @@ public class DanceColliderActivate : MonoBehaviour
         collider = GetComponent<Collider2D>();
         renderer = GetComponent<SpriteRenderer>();
     }
-    public void TriggerHitbox()
+    public void ActivateHitbox()
     {
         StartCoroutine(EnableColliderTemporarily());
     }
