@@ -5,12 +5,12 @@ using UnityEngine.Events;
 
 public class SimpleInputListener : MonoBehaviour
 {
-    [SerializeField] private string keyName;
+    [SerializeField] private string buttonName;
     [SerializeField] private UnityEvent callback;
 
     void Update()
     {
-        bool keyPressed = Input.GetButtonDown(keyName);
+        bool keyPressed = Input.GetButtonDown(buttonName);
 
         if (keyPressed)
         {

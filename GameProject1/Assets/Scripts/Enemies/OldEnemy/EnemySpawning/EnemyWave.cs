@@ -12,7 +12,7 @@ public class EnemyWave : ScriptableObject
 public class SpawnInfo
 {
     [Tooltip("The enemy prefab to spawn")]
-    public EnemyAI Enemy;
+    public EnemyAIOld Enemy;
     [Tooltip("The zone in which it will spawn (1 = left, 2 = down, 3 = right)")]
     [Range(1,3)] public int Position = 1;
 }

@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class PlayerHealth : MonoBehaviour
 {
     public static PlayerHealth Instance;
+    
     [SerializeField] private float playerHealth = 10f;
     [SerializeField] private SpriteRenderer coneRenderer;
     [SerializeField] private Color FullHealth;
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
     private float currentPlayerHealth;
     private float damageTimer = -1;
+    private bool isDead = false;
 
     public void TryDamagePlayer(float damageAmount)
     {
@@ -65,6 +67,8 @@ public class PlayerHealth : MonoBehaviour
             Instance = this;
         }
 
+        isDead = false;
+
         coneRenderer.color = FullHealth;
 
         currentPlayerHealth = 10f;
@@ -72,8 +76,14 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
+        
         if (currentPlayerHealth <= 0)
         {
+            isDead = true;
             onDeath.Invoke();
         }
 

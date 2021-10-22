@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<SongWaves> songWaves;
     [SerializeField] private UnityEvent onNewSong;
 
-    private List<EnemyAI> enemiesAlive = new List<EnemyAI>();
+    private List<EnemyAIOld> enemiesAlive = new List<EnemyAIOld>();
     private int currentWave = 0;
     private int currentSong = 0;
     
@@ -58,13 +58,13 @@ public class EnemySpawner : MonoBehaviour
     {
         foreach (SpawnInfo spawnInfo in wave.Enemies)
         {
-            EnemyAI enemy = Spawn(spawnInfo.Enemy, spawnZones[spawnInfo.Position-1]);
+            EnemyAIOld enemy = Spawn(spawnInfo.Enemy, spawnZones[spawnInfo.Position-1]);
             enemiesAlive.Add(enemy);
             enemy.onDeath += () => enemiesAlive.Remove(enemy);
         }
     }
 
-    private EnemyAI Spawn(EnemyAI enemy, SpawnZone zone)
+    private EnemyAIOld Spawn(EnemyAIOld enemy, SpawnZone zone)
     {
         Vector3 spawnPosition = new Vector3();
         spawnPosition.x = Random.Range(zone.Center.x - zone.Width / 2, zone.Center.x + zone.Width / 2);

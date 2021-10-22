@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class PlayerCursorInput : MonoBehaviour
 {
+    [SerializeField] private int mouseButtonIndex;
     [SerializeField] private UnityEvent<Vector2> simpleCursorEvent;
     [SerializeField] private UnityEvent<Vector2> directionalCursorEvent;
     private Vector3 cursorPos;
@@ -21,8 +22,8 @@ public class PlayerCursorInput : MonoBehaviour
         cursorPos = camera.ScreenToWorldPoint(Input.mousePosition);
         cursorPos.z = 0;
         Vector2 relativePosition = cursorPos - this.transform.position;
-        
-        if (Input.GetMouseButton(0))
+
+        if (Input.GetMouseButton(mouseButtonIndex))
         {
             simpleCursorEvent?.Invoke(cursorPos);
             directionalCursorEvent?.Invoke(relativePosition);

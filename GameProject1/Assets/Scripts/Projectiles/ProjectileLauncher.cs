@@ -38,10 +38,11 @@ public class ProjectileLauncher : MonoBehaviour
         direction.Normalize();
         
         PlayerProjectileInstance bulletPrefab = shootEffectPrefabs[Random.Range(0, shootEffectPrefabs.Length)];
-        
         PlayerProjectileInstance playerProjectile = Instantiate(bulletPrefab);
+
         playerProjectile.transform.position = this.transform.position;
         playerProjectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        
         onBulletFired.Invoke();
         inputAvailable = false;
         timer = firingCooldown;

@@ -6,7 +6,7 @@ using CustomEventSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnemyAI : MonoBehaviour 
+public class EnemyAIOld : MonoBehaviour 
 {
     [SerializeField] private float damageAmount;
     [SerializeField] private int enemyHealth = 5;
